@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="landingpage/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
+        <link rel="icon" href="landingpage/images/pdImpresionesLogo.jpeg">
+
+        <title> PDImpresiones </title>
+
+    </head>
+
+    <body>
+        <header id="header" class="header">
+            <div class="menu container">
+                <a href="#" class="logo"> PD Impresiones </a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+                        <li> <a href="#"> INICIO </a> </li>
+                        <li> <a href="#"> PRODUCTOS </a> </li>
+                        <li> <a href="#"> CONTACTO </a> </li>
+                        <li> <a href="#"> NOSOTROS </a> </li>
+                    </ul>
+                </nav>
+                <div>
+                    <ul>
+                        <li class="submenu">
+                            <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
+                            <div id="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th> Imagen </th>
+                                            <th> Nombre </th>
+                                            <th> Precio </th>
+                                            <th> Cantidad </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <div class="botones-carrito"> 
+
+                                    <div class="btn-vaciarCarrito"> 
+                                        <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
+                                    </div>
+                                    <div class="nadaCarrito">
+                                        <!-- ACA VA EL P CUANDO NO HAY NADA -->
+                                    </div>
+                                    <div class="btn-pagarCarrito"> 
+                                        <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-content container">
+                <div class="header-img">
+                    <img src="landingpage/images/img 5.jpeg" width="600px">
+                </div>
+                <div class="header-txt">
+                    <h3> Ofertas especiales </h3>
+                    <p> No te pierdas estas impresiones </p>
+                    <a href="#" class="btn-1"> + Info </a>
+                </div>
+            </div>
+
+        </header>
+        <!-- HASTA ACA ES EL HEADER -->
+
+        <section class="ofert container">
+            <div class="ofert-1">
+                <div class="ofert-img">
+                    <img src="landingpage/images/img 2.jpeg" alt="">
+                </div>
+                <div class="ofert-txt">
+                    <h3> Oferta 1 </h3>
+                    <a href="#" class="btn-2"> + Info</a>
+                </div>
+            </div>
+
+            <div class="ofert-1">
+                <div class="ofert-img">
+                    <img src="landingpage/images/img 4.jpeg" alt="">
+                </div>
+                <div class="ofert-txt">
+                    <h3> Oferta 2 </h3>
+                    <a href="#" class="btn-2"> + Info</a>
+                </div>
+
+            </div>
+
+            <div class="ofert-1">
+                <div class="ofert-img">
+                    <img src="landingpage/images/img 1.jpeg" alt="">
+                </div>
+                <div class="ofert-txt">
+                    <h3> Oferta 3 </h3>
+                    <a href="#" class="btn-2"> + Info</a>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- HASTA SECCION DE OFERTAS YA ESTA TODO ACTUALIZADO-->
+
+        <main id="lista-cursos" class="products container" >
+            <h2> Productos </h2>
+            <div class="product-content">
+
+                <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
+                    <img src="landingpage/images/img 1.jpeg" alt="">
+                    <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
+                        <h3> Impresion 1</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="1"> Agregar al carrito </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 2.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 2</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="2"> Agregar al carrito </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 3.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 3</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="3"> Agregar al carrito </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 4.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 4</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="4"> Agregar al carrito </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 5.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 5</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="5"> Agregar al carrito </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 6</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="6"> Agregar al carrito </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <!-- HASTA ACA LA LISTA DE LOS PRODUCTOS -->
+
+        <section class="icons container">
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="landingpage/images/IconEnvio.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3> Envios a todo el país </h3>
+                    <p> Podes fijarte cuanto sale en nuestro <a href="#" class="btn-2"> cotizador de envios.</a></p>
+                </div>
+            </div>
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="landingpage/images/IconStar.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3> Calidad asegurada </h3>
+                    <p> Contactese con nosotros mediante el <a href="#" class="btn-2"> formulario de atencion.</a></p>
+                </div>
+            </div>
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="landingpage/images/IconHappy.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3> Clientes satisfechos </h3>
+                    <p> Podes encontrar pruebas de nuestra calidad viendo la  <a href="#" class="btn-2"> galeria de clientes.</a></p>
+                </div>
+            </div>
+
+        </section>
+        <!-- HASTA ACA LA SECCION DE ICONOS ASI COMO MEJOR ENVIO, MEJORES CLIENTES Y ESO -->
+
+        <section class="blog container">
+            <div class="blog-1">                
+                <img src="landingpage/images/matias.jpeg" alt="">
+                <h3> Sobre nosotros </h3>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>          
+            </div>
+
+            <div class="blog-1">
+                <img src="landingpage/images/impresora.jpeg" alt="">
+                <h3> Con que imprimimos </h3>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="blog-1">
+                <img src="landingpage/images/impresora2.jpeg" alt="">
+                <h3> Info sobre la impresion 3D </h3>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+        </section>
+        <!-- HASTA ACA LA SESION DE BLOG Y MAS SOBRE NOSOTROS -->
+
+        <footer class="footer">
+            <div class="footer-content container">
+
+                <div class="link">
+                    <h3> Redes sociales </h3>
+                    <ul>
+                        <li> <a href="#"> Insta </a> </li>
+                        <li> <a href="#"> Facebook </a> </li>
+                        <li> <a href="#"> Whatsapp </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+        <!-- HASTA ACA EL FOOTER -->
+
+        <!-- ME FALTARIA:
+        + CONECTAR LOS LINKS A SUS RESPECTIVAS UBICACIONES
+        + PONER LAS FOTOS BIEN
+        + PONER LAS GALERIAS DE CLIENTES
+        + HACER EXISTIR LOS FORMULARIOS DE CONSULTAS Y DE "QUEJAS"
+        + HACER EXISTIR EL COTIZADOR DE ENVIOS
+        + RELLENAR BIEN LOS LOREM
+        -->
+
+    </body>
+
+    <script src="landingpage/js/js.js"> </script>
+</html>
