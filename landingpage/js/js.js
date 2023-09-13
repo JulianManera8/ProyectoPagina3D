@@ -40,8 +40,18 @@ function crearEventos() {
 
     });
 
+    //usar localStorage para guardar los que pongamos en el carrito
+    document.addEventListener('DOMContentLoaded', () => {
+        arregloProductos = JSON.parse(localStorage.getItem('producto')) || [];
+
+        crearHTML();
+    });
+
+
     //que no me muestre los botones de vaciar o pagar si no tengo nada en el carrito
     iconoCarrito.addEventListener('mouseenter', sacarBotones);
+
+    
 
 }
 
@@ -109,11 +119,11 @@ function leerDatoProducto(producto) {
     }
     
     //le pasamos el arreglo a la funcion crearHTML para justamente crear el html del carrito
-    crearHTML(arregloProductos);
+    crearHTML();
 }
 
 
-function crearHTML(producto) {
+function crearHTML() {
     //primero hay que hacer que no se dupliquen
     limpiarHTML();
 
@@ -132,9 +142,21 @@ function crearHTML(producto) {
 
     });
 
+    //que me saque los botones si no tengo productos en el carrito
     sacarBotones();
+    
+    //que me los agregue si hay productos
     agregarBotones();
+
+    //conectar localStorage
+    sincronizarStorage(); 
 }
+
+function sincronizarStorage() {
+    localStorage.setItem('producto', JSON.stringify(arregloProductos))
+}
+
+
 
 //borrar producto del carrito desde la X
 function borrarProducto(e) {
