@@ -1,7 +1,7 @@
 //VARIABLES
 
 const carrito = document.querySelector('#carrito');
-const listaCursos = document.querySelector('#lista-cursos');
+const listaCursos = document.querySelector('#lista-productos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const botonesCarrito = document.querySelector('.botones-carrito');
 const botonVaciarCarrito = document.querySelector('.vaciar-carrito');
