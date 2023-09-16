@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" type="text/css" href="landingpage/css/estilo-Form.css">
         <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
         <link rel="icon" href="landingpage/images/pdImpresionesLogo.jpeg">
-
         <title> PDImpresiones </title>
-
     </head>
 
     <body>
-        <div>
-            <h1 class="titulo"> Formulario de consultas </h1>
-            <div class="boton-volver"> 
 
-                <button><a href="index.html">Volver</a></button> 
+        <h1 class="titulo"> Formulario de consultas </h1>
 
-            </div>
-
-            <div class="form-container">
-                <form id="formulario">
-                    <div class="email">
-                        <label for="email">Email: </label>
-                        <input type="email" id="email" name="email" placeholder="Pon tu Email">
+        <div class="todo"> 
+            <div class="flex-container">
+            
+                <form class="form" id="formulario">
+                    <div class="form-section">
+                        <label for="nombreApellido" class="label">Nombre y apellido: </label>
+                        <input class="form__input" type="text" id="email" name="email">
                     </div>
-
-                    <div class="asunto">
-                        <label for="asunto">Titulo del Email: </label>
-                        <input type="text" id="text" name="text" placeholder="Pon el asunto del correo">
+                    <div class="form-section">
+                        <label for="email" class="label">Email: </label>
+                        <input class="form__input" type="email" id="email" name="email">
                     </div>
-
-                    <div class="mensaje">
-                        <label for="mensaje">Mensaje del correo: </label>
-                        <input id="mensaje" name="mensaje" placeholder="Pon tu mensaje">
+    
+                    <div class="form-section">
+                        <label for="asunto" class="label">Titulo del Email: </label>
+                        <input class="form__input" type="text" id="text" name="text">
                     </div>
-
-                    <div id="botones">
+    
+                    <div class="form-section">
+                        <label for="mensaje" class="label">Mensaje del correo: </label>
+                        <input class="form__input" id="mensaje" type="textarea" name="mensaje">
+                    </div>
+    
+                    <div class="form-section" id="botones">
                         <button 
                             type="submit"
                             disabled
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                        </svg>
                             Enviar
                         </button>
-    
+                        <div class="spinner-container">
+                            <div class="custom-loader" hidden></div>  
+                        </div>
                         <button 
                             type="reset"
                         >
@@ -59,14 +58,17 @@
                             Reset
                         </button>
                     </div>
-
+    
                 </form>
+                
             </div>
-
-            <div class="spinner-container">
-                <div class="custom-loader"></div>  
-            </div>
+    
         </div>
+         
+        <div>
+            <button class="boton-volver"><a href="index.html">Volver</a></button>
+        </div>
+
     </body>
 
     <script src="landingpage/js/js-Form.js"> </script>
