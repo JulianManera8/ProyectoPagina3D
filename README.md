@@ -19,10 +19,5 @@ GENERAL:
 - Darle otra tonalidad a la parte de la barra de nav
 - 
 
-GENERAL:
-- Ver lo de las ofertas, si lo dejo o q hago
-- Darle otra tonalidad a la parte de la barra de nav
-- 
-
 
 
