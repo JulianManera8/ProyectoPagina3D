@@ -1,3 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;600&display=swap');
+
+
+* {
+	
+	font-weight: 100;
+}
+
+
+body {
+	background-color:rgb(255, 255, 255);
+  
+}
+
+.todo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.titulo {
+	color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.flex-container {
+ 	display: flex;
+ 	align-items: center;
+  text-align: center;
+ 	flex-wrap: wrap-reverse;
+ 	background-color: rgb(206, 234, 247);
+ 	margin: 40px 50px;
+ 	flex-direction: row-reverse;
+ 	justify-content: center;
+ 	padding: 20px;
+ 	border-radius: 60px;
+  box-shadow: 0 0 20px;
+ 	border: 3px solid rgb(206, 234, 247);
+ 	max-width: 600px;
+  min-width: 300px;
+}
+
+.form {
+	min-width: 230px;;
+	width: 100%;
+	flex: 1;
+	text-align: left;
+	padding: 10px;
+	padding-right: 35px;
+}
+
+
+label {
+  position: relative;
+	color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+
+.form__input {
+  position: inherit;
+	width: 100%;
+	padding: 15px;
+	margin: 10px 0px;
+	margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+	border-style: none;
+	background-color:rgb(248, 238, 226);
+	text-align: left;
+	justify-content: center;
+}
+
+#botones {
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+svg {
+  display: block;
+  height: 70px;
+}
+
+.form button[type="submit"] {
+	background-color: transparent;
+  margin-top: 10px;
+	margin-bottom: 15px;
+	opacity: 50%;
+  border: none;
+  cursor: pointer;
+  height: 100px;
+
+}
+
+.form button[type="reset"] {
+	background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 100px;
+  margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+button[type="submit"]:active{
+	background-color: rgb(248, 238, 226);
+	box-shadow: 0 0 20px;
+}
+
+button[type="reset"]:active{
+	background-color: rgb(248, 238, 226);
+	box-shadow: 0 0 20px;
+}
+
+button:hover {
+	background-color: #060625;
+	box-shadow: 0 0 20px;
+  border-radius: 10%;
+}
+
+/* ABAJO ES PARA LA FUNCIONALIDAD DE JAVA */
+
+
+p {
+	margin: auto;
+	color: rgb(239, 123, 123);
+	font-size: 15px;
+	margin-top: -7px;
+	margin-bottom: 20px;
+	align-content: center;
+	align-content: center;
+	width: 70%;
+	padding: 10px;
+	border: 2px solid red;
+	text-align: center;
+}
+
+.hidde {
+	opacity: 0;;
+}
+
+.alertaBien {
+	color: white;
+	border: 3px solid black;
+	padding: 20px;
+	width: 80%;
+	text-align: center;
+	font-weight: bold;
+	margin-top: -55px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+	background-color: #022a05;
+	display: flex;
+	justify-content: center;
+
+}
+
+/* ________________________LOADER__________________________________ */
+
 .custom-loader {
   width: 50px;
   height: 50px;
@@ -28,3 +190,8 @@
 @keyframes s6 { 
   100%{transform: rotate(1turn)}
 }
+
+
+
+
+
