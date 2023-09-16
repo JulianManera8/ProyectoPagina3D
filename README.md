@@ -6,8 +6,11 @@ CARRITO:
 
 
 FORMULARIO:
-- Darle estilos
-- Agregarle una opcion de contactar por wsp desde esa pestaña
++ Estilos A:
+    -HOVER O FOCUS EN LOS INPUTS (como los de google, buscar en wsp o en youtube)
+    -
++ Ponerle FOOTER Y NAV 
++ Ponerle la funcionalidad de wsp ahi mismo abajo del formulario
 
 
 GALERIA DE CLIENTES:
@@ -16,8 +19,7 @@ GALERIA DE CLIENTES:
 
 GENERAL:
 - Ver lo de las ofertas, si lo dejo o q hago
-- Darle otra tonalidad a la parte de la barra de nav
-- 
+
 
 
 
