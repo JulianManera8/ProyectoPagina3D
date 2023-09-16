@@ -346,36 +346,108 @@ td {
     font-weight: 600;
 }
 
-
+/* _______________________BLOG/NOSOTROS______________________________________ */
 
 .blog {
-    display: flex;
-    justify-content: space-between;
     text-align: center;
     padding-bottom: 15px;
-    padding-top: 20px;
     margin-bottom: 75px;
 }
 
-.blog-1 {
-    flex-basis: calc(33.3% - 30px);
-}
-
-
-.blog-1 img {
-    width: 250px;
-    height: 200px;
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 43px;
+    color: rgb(0, 0, 0);
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
-.blog h3 {
-    margin: 20px 0;
-    font-size: 30px;
-
-}
 .blog p {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 400;
 }
+
+.blog-1 {
+    text-align: center;
+}
+
+.cards-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-basis: calc(33.3% - 30px);
+
+} 
+
+
+.card-content h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    color: black;
+
+}
+
+.card-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    opacity: 100%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    backface-visibility: hidden;
+}
+
+
+.back { 
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(248, 238, 226);
+    padding: 30px;
+}
+
+
+.back p {
+    display: flex;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.card:hover .front img {
+    filter: blur(1px);
+}
+
+.card:hover .back {
+    transition: 1s;
+    opacity: 90%;
+    color:black
+}
+
+.card:not(:hover) .front img {
+    filter: blur(0);
+}
+
+.card:not(:hover) .back {
+    transition: 1s;
+    opacity: 0%;
+}
+
+/* _______________________FOOTER______________________________________ */
+
 
 .footer {
     padding: 50px;
@@ -500,7 +572,7 @@ td {
         margin-bottom: 30px;
     }
 
-    .blog {
+    .cards-containers {
         padding: 0 30px 30px 30px;
         flex-direction: column;
     }
@@ -521,3 +593,4 @@ td {
 
 }
     
+ 
