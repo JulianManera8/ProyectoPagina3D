@@ -11,7 +11,64 @@
 
     <body>
 
-        <h1 class="titulo"> Formulario de consultas </h1>
+        <div class="menu container">
+            <a href="index.html" class="logo"> PD Impresiones </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="index.html"> INICIO </a> </li>
+                    <li> <a href="#lista-productos"> PRODUCTOS </a> </li>
+                    <li> <a href="index-Form.html"> CONTACTO </a> </li>
+                    <li> <a href="#sobre-nosotros"> NOSOTROS </a> </li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th> Imagen </th>
+                                        <th> Nombre </th>
+                                        <th> Precio </th>
+                                        <th> Cantidad </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="botones-carrito"> 
+
+                                <div class="btn-vaciarCarrito"> 
+                                    <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
+                                </div>
+                                <div class="nadaCarrito">
+                                    <!-- ACA VA EL P CUANDO NO HAY NADA -->
+                                </div>
+                                <div class="btn-pagarCarrito"> 
+                                    <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="titulo"> CONTACTO </h1>
+
+        <div class="todo">
+            <h4 class="wsp-titulo"> Si prefieres, puedes contactarnos via Whatsapp, haciendo click en su icono </h4>
+            <br />
+            <div class="wsp-logo">
+                <a href="https://wa.me/543413076880" target="_blank"> <img src="landingpage/images/wsp.svg"> </a>
+            </div>
+        </div>
 
         <div class="todo"> 
             <div class="flex-container">
@@ -65,9 +122,45 @@
     
         </div>
          
-        <div>
-            <button class="boton-volver"><a href="index.html">Volver</a></button>
-        </div>
+
+        <footer class="footer">
+            <div class="footer-content container">
+
+                <div class="link">
+                    <h3> Redes sociales </h3>
+                    <ul>
+                        <li> <a href="#"> Insta </a> </li>
+                        <li> <a href="#"> Facebook </a> </li>
+                        <li> <a href="#"> Whatsapp </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
 
     </body>
 
