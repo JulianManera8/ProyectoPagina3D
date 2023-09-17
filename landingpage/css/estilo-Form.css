@@ -2,7 +2,11 @@
 
 
 * {
-	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
 	font-weight: 100;
 }
 
@@ -20,28 +24,40 @@ body {
 
 .titulo {
 	color: black;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 60px;
-  font-weight: 600;
+  	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  	font-size: 60px;
+  	font-weight: 600;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 120px;
+}
+
+.wsp-titulo {
+	margin-top: 30px;
+}
+
+.wsp-logo a img {
+	width: 60px;
+	margin-left: 20px;
+	text-align: center;
+	justify-content: center;
 }
 
 .flex-container {
  	display: flex;
+	flex-direction: column;
+	flex:1;
  	align-items: center;
-  text-align: center;
- 	flex-wrap: wrap-reverse;
+  	text-align: center;
  	background-color: rgb(206, 234, 247);
  	margin: 40px 50px;
  	flex-direction: row-reverse;
  	justify-content: center;
  	padding: 20px;
  	border-radius: 60px;
-  box-shadow: 0 0 20px;
+  	box-shadow: 0 0 20px;
  	border: 3px solid rgb(206, 234, 247);
  	max-width: 600px;
-  min-width: 300px;
+  	min-width: 300px;
 }
 
 .form {
@@ -191,7 +207,242 @@ p {
   100%{transform: rotate(1turn)}
 }
 
+.menu {
+	z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.menu  {
+    background-color:rgb(206, 234, 247);
+    padding: 20px;
+    position: fixed;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+}
+
+.menu .navbar ul li {
+    float: left;
+    position: relative;
+    align-items: center;
+}
+
+.menu .navbar ul li a {
+    display: block;
+    padding: 20px;
+    color: black;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 45px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color:rgb(206, 234, 247);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px;
+    background-color: blur(10px);
+    z-index: 1;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.botones-carrito {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0 30px 0;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+}
+
+th, tr, td {
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+th {
+    padding: 15px;
+    justify-content: space-evenly;
+    font-weight: 1200;
+    font-size: 20px;
+}
+
+td {
+    font-size: 18px;
+}
 
 
+.pagar-carrito {
+    color: green;
+    font-weight: 600;
+}
+
+#vaciar-carrito {
+    
+    padding: 5px 10px;
+    color: rgb(129, 6, 6);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.esconder {
+    display: none;
+}
+
+.nadaCarrito {
+    text-align: center;
+}
+
+.borrar-curso {
+    color: rgb(176, 29, 29);
+    font-weight: bold;
+    border: 3px solid transparent;
+    padding: 0px 5.5px 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(241, 103, 103);
+}
+
+.borrar-curso:hover {
+    box-shadow: 0 0 25px rgb(241, 103, 103);
+    transition: 0.5s;
+}
+
+.menu .titulo .todo {
+	flex: 1;
+	flex-direction: column;
+}
+
+
+.footer {
+	height: 200px;
+	width: 100%;
+	padding: 50px;
+    background-color: rgb(206, 234, 247);
+}
+
+.footer-content {
+    display: flex;
+	text-align: center;
+    justify-content: space-around;
+}
+
+.footer-content a {
+    font-size: 15px;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+}
+
+@media (max-width: 902px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0;
+        background-color: bisque;
+        display: none;
+    }
+
+    .menu .navbar ul li a {
+        width: 100%;
+    }
+
+
+    #menu:checked ~ .navbar  {
+        display: initial;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .submenu:hover #lista-carrito {
+        max-width: 100%;
+    }
+
+    .header {
+        min-height: 0vh;
+        margin-bottom: -60px;
+    }
+
+    .header-content {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-txt {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .header-txt h3 {
+        font-size: 50px;
+    }
+
+
+
+    .footer {
+		display: flex;
+		flex-direction: column;
+        padding: 30px;
+		bottom: 0%;
+    }
+
+    .footer-content {
+		
+        text-align: center;
+    }
+
+
+}
 
 
