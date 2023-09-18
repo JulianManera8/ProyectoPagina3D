@@ -32,6 +32,7 @@ GENERAL:
 - QUE EL HEADER ME OCUPE TODO EL WIDTH  
 - Productos con colores mas llamativos
 - Poner carteles emergentes tipo alarmas para llamar mas la atencion de ciertas cosas
+- Poner botyon flotante de wsp en inicio https://www.youtube.com/watch?v=fVeGYX6GWMU
 
 
 
