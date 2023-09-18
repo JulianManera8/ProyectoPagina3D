@@ -2,7 +2,8 @@
 
 CARRITO:
 - Darle funcionalidad al boton de pagar: CREAR TODO LO DE PAGO
-- Ver como queda mejor el fondo y el formato    
+- Ver como queda mejor el fondo y el formato 
+- Darle estilos de hover y active a los botones de vaciar e ir a pagar. Buscar referencias en youtube.   
 
 
 FORMULARIO:
@@ -27,6 +28,8 @@ GALERIA DE CLIENTES:
 GENERAL:
 - Ver lo de las ofertas, si lo dejo o q hago
 - QUE EL HEADER ME OCUPE TODO EL WIDTH  
+- Productos con colores mas llamativos
+- Poner carteles emergentes tipo alarmas para llamar mas la atencion de ciertas cosas
 
 
 
