@@ -11,6 +11,7 @@
 
     <body>
 
+<!-- HEADER -->
         <div class="menu container">
             <a href="index.html" class="logo"> PD Impresiones </a>
             <input type="checkbox" id="menu" />
@@ -61,20 +62,51 @@
             </div>
         </div>
 
+
+<!-- ACA EMPIEZA EL MAIN -->
+
         <h1 class="titulo"> CONTACTO </h1>
 
-        <div class="todo">
-            <h4 class="wsp-titulo"> Si prefieres, puedes contactarnos via Whatsapp, haciendo click en su icono </h4>
-            <br />
-            <div class="wsp-logo">
-                <a href="https://wa.me/543413076880" target="_blank"> <img src="landingpage/images/wsp.svg"> </a>
-            </div>
-        </div>
+        <h4 class="explicacion"> Puedes contactarnos haciendo click en cualquiera de nuestras 3 opciones</h4>
 
-        <div class="todo"> 
+    <div class="card-containers"> <!-- este seria class="card-container" -->
+        
+        <div class="todo card-content"> 
+            <div class="card">
+                <div class="front"> <!-- este seria class="card" -->
+                    <img src="landingpage/images/wsp.svg">
+                </div>  <!-- este seria class="card" -->
+                <div class="back"> 
+                    <a href="https://wa.me/543413076880" target="_blank">Enviar Whatsapp</a>
+                </div> 
+            </div>    
+        </div>
+        
+        <div class="todo card-content"> 
+            <div class="card">
+                <div class="front"> <!-- este seria class="card" -->
+                    <img src="landingpage/images/insta.svg"> </a>
+                </div>  <!-- este seria class="card" -->
+                <div class="back"> 
+                    <a href="https://www.instagram.com/juli.manera/" target="_blank">Contactar por instagram</a>
+                </div> 
+            </div>    
+        </div>
+        
+        <div class="todo card-content"> 
+            
+            <div class="card">
+                <div class="front">
+                    <img src="landingpage/images/bx-envelope.svg" class="email-logo" alt="email" width="75px" >
+                </div>
+                <div class="back">
+                    <p>EMAIL</p>
+                </div>
+            </div>
+        
             <div class="flex-container">
             
-                <form class="form" id="formulario">
+                <form class="form" id="formulario" >
                     <div class="form-section">
                         <label for="nombreApellido" class="label">Nombre y apellido: </label>
                         <input class="form__input" type="text" id="email" name="email">
@@ -122,6 +154,9 @@
             </div>
     
         </div>
+
+    </div>    
+        
          
 
         <footer class="footer">
