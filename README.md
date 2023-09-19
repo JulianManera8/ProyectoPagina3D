@@ -5,11 +5,15 @@ CARRITO:
 - Ver como queda mejor el fondo y el formato 
 - Darle estilos de hover y active a los botones de vaciar e ir a pagar. Buscar referencias en youtube.
 
+
+
 PRODUCTOS:
 - Ponerle filtros de busqueda
 - IDEA:
     - Poner un boton que diga "mostrar mas" y ahi que me muestre en otra pestaña todo con los filtros y todo.
 - Ponerle un active o hover a los botones para agregar el producto al carrito.
+
+
 
 FORMULARIO:
 + Estilos A:
@@ -20,6 +24,7 @@ FORMULARIO:
 
 + Terminar de darle los estilos a los 3 botones
 + Darle funcionalidad al formulario
++ Hacer que aparezca y desaparezca mas fluido el form, no tan de una ahi pum
   
 
 
@@ -29,8 +34,8 @@ GALERIA DE CLIENTES:
 
 
 GENERAL:
-- Ver lo de las ofertas, si lo dejo o q hago
-- QUE EL HEADER ME OCUPE TODO EL WIDTH  
+- Ver lo de las ofertas, si lo dejo o q hago 
+- QUE EL HEADER ME OCUPE TODO EL WIDTH (En pestaña inicio)
 - Productos con colores mas llamativos
 - Poner carteles emergentes tipo alarmas para llamar mas la atencion de ciertas cosas
 - Poner botyon flotante de wsp en inicio https://www.youtube.com/watch?v=fVeGYX6GWMU
