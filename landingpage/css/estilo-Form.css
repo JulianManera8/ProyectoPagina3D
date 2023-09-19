@@ -28,29 +28,21 @@ body {
   	font-size: 60px;
   	font-weight: 600;
 	text-align: center;
-	margin-top: 120px;
+	margin-top: 130px;
 }
 
-.wsp-titulo {
-	margin-top: 30px;
-}
-
-.wsp-logo a img {
-	width: 60px;
-	margin-left: 20px;
-	text-align: center;
-	justify-content: center;
+h4 {
+    text-align: center;
+    margin-top: 15px;
 }
 
 .flex-container {
  	display: flex;
-	flex-direction: column;
 	flex:1;
  	align-items: center;
   	text-align: center;
  	background-color: rgb(206, 234, 247);
  	margin: 40px 50px;
- 	flex-direction: row-reverse;
  	justify-content: center;
  	padding: 20px;
  	border-radius: 60px;
@@ -207,7 +199,7 @@ p {
   100%{transform: rotate(1turn)}
 }
 
-
+/* ______________________HEADER____________________________________ */
 
 .menu {
     position: absolute;
@@ -371,7 +363,7 @@ td {
 	flex-direction: column;
 }
 
-
+/* ____________________________FOOTER____________________________ */
 .footer {
 	height: 200px;
 	width: 100%;
@@ -395,6 +387,8 @@ td {
     font-size: 20px;
     font-weight: 400;
 }
+
+/* ________________________MEDIA__________________________________ */
 
 @media (max-width: 902px) {
     .menu {
@@ -469,7 +463,8 @@ td {
 		display: flex;
 		flex-direction: column;
         padding: 30px;
-		bottom: 0%;
+        top: 100%;
+		bottom: 0;
         text-align: center;
     }
 
@@ -479,4 +474,81 @@ td {
 
 }
 
+/* __________________ ANIMACION DE LOS ICONOCS____________________ */
+
+.cards-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-basis: calc(33.3% - 30px);
+} 
+
+
+.card-content h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    color: black;
+
+}
+
+.card-content img {
+    width: 100px;
+    opacity: 100%;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 30px;
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    backface-visibility: hidden;
+}
+
+
+.back { 
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    background-color: transparent;
+    opacity: 0%;
+    padding: 30px;
+}
+
+
+.back a {
+    display: flex;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.card:hover .front img { /* Es lo que tarda el icono en ir para la izq*/
+    transition: 1s;
+    transform: translate(-100px)
+}
+
+.card:hover .back {
+    transition: 2s; /* Es lo q tarda en aparecer el texto*/
+    opacity: 90%;
+    color:black
+}
+
+.card:not(:hover) .front img {
+    transition: 1s;
+    transform: translate(0px)
+}
+
+.card:not(:hover) .back {
+    transition: 1s;
+    opacity: 0%;
+}
 
