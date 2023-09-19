@@ -36,21 +36,7 @@ h4 {
     margin-top: 15px;
 }
 
-.flex-container {
- 	display: flex;
-	flex:1;
- 	align-items: center;
-  	text-align: center;
- 	background-color: rgb(206, 234, 247);
- 	margin: 40px 50px;
- 	justify-content: center;
- 	padding: 20px;
- 	border-radius: 60px;
-  	box-shadow: 0 0 20px;
- 	border: 3px solid rgb(206, 234, 247);
- 	max-width: 600px;
-  	min-width: 300px;
-}
+
 
 .form {
 	min-width: 230px;;
@@ -59,6 +45,7 @@ h4 {
 	text-align: left;
 	padding: 10px;
 	padding-right: 35px;
+    
 }
 
 
@@ -80,53 +67,57 @@ label {
 	background-color:rgb(248, 238, 226);
 	text-align: left;
 	justify-content: center;
+    
+    
 }
 
 #botones {
 	display: flex;
 	justify-content: space-evenly;
+    
 	
 }
 
 svg {
   display: block;
   height: 70px;
+  
 }
 
 .form button[type="submit"] {
 	background-color: transparent;
-  margin-top: 10px;
+    margin-top: 10px;
 	margin-bottom: 15px;
 	opacity: 50%;
-  border: none;
-  cursor: pointer;
-  height: 100px;
+    border: none;
+    cursor: pointer;
+    height: 100px;
+    font-weight: 800;
 
 }
 
 .form button[type="reset"] {
 	background-color: transparent;
-  border: none;
-  cursor: pointer;
-  height: 100px;
-  margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    height: 100px;
+    margin-top: 10px;
 	margin-bottom: 15px;
+    font-weight: 800;
+    text-align: center;
 }
 
 button[type="submit"]:active{
 	background-color: rgb(248, 238, 226);
-	box-shadow: 0 0 20px;
 }
 
 button[type="reset"]:active{
 	background-color: rgb(248, 238, 226);
-	box-shadow: 0 0 20px;
 }
 
 button:hover {
 	background-color: #060625;
-	box-shadow: 0 0 20px;
-  border-radius: 10%;
+    border-radius: 10%;
 }
 
 /* ABAJO ES PARA LA FUNCIONALIDAD DE JAVA */
@@ -369,6 +360,7 @@ td {
 	width: 100%;
 	padding: 50px;
     background-color: rgb(206, 234, 247);
+    
 }
 
 .footer-content {
@@ -490,7 +482,6 @@ td {
     font-size: 30px;
     margin: 20px;
     color: black;
-
 }
 
 .card-content img {
@@ -531,9 +522,19 @@ td {
     font-weight: 500;
 }
 
+.texto-wsp {
+    color: green;
+}
+.texto-ig {
+    color: darkviolet;
+}
+.texto-email {
+    color: black
+}
+
 .card:hover .front img { /* Es lo que tarda el icono en ir para la izq*/
     transition: 1s;
-    transform: translate(-100px)
+    transform: translate(-90px)
 }
 
 .card:hover .back {
@@ -548,7 +549,60 @@ td {
 }
 
 .card:not(:hover) .back {
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0%;
+}
+
+.cerrar-form {
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    text-transform: uppercase;
+}
+
+.cerrar-form {
+    color: rgb(176, 29, 29);
+    font-weight: bold;
+    padding: 0px 5.5px 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(241, 103, 103);
+    cursor: pointer;
+}
+
+.cerrar-form:hover {
+    box-shadow: 0 4px 6px -2px rgba(241, 103, 103);
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.cerrar-form:not(:hover){
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+
+.flex-container {
+    display: none;
+   flex:1;
+    align-items: center;
+     text-align: center;
+    background-color: rgb(206, 234, 247);
+    margin: 40px 50px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 60px;
+     box-shadow: 0 0 20px;
+    border: 3px solid rgb(206, 234, 247);
+    max-width: 600px;
+     min-width: 300px;
+   transition: 2s;
+}
+
+
+
+
+.email-logo {
+    height: 90px;
 }
 
