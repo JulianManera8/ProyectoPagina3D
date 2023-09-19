@@ -74,8 +74,7 @@ label {
 #botones {
 	display: flex;
 	justify-content: space-evenly;
-    
-	
+    transition: 2s;
 }
 
 svg {
@@ -125,20 +124,33 @@ button:hover {
 
 p {
 	margin: auto;
-	color: rgb(239, 123, 123);
+	color: rgb(0, 0, 0);
 	font-size: 15px;
 	margin-top: -7px;
 	margin-bottom: 20px;
-	align-content: center;
 	align-content: center;
 	width: 70%;
 	padding: 10px;
 	border: 2px solid red;
 	text-align: center;
+    font-weight: 600;
 }
 
-.hidde {
+.hidden {
 	opacity: 0;;
+}
+.p-spinner {
+    border: none;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.spinner-container {
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+
 }
 
 .alertaBien {
@@ -148,7 +160,7 @@ p {
 	width: 80%;
 	text-align: center;
 	font-weight: bold;
-	margin-top: -55px;
+	margin-top: -100px;
 	margin-bottom: 20px;
 	margin-left: 60px;
 	background-color: #022a05;
@@ -584,22 +596,19 @@ td {
 
 .flex-container {
     display: none;
-   flex:1;
+    flex:1;
     align-items: center;
-     text-align: center;
+    text-align: center;
     background-color: rgb(206, 234, 247);
     margin: 40px 50px;
     justify-content: center;
     padding: 20px;
     border-radius: 60px;
-     box-shadow: 0 0 20px;
+    box-shadow: 0 0 20px;
     border: 3px solid rgb(206, 234, 247);
     max-width: 600px;
-     min-width: 300px;
-   transition: 2s;
+    min-width: 300px;
 }
-
-
 
 
 .email-logo {
