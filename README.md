@@ -18,8 +18,9 @@ FORMULARIO:
 + Hacer que el carrito muestre la info en la pestaña de contacto 
      (se me ocurre que podemos poner un domcontentload y q muestre lo que hay en el localStorage, IF si muestra algo entonces que muestre los botones, ELSE el p de no hay nada)
 
-+ Ponerle para contactar por instagram, igual que wsp
-+ IDEA: que la pestaña de contacto te ofrezca wsp, instagram y mail, vos toques cualquiera de los 3 iconos y, si tocas el d mail, que te desplace el formulario.
++ Terminar de darle los estilos a los 3 botones
++ Darle funcionalidad al formulario
+  
 
 
 
