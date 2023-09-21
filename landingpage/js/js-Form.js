@@ -3,13 +3,17 @@
 const seleccionarCorreo = document.querySelector('.texto-email');
 const visibilidadFormulario = document.querySelector('.flex-container');
 const cerrarForm = document.querySelector('.cerrar-form');
+const cardEmail = document.querySelector('.card-email');
 
 seleccionarCorreo.addEventListener('click', () => {
     visibilidadFormulario.style.display = 'flex';
+    cardEmail.classList.add('desplazar-iconoMail');
+
 })
 
 cerrarForm.addEventListener('click', () => {
     visibilidadFormulario.style.display = 'none'
+    cardEmail.classList.remove('desplazar-iconoMail');
 })
 
 
@@ -27,8 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonEnviar = document.querySelector('#botonEnviar');
     const botonReset = document.querySelector('#botonReset');
     const spinners = document.querySelector('#spinner');
+    const pSpinner = document.querySelector('#p-spinner');
 
     const correo = {
+        nombreApellido: '',
+        email: '',
         asunto: '',
         mensaje: '',
     }
@@ -36,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //EVENTOSLISTENEROS
     inputNombreApellido.addEventListener('input', validar);
-    inputEmail.addEventListener('input', validar);
+    inputEmail.addEventListener('change', validar);
     inputAsunto.addEventListener('input', validar);
     inputMensaje.addEventListener('input', validar);
     botonEnviar.addEventListener('click', enviarMail);
@@ -67,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         correo[e.target.name] = e.target.value.trim().toLowerCase();
+        console.log(correo);
         validarObjCorreo(correo);
 
     }
@@ -101,13 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function resetForm(e) {
-        const correo = {
-            asunto: '',
-            email:'',
-            mensaje: '',
-        }
+        e.preventDefault();
+
+        correo.nombreApellido = '';
+        correo.email = '';
+        correo.asunto = '';
+        correo.mensaje = '';
         
-        formulario.reset();
+        formulario.reset(); 
         validarObjCorreo(correo);
 
         const alertas = document.querySelectorAll('.alertaError');
@@ -134,9 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(function(){
                 formulario.removeChild(alertaBien);
                 botonEnviar.style.opacity = 100;
+                botonEnviar.disabled = true;
                 botonReset.style.opacity = 100;
                 cerrarForm.classList.remove('hidden');
-                resetForm();
+                formulario.reset();
+                
             }, 2000);
 
 
@@ -162,4 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+
+
+
+
+
 
