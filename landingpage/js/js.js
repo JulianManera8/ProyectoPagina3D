@@ -63,7 +63,7 @@ function sacarBotones() {
         botonPagarCarrito.classList.add('esconder');
 
         const nadaCarrito = document.createElement('p');
-        nadaCarrito.innerHTML = 'No hay nada en el carrito.';
+        nadaCarrito.innerHTML = 'No hay nada en el carrito';
         botonesCarrito.style.alignItems = 'center';
         divNadaCarrito.appendChild(nadaCarrito); 
         return;
