@@ -14,12 +14,15 @@
 body {
 	background-color:#f5f5f5;
     font-family: "Poppins", sans-serif;
+    min-height: 100vh;
 }
+
 
 .todo {
   display: flex;
   text-align: center;
   justify-content: center;
+  
 }
 
 .titulo {
@@ -37,7 +40,6 @@ h4 {
 }
 
 
-
 .form {
 	min-width: 230px;;
 	width: 100%;
@@ -45,6 +47,7 @@ h4 {
 	text-align: left;
 	padding: 10px;
 	padding-right: 35px;
+    min-height: auto;
     
 }
 
@@ -62,12 +65,12 @@ label {
 	padding: 15px;
 	margin: 10px 0px;
 	margin-bottom: 15px;
-  color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 	border-style: none;
 	background-color:rgb(248, 238, 226);
 	text-align: left;
 	justify-content: center;
-    
+    font-weight: 400;
     
 }
 
@@ -302,7 +305,7 @@ th, tr, td {
 th {
     padding: 15px;
     justify-content: space-evenly;
-    font-weight: 1200;
+    font-weight: bold;
     font-size: 20px;
 }
 
@@ -367,12 +370,17 @@ td {
 }
 
 /* ____________________________FOOTER____________________________ */
+.todo-footer {
+    position: absolute;
+    margin-bottom: -650px;
+    bottom: 0;
+    width: 100%;
+}
+
 .footer {
-	height: 200px;
 	width: 100%;
-	padding: 50px;
-    background-color: rgb(206, 234, 247);
-    
+	padding: 20px;
+    background-color: rgb(206, 234, 247);   
 }
 
 .footer-content {
@@ -585,12 +593,14 @@ td {
 .cerrar-form:hover {
     box-shadow: 0 4px 6px -2px rgba(241, 103, 103);
     background-color: transparent;
-    transition: 0.5s;
 }
 
 .cerrar-form:not(:hover){
     box-shadow: none;
-    transition: 0.5s;
+}
+
+.desplazar-iconoMail {
+    transform: translateY(250px);
 }
 
 
@@ -614,4 +624,5 @@ td {
 .email-logo {
     height: 90px;
 }
+
 
