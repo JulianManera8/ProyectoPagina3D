@@ -16,6 +16,7 @@ font-family: 'Poppins', sans-serif;
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f5f5f5 ;
+    
 }
 
 img {
@@ -23,7 +24,6 @@ img {
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -478,7 +478,6 @@ h2 {
     background-color: rgb(206, 234, 247);
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     
 }
 
@@ -517,6 +516,7 @@ h2 {
 @media (max-width: 902px) {
     .menu {
         padding: 20px;
+        justify-content: space-between;
     }
 
     .menu label {
@@ -547,7 +547,6 @@ h2 {
         border-bottom: 3px solid black;
         background-color: rgb(206, 234, 247);
         width: 100%;
-       
     }
 
     .logo {
@@ -648,3 +647,6 @@ h2 {
 
 }
     
+.paraMargin {
+    max-width: 1200px;
+}
