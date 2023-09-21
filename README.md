@@ -23,8 +23,7 @@ FORMULARIO:
      (se me ocurre que podemos poner un domcontentload y q muestre lo que hay en el localStorage, IF si muestra algo entonces que muestre los botones, ELSE el p de no hay nada)
 
 + Terminar de darle los estilos a los 3 botones
-+ Darle funcionalidad al formulario
-+ Hacer que aparezca y desaparezca mas fluido el form, no tan de una ahi pum
+
   
 
 
@@ -35,7 +34,6 @@ GALERIA DE CLIENTES:
 
 GENERAL:
 - Ver lo de las ofertas, si lo dejo o q hago 
-- QUE EL HEADER ME OCUPE TODO EL WIDTH (En pestaña inicio)
 - Productos con colores mas llamativos
 - Poner carteles emergentes tipo alarmas para llamar mas la atencion de ciertas cosas
 - Poner botyon flotante de wsp en inicio https://www.youtube.com/watch?v=fVeGYX6GWMU
