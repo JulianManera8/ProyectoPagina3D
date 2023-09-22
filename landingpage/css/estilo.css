@@ -139,27 +139,40 @@ td {
 }
 
 
-.pagar-carrito {
-    color: black;
+#vaciar-carrito {
+    padding: 5px 10px;
+    color: rgb(121, 6, 6);
+    text-decoration: none;
+    cursor: pointer;
     font-weight: 400;
     font-size: 20px;
 }
-
-#vaciar-carrito {
-    
-    padding: 5px 10px;
-    color: rgb(168, 9, 9);
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
+#vaciar-carrito:hover {
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
 }
 
+#vaciar-carrito:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.pagar-carrito {
+    color: rgb(13, 102, 31);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+}
 .pagar-carrito:hover {
     color: rgb(9, 172, 9);
-    padding: 5px;
-    box-shadow: 0 0 10px black;
-    transition: 2s;
+    transition: 0.5s;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.pagar-carrito:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
 }
 
 
@@ -188,6 +201,34 @@ td {
     box-shadow: none;
     transition: 0.5s;
 }
+
+.iracomprar {
+    color: black;
+    font-weight: 600;
+}
+
+.iracomprar:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    padding: 6px;
+    border-radius: 6%;
+}
+
+.iracomprar:active {
+    background-color: antiquewhite;
+}
+
+.p-subtotal {
+    text-align: right;
+    padding-right: 40px;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+
+span {
+    font-weight: 600;
+}
+
 
 .header-content {
     
@@ -328,15 +369,23 @@ td {
 
 .agregar-carrito {
     font-size: 15px;
+    font-weight: 600;
     text-align: center;
     margin-top: 50px;
     padding: 6px 11px;
-    background-color: rgb(7, 7, 7);
-    color: white;
+    background-color: rgb(206, 234, 247);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 7px;
 }
 
+.agregar-carrito:hover {
+    outline: 1px solid black;
+}
+
+.agregar-carrito:active {
+    background-color: antiquewhite;
+}
 
 .icons {
     display: flex;
