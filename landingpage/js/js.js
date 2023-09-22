@@ -7,6 +7,9 @@ const botonesCarrito = document.querySelector('.botones-carrito');
 const botonVaciarCarrito = document.querySelector('.vaciar-carrito');
 const botonPagarCarrito = document.querySelector('.pagar-carrito');
 const divNadaCarrito = document.querySelector('.nadaCarrito');
+const divSubtotal = document.querySelector('.subtotal');
+const spanSubtotal = document.querySelector('.precio-subtotal');
+
 
 const iconoCarrito = document.querySelector('#img-carrito');
 
@@ -61,14 +64,21 @@ function sacarBotones() {
     if (!contenedorCarrito.firstChild) {  
         botonVaciarCarrito.classList.add('esconder');
         botonPagarCarrito.classList.add('esconder');
+        divSubtotal.classList.add('esconder');
+        
 
         const nadaCarrito = document.createElement('p');
-        nadaCarrito.innerHTML = 'No hay nada en el carrito';
+        nadaCarrito.innerHTML = 'No hay nada en el carrito.';
+        nadaCarrito.innerHTML = 
+        '<p> No hay nada en el carrito</p> <br><a href="#lista-productos" class="iracomprar" > Ir a PRODUCTOS </a>';
+
         botonesCarrito.style.alignItems = 'center';
         divNadaCarrito.appendChild(nadaCarrito); 
         return;
         
-    }
+    } 
+
+
     
 }
 
@@ -101,6 +111,8 @@ function leerDatoProducto(producto) {
         cantidad: 1
     }
 
+    const precioBase = producto.querySelector('.precio').textContent;
+    
     //agregar la info al arreglo 
     //vamos a hacer que si agregamos dos veces el mismo producto, que nos sume una cantidad y no nos lo agregue de nuevo 
     
@@ -108,6 +120,7 @@ function leerDatoProducto(producto) {
         const productoRepetido = arregloProductos.map( producto => {
             if(producto.id === infoProducto.id) {
                 producto.cantidad++;
+                producto.precio = precioBase*producto.cantidad;
                 return producto;
             } else {
                 return producto;
@@ -127,6 +140,10 @@ function crearHTML() {
     //primero hay que hacer que no se dupliquen
     limpiarHTML();
 
+    //empezamos con para que muestre el total de lo sumado en el carrito
+    let subtotalCarrito = 0;
+
+
     //creamos el html para cada elemento del arreglo
     arregloProductos.forEach( producto => {
         const row = document.createElement('tr');
@@ -140,6 +157,9 @@ function crearHTML() {
 
         contenedorCarrito.appendChild(row)
 
+        //que me agregue los precios cada vez q sumo algo al subtotal
+        subtotalCarrito = subtotalCarrito + parseInt(producto.precio)
+
     });
 
     //que me saque los botones si no tengo productos en el carrito
@@ -150,12 +170,14 @@ function crearHTML() {
 
     //conectar localStorage
     sincronizarStorage(); 
+
+    //PARA QUE MUESTRE EN EL CARRITO EL SUBTOTAL
+    spanSubtotal.textContent = `${subtotalCarrito}`;
 }
 
 function sincronizarStorage() {
     localStorage.setItem('producto', JSON.stringify(arregloProductos))
 }
-
 
 
 //borrar producto del carrito desde la X
@@ -176,6 +198,7 @@ function borrarProducto(e) {
 function agregarBotones() {
     botonPagarCarrito.classList.remove('esconder')
     botonVaciarCarrito.classList.remove('esconder')
+    divSubtotal.classList.remove('esconder');
 }
 
 
