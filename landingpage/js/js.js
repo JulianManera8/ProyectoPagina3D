@@ -9,8 +9,6 @@ const botonPagarCarrito = document.querySelector('.pagar-carrito');
 const divNadaCarrito = document.querySelector('.nadaCarrito');
 const divSubtotal = document.querySelector('.subtotal');
 const spanSubtotal = document.querySelector('.precio-subtotal');
-
-
 const iconoCarrito = document.querySelector('#img-carrito');
 
 
@@ -202,7 +200,6 @@ function agregarBotones() {
 }
 
 
-
 //FUNCION PARA QUE NO SE REPITAN LOS ELEMENTOS EN EL CARRITO
 function limpiarHTML() {
     while (contenedorCarrito.firstChild) {
@@ -217,4 +214,5 @@ function limpiarPcarrito() {
     }
 }
 
+//TODO LO DEL ENVIO
 
