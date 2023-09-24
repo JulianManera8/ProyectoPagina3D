@@ -95,6 +95,9 @@ img {
     display: none;
 }
 
+/* _________________________CARRITO_____________________ */
+
+
 .submenu:hover #carrito {
     display: block;
     position: absolute;
@@ -114,6 +117,8 @@ img {
     justify-content: space-evenly;
     margin: 30px 0 20px 0;
     align-items: center;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 20px;
 }
 
 table {
@@ -166,12 +171,10 @@ td {
 .pagar-carrito:hover {
     color: rgb(9, 172, 9);
     transition: 0.5s;
-    box-shadow: 0 0 15px rgb(255, 255, 255);
     border-radius: 50%;
 }
 
 .pagar-carrito:not(:hover) {
-    box-shadow: none;
     transition: 0.5s;
 }
 
@@ -221,14 +224,83 @@ td {
 .p-subtotal {
     text-align: right;
     padding-right: 40px;
-    border-bottom: 1px solid black;
-    padding-bottom: 4px;
+    padding-bottom: 25px;
 }
-
 span {
     font-weight: 600;
 }
 
+.p-totalenvio {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.calcular {
+    padding: 3px 5px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    border-radius: 30%;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgb(255, 255, 255);
+}
+
+.calcular:hover {
+    background-color: antiquewhite;
+    transition: 1s;   
+    box-shadow: none;
+}
+
+.calcular:not(:hover) {
+    background-color: transparent;
+    transition: 1s;
+    box-shadow: 0 10px 15px rgb(255, 255, 255);
+}
+
+.mostrarEnvio {
+    display: flex;
+    justify-content: right;
+    border: none;
+}
+
+.probarOtro{
+    border: none;
+    margin: 0px 40px 30px 0;
+}
+
+
+.calculoEnvio-provincia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.chekers-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+}
+.realizarCalculo {
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.calculoEnvio-label {
+    display: block !important;   
+}
+
+.p-calculoEnvio {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.calcularEnvio2 {
+    margin-top: 15px;
+}
+
+/* ____________________________________________________________ */
 
 .header-content {
     
