@@ -19,7 +19,7 @@
             <div class="menu container">
                 <a href="#" class="logo"> PD Impresiones </a>
                 <input type="checkbox" id="menu" />
-                <label for="menu">
+                <label for="menu" class="labelhide">
                     <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
                 </label>
 
@@ -50,7 +50,32 @@
                                 </table>
                                 <div class="subtotal">
                                     <br>
-                                    <p class="p-subtotal"> Subtotal:   $<span class="precio-subtotal"> </span></p>
+                                    <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
+                                    <div class="mostrarEnvio"> 
+                                        <input type="submit" value="probar otro" class="probarOtro calcular " id="probarOtroEnvio"><p class="p-subtotal p-totalenvio"> Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
+                                    </div>
+
+                                    <div class="calculoEnvio-provincia">
+                                 
+                                        <p class="p-calculoEnvio">Seleccione su provincia</p>
+                        
+                                        <div class="chekers-container">
+                                            <div  class="chekersProvincia">
+                                                <label for="santafe" class="calculoEnvio-label">Santa Fe</label>
+                                                    <input type="radio" name="tipo" id="santafe">
+                                                </label>
+                                            </div>
+                                            <div class="chekersProvincia">
+                                                <label for="otraProvincia" class="calculoEnvio-label">Otra provincia</label>
+                                                    <input type="radio" name="tipo" id="otraProvincia">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="calcularEnvio2-container">
+                                            <input type="button" value="CALCULAR" class="calcularEnvio2 calcular" id="calcularEnvio2">
+                                        </div>
+                                        
+                                    </div>
                                 </div>
 
 
@@ -199,7 +224,7 @@
                 </div>
                 <div class="icon-txt">
                     <h3> Envios a todo el país </h3>
-                    <p> Podes fijarte cuanto sale en nuestro <a href="#" class="btn-2"> cotizador de envios.</a></p>
+                    <p> Utilisamos Correo Argentino. El envio se calcula en base a: el peso total del paquete, y si el destino de envio es regional (dentro de la provincia de Santa Fe) o al resto del pais. Podes encontrar los precios e info actualizada haciendo<a href="#" class="btn-2"> click aqui</a></p>
                 </div>
             </div>
 
@@ -208,8 +233,8 @@
                     <img src="landingpage/images/IconStar.svg" alt="">
                 </div>
                 <div class="icon-txt">
-                    <h3> Calidad asegurada </h3>
-                    <p> Contactese con nosotros mediante el <a href="index-Form.html" class="btn-2"> formulario de consultas.</a></p>
+                    <h3> Atencion en todo momento </h3>
+                    <p> Contactese mediante cualquiera de nuestras<a href="index-Form.html" class="btn-2"> opciones de contacto.</a> Respoderemos lo antes posible!</p>
                 </div>
             </div>
 
