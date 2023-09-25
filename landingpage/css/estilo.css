@@ -180,7 +180,7 @@ td {
 
 
 .esconder {
-    display: none;
+    display: none !important;
 }
 
 .nadaCarrito {
