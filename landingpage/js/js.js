@@ -215,4 +215,32 @@ function limpiarPcarrito() {
 }
 
 //TODO LO DEL ENVIO
+const divCalculoEnvio = document.getElementById('divCalculoEnvio');
+const btnProbarOtro = document.getElementById('probarOtroEnvio');
+const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
+const spanEnvio = document.querySelector('.numero-envioTotal')
+const chekProvincia = document.querySelector('provincia')
+const chekProvinciaSantafe = document.querySelector('input[name="tipo-provinciaSfe"]').value
+const chekProvinciaOtra = document.querySelector('input[name="tipo-otraProvincia"]').value
+const chekCiudad = document.querySelector('ciudad')
+const chekCiudadRosario = document.querySelector('input[name="tipo-ciudadRosario"]').value
+const chekCiudadOtra = document.querySelector('input[name="tipo-otraCiudad"]').value;
+
+
+eventosEnvio();
+function eventosEnvio() {
+    btnCalcularEnvio1.addEventListener('click', mostrarCalcularEnvio)
+
+    
+
+
+}
+
+function mostrarCalcularEnvio() {
+    divCalculoEnvio.classList.remove('esconder');
+    btnCalcularEnvio1.classList.add('esconder');
+    spanEnvio.textContent = '...';
+
+    
+}
 
