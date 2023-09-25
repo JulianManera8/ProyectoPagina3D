@@ -52,25 +52,36 @@
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <input type="submit" value="probar otro" class="probarOtro calcular " id="probarOtroEnvio"><p class="p-subtotal p-totalenvio"> Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
+                                        <input type="submit" value="probar otro" class="probarOtro calcular esconder" id="probarOtroEnvio" ><p class="p-subtotal p-totalenvio"> Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
                                     </div>
 
-                                    <div class="calculoEnvio-provincia">
+                                    <div class="calculoEnvio-provincia esconder" id="divCalculoEnvio">
                                  
                                         <p class="p-calculoEnvio">Seleccione su provincia</p>
                         
                                         <div class="chekers-container">
-                                            <div  class="chekersProvincia">
+                                            <div  class="chekersProvincia"  id="provincia">
                                                 <label for="santafe" class="calculoEnvio-label">Santa Fe</label>
-                                                    <input type="radio" name="tipo" id="santafe">
+                                                    <input type="radio" name="tipo-provinciaSfe" id="provinciaSantafe" value="provincia Santa fe">
                                                 </label>
                                             </div>
-                                            <div class="chekersProvincia">
+                                            <div class="chekersProvincia" id="provincia">
                                                 <label for="otraProvincia" class="calculoEnvio-label">Otra provincia</label>
-                                                    <input type="radio" name="tipo" id="otraProvincia">
+                                                    <input type="radio" name="tipo-otraProvincia" id="otraProvincia" value="otra Provincia">
+                                                </label>
+                                            </div>
+                                            <div  class="chekersProvincia esconder" id="ciudad">
+                                                <label for="santafe" class="calculoEnvio-label">Rosario</label>
+                                                    <input type="radio" name="tipo-ciudadRosario" id="ciudadRosario" value="ciudad Rosario">
+                                                </label>
+                                            </div>
+                                            <div  class="chekersProvincia esconder" id="ciudad">
+                                                <label for="santafe" class="calculoEnvio-label">Otra ciudad/localidad</label>
+                                                    <input type="radio" name="tipo-otraCiudad" id="otraCiudad" value="otra Ciudad">
                                                 </label>
                                             </div>
                                         </div>
+
                                         <div class="calcularEnvio2-container">
                                             <input type="button" value="CALCULAR" class="calcularEnvio2 calcular" id="calcularEnvio2">
                                         </div>
@@ -225,6 +236,7 @@
                 <div class="icon-txt">
                     <h3> Envios a todo el país </h3>
                     <p> Utilisamos Correo Argentino. El envio se calcula en base a: el peso total del paquete, y si el destino de envio es regional (dentro de la provincia de Santa Fe) o al resto del pais. Podes encontrar los precios e info actualizada haciendo<a href="#" class="btn-2"> click aqui</a></p>
+                    <p> Si sos de Rosario, el envio es gratis!</p>
                 </div>
             </div>
 
