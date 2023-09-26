@@ -1,25 +1,21 @@
 # ProyectoPagina3D
 
 CARRITO:
-- Darle funcionalidad al boton de pagar: CREAR TODO LO DE PAGO
++ Darle funcionalidad al boton de pagar: CREAR TODO LO DE PAGO
 
-    + Que el carrito sea onclick, no hover pq es medio molesto
++ Para sumar y restar cantidades, en donde esta la cantidad, puedo poner un div en esa cantidad, y agregarle al elemento de cantidad, dos botones que sean un - y un +, cuando tocas uno, resta la cantidad, y vicebersa, que eso me impacte en el total tmb
+    https://www.youtube.com/watch?v=ThpUZSA64BA minuto 20 maome aparece como hacer esto
 
 
     + Buscar como se pone todo lo de seleccionar envio y todo eso
-        - Usar este enlace de chatgpt (https://chat.openai.com/share/d267899d-a39f-43d8-b517-b0f638eee67a) para poner lo del envio, pero basicamente es hacer parecido al proyecto de cotizar un seguro segun distintos precios y cosas asi 
-        - que use un multiplechoice entre Santafe y otra provincia, pq de eso depende un precio u otro, y el otro factor es el peso del carrito en total.
+        
+        - que use un multiplechoice entre Santafe y otra provincia, pq de eso depende un precio u otro.
 
         - que me calcule el envio en un boton abajo del subtotal, ponerlo todo en la misma funcion donde me muestra el subtotal
         y que valida que este ese puesto, sino no deje seguir con la compra.
 
-        - DARLE FUNCIONALIDAD A LOS BOTONES DEL ENVIO, QUE MUESTRE Y DEJE DE MOSTRARLOS Y ASI, usar classlist.add.remove 'esconder' para mostrarlos y dejar de mostrarlos.
+        - DARLE MEJOR ESTILO A LOS BOTONES DE "CALCULAR" ENVIO
         
-
-    + IDEA:
-        - Cuando tocas el boton de pago, que ahi mismo en el carrito, se  desplace mas para abajo el tema de coordinar el envio por wsp (ver como poner eso del envio ahi sino) y despues que aparezca directamente lo del boton de ir a pagar propio de mercado pago, abajo poner un boton de "cancelar" y que se des-despliegue eso y vuelva  a quedar solo los botondes de vaciar o ir a pagar.
-
-    
 
 
 
