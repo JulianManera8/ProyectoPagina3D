@@ -11,123 +11,152 @@
 
 <body class="main-container">
 
-<div class="TODOMENOSFOOTER">
-        <div class="menu container">
-            <a href="index.html" class="logo"> PD Impresiones </a>
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
-            </label>
+  
+    <div class="menu container">
+        <a href="index.html" class="logo"> PD Impresiones </a>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
+        </label>
 
-            <nav class="navbar">
-                <ul>
-                    <li> <a href="index.html"> INICIO </a> </li>
-                    <li> <a href="#lista-productos"> PRODUCTOS </a> </li>
-                    <li> <a href="index-Form.html"> CONTACTO </a> </li>
-                    <li> <a href="#sobre-nosotros"> NOSOTROS </a> </li>
-                </ul>
-            </nav>
-            <div>
-                <ul>
-                    <li class="submenu">
-                        <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
-                        <div id="carrito">
-                            <table id="lista-carrito">
-                                <thead>
-                                    <tr>
-                                        <th> Imagen </th>
-                                        <th> Nombre </th>
-                                        <th> Precio </th>
-                                        <th> Cantidad </th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                            <div class="botones-carrito"> 
+        <nav class="navbar">
+            <ul>
+                <li> <a href="index.html"> INICIO </a> </li>
+                <li> <a href="#lista-productos"> PRODUCTOS </a> </li>
+                <li> <a href="index-Form.html"> CONTACTO </a> </li>
+                <li> <a href="#sobre-nosotros"> NOSOTROS </a> </li>
+            </ul>
+        </nav>
+        <div>
+            <ul>
+                <li class="submenu"> 
 
-                                <div class="btn-vaciarCarrito"> 
-                                    <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
+                    <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
+                    <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="40px" class="esconder">
+                    
+                    <div id="carrito">
+                        <table id="lista-carrito">
+                            <thead>
+                                <tr>
+                                    <th> Imagen </th>
+                                    <th> Nombre </th>
+                                    <th> Precio </th>
+                                    <th> Cantidad </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div class="subtotal">
+                            <br>
+                            <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
+                            <div class="mostrarEnvio"> 
+                                <input type="submit" value="probar otro" class="probarOtro calcular esconder" id="probarOtroEnvio" >
+                                <p class="p-subtotal p-totalenvio"> *Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
+                                
+                            </div>
+
+                            <div class="calculoEnvio-provincia esconder" id="divCalculoEnvio">
+
+                                <div class="chekers-container">
+                                    <div  class="chekersProvincia"  id="provincia">
+                                        <label for="santafe" class="calculoEnvio-label">Escribe tu codigo postal</label>
+                                        <input type="number" name="tipo-codigoPostal" id="codigoPostal">
+                                    </div>
                                 </div>
-                                <div class="nadaCarrito">
-                                    <!-- ACA VA EL P CUANDO NO HAY NADA -->
+
+                                <div class="calcularEnvio2-container">
+                                    <input type="button" value="CALCULAR" class="calcularEnvio2 calcular" id="calcularEnvio2">
                                 </div>
-                                <div class="btn-pagarCarrito"> 
-                                    <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
-                                </div>
+                                
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
+
+
+                        <div class="botones-carrito"> 
+
+                            <div class="btn-vaciarCarrito"> 
+                                <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
+                            </div>
+                            <div class="nadaCarrito">
+                                <!-- ACA VA EL P CUANDO NO HAY NADA -->
+                            </div>
+                            <div class="btn-pagarCarrito"> 
+                                <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
+                            </div>
+                        </div>
+                        <div class="p-container">
+                            <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="#blog" class="a-pMostrarEnvio">blog. </a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
+    </div>
 
 
 <!-- ACA EMPIEZA EL MAIN -->
 
-        <h1 class="titulo"> CONTACTO </h1>
+    <h1 class="titulo"> CONTACTO </h1>
 
-        <h4 class="explicacion"> Puedes contactarnos haciendo click en cualquiera de nuestras 3 opciones</h4>
 
+<div class="todomenosfooter">
     <div class="card-containers"> <!-- este seria class="card-container" -->
-        
-        <div class="todo card-content"> 
-            <div class="card">
-                <div class="front"> <!-- este seria class="card" -->
-                    <img src="landingpage/images/wsp.svg">
-                </div>  <!-- este seria class="card" -->
-                <div class="back"> 
-                    <a href="https://wa.me/543413076880" target="_blank" class="texto-wsp">Enviar Whatsapp</a>
-                </div> 
-            </div>    
+
+        <div class="wsp-ig">
+            <div class="todo card-content"> 
+                <div class="card">
+                    <div class="front"> <!-- este seria class="card" -->
+                        <img src="landingpage/images/wsp.svg">
+                    </div>  <!-- este seria class="card" -->
+                    <div class="back"> 
+                        <a href="https://wa.me/543413076880" target="_blank" class="texto-wsp">Enviar Whatsapp</a>
+                    </div> 
+                </div>    
+            </div>
+            
+            <div class="todo card-content"> 
+                <div class="card">
+                    <div class="front"> <!-- este seria class="card" -->
+                        <img src="landingpage/images/insta.svg"> </a>
+                    </div>  <!-- este seria class="card" -->
+                    <div class="back"> 
+                        <a href="https://www.instagram.com/juli.manera/" target="_blank" class="texto-ig">Contactar por instagram</a>
+                    </div> 
+                </div>    
+            </div>
         </div>
         
-        <div class="todo card-content"> 
-            <div class="card">
-                <div class="front"> <!-- este seria class="card" -->
-                    <img src="landingpage/images/insta.svg"> </a>
-                </div>  <!-- este seria class="card" -->
-                <div class="back"> 
-                    <a href="https://www.instagram.com/juli.manera/" target="_blank" class="texto-ig">Contactar por instagram</a>
-                </div> 
-            </div>    
-        </div>
         
         <div class="todo card-content container-email"> 
-            
-            <div class="card card-email">
-                <div class="front">
-                    <img src="landingpage/images/email.svg" class="email-logo" alt="email" width="75px"  >
-                </div>
-                <div class="back">
-                    <a href="#" class="texto-email">Enviar correo electronico</a>
-                </div>
+        
+            <div class="tituloForm">
+                <h3> Puedes contactanos via correo electronico si prefieres </h3>
             </div>
         
-            <div class="flex-container ocultar-form">
+            <div class="flex-container">
             
                 <!-- action="https://formsubmit.co/julianmanera1889@gmail.com" method="POST" -->
                 <form class="form" id="formulario">
-                    <div class="form-section">
-                        <label for="nombreApellido" class="label">Nombre y apellido </label>
-                        <input class="form__input" type="text" id="nombreApellido" name="nombreApellido">
+                    <div class="input-group">
+                        <label for="nombreApellido" class="user-label labelNombreApelido">Nombre y apellido </label>
+                        <input class="input" type="text" id="nombreApellido" name="nombreApellido">
                     </div>
-                    <div class="form-section">
-                        <label for="email" class="label">Correo electronico </label>
-                        <input class="form__input" type="email" id="email" name="email" autocomplete="email">
+                    <div class="input-group">
+                        <label for="email" class="user-label labelEmail">Correo electronico </label>
+                        <input class="input" type="email" id="email" name="email" autocomplete="email">
                     </div>
-    
-                    <div class="form-section">
-                        <label for="asunto" class="label">Asunto del correo </label>
-                        <input class="form__input" type="text" id="asunto" name="asunto">
-                    </div>
-    
-                    <div class="form-section">
-                        <label for="mensaje" class="label">Mensaje del correo </label>
-                        <input class="form__input" id="mensaje" type="textarea" name="mensaje">
+                    <div class="input-group">
+                        <label for="asunto" class="user-label labelAsunto">Asunto del correo </label>
+                        <input class="input" type="text" id="asunto" name="asunto">
                     </div>
     
-                    <div class="form-section" id="botones">
+                    <div class="input-group">
+                        <label for="mensaje" class="user-label labelMensaje">Mensaje del correo </label>
+                        <input class="input" id="mensaje" type="textarea" name="mensaje">
+                    </div>
+    
+                    <div class="" id="botones">
                         
                         <button 
                             type="submit"
@@ -157,9 +186,6 @@
                         </button>
                     
                     </div>
-                    <div class="form-section" id="botones">
-                        <button class="cerrar-form" type="close"> Cerrar </button>
-                    </div>
                     
                     <!-- <input type="hidden" name="_next" value="https://127.0.0.1:5500"> 
                     <input type="hidden" name="_captcha" value="false"> -->
@@ -171,48 +197,50 @@
         </div>
 
     </div>    
+</div> 
+    
         
-        <div class="todo-footer">
-            <footer class="footer">
-                <div class="footer-content container">
+    <div class="todo-footer">
+        <footer class="footer">
+            <div class="footer-content container">
 
-                    <div class="link">
-                        <h3> Redes sociales </h3>
-                        <ul>
-                            <li> <a href="#"> Insta </a> </li>
-                            <li> <a href="#"> Facebook </a> </li>
-                            <li> <a href="#"> Whatsapp </a> </li>
+                <div class="link">
+                    <h3> Redes sociales </h3>
+                    <ul>
+                        <li> <a href="#"> Insta </a> </li>
+                        <li> <a href="#"> Facebook </a> </li>
+                        <li> <a href="#"> Whatsapp </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
                         </ul>
-                    </div>
-                    <div class="link">
-                        <h3> Lorem </h3>
-                        <ul>
-                            <li> <a href="#"> lorem  </a> </li>
-                            <li> <a href="#"> lorem </a> </li>
-                            <li> <a href="#"> lorem </a> </li>
-                        </ul>
-                    </div>
-                    <div class="link">
-                        <h3> Lorem </h3>
-                        <ul>
-                            <li> <a href="#"> lorem  </a> </li>
-                            <li> <a href="#"> lorem </a> </li>
-                            <li> <a href="#"> lorem </a> </li>
-                        </ul>
-                    </div>
-                    <div class="link">
-                        <h3> Lorem </h3>
-                        <ul>
-                            <li> <a href="#"> lorem  </a> </li>
-                            <li> <a href="#"> lorem </a> </li>
-                            <li> <a href="#"> lorem </a> </li>
-                            </ul>
-                    </div>
-
                 </div>
 
-            </footer>
-        </div>
+            </div>
+
+        </footer>
+    </div>
 </div>
 
 </body>
