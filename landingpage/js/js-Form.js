@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     const correo = {
-        nombreApellido: '',
+        
         email: '',
         asunto: '',
         mensaje: '',
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //EVENTOSLISTENEROS
     inputNombreApellido.addEventListener('input', validar);
-    inputEmail.addEventListener('change', validar);
+    inputEmail.addEventListener('input', validar);
     inputAsunto.addEventListener('input', validar);
     inputMensaje.addEventListener('input', validar);
     botonEnviar.addEventListener('click', enviarMail);
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarError(`Tienes que completar el ${e.target.name}`, e.target.parentElement);
             correo[e.target.name] = '';
             validarObjCorreo(correo);
+            moverLabel(e.target.parentElement);
             return
         } 
 
@@ -52,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         limpiarAlertas(e.target.parentElement);
+        restablecerLabel(e.target.parentElement);
 
         correo[e.target.name] = e.target.value.trim().toLowerCase();
-        console.log(correo);
         validarObjCorreo(correo);
-
+        console.log(correo)
     }
 
 
@@ -91,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetForm(e) {
         e.preventDefault();
 
-        correo.nombreApellido = '';
         correo.email = '';
         correo.asunto = '';
         correo.mensaje = '';
@@ -103,6 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         alertas.forEach( function(alert) {
             alert.remove();
         })
+
+        labelRestar();
     }
 
 
@@ -125,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 botonEnviar.style.opacity = 100;
                 botonEnviar.disabled = true;
                 botonReset.style.opacity = 100;
-                
+                labelRestar();
                 formulario.reset();
             }, 2000);
         }, 2000)
@@ -141,24 +143,40 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    
-  
+    function moverLabel(ubicacion) {
+        const colorInput = ubicacion.querySelector('.input');
+        const labelCambiar  = ubicacion.querySelector('.user-label');
+        colorInput.style.border = "2px solid red";
+        labelCambiar.style.color = 'red';
+        return
+    }
 
-    inputNombreApellido.onclick = () => {
-        labelNombreApellido.style.transform = 'translateY(-9px)';
+    function restablecerLabel(ubicacion) {
+        const colorInput = ubicacion.querySelector('.input');
+        const labelCambiar  = ubicacion.querySelector('.user-label');
+        colorInput.style.border = "3px solid green";
+        labelCambiar.style.color = 'green';
+        return
     }
-    
-    inputEmail.onclick = () => {
-        labelEmail.style.transform = 'translateY(-9px)';
+
+    function labelRestar() {
+        inputNombreApellido.style.border = "2px solid black";
+        inputAsunto.style.border = "2px solid black"
+        inputEmail.style.border = "2px solid black"
+        inputMensaje.style.border = "2px solid black"
+
+        labelNombreApellido.style.color = "black";
+        labelAsunto.style.color = "black"
+        labelEmail.style.color = "black"
+        labelMensaje.style.color = "black"
+
+
     }
-    
-    inputAsunto.onclick = () => {
-        labelAsunto.style.transform = 'translateY(-9px)';
-    }
-    inputMensaje.onclick = () => {
-        labelMensaje.style.transform = 'translateY(-9px)';
-    }
-});
+
+
+
+
+})
 
 
 
