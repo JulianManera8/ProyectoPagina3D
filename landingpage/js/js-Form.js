@@ -1,37 +1,23 @@
-//darle la visibilidad al formulario cuando toquemos en enviar correo electronico
-//es lo primero de todo
-const seleccionarCorreo = document.querySelector('.texto-email');
-const visibilidadFormulario = document.querySelector('.flex-container');
-const cerrarForm = document.querySelector('.cerrar-form');
-const cardEmail = document.querySelector('.card-email');
-
-seleccionarCorreo.addEventListener('click', () => {
-    visibilidadFormulario.style.display = 'flex';
-    cardEmail.classList.add('desplazar-iconoMail');
-
-})
-
-cerrarForm.addEventListener('click', () => {
-    visibilidadFormulario.style.display = 'none'
-    cardEmail.classList.remove('desplazar-iconoMail');
-})
-
 
 //ACA EMPIEZA LA PARTE DE FUNCIONALIDAD DEL FORM
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
     //VARIABLES
     const formulario = document.querySelector('#formulario')
     const inputNombreApellido = document.querySelector('#nombreApellido');
+    const labelNombreApellido = document.querySelector('.labelNombreApelido');
     const inputEmail = document.querySelector('#email');
+    const labelEmail = document.querySelector('.labelEmail');
     const inputAsunto = document.querySelector('#asunto');
+    const labelAsunto = document.querySelector('.labelAsunto');
     const inputMensaje = document.querySelector('#mensaje');
+    const labelMensaje = document.querySelector('.labelMensaje');
     const botonEnviar = document.querySelector('#botonEnviar');
     const botonReset = document.querySelector('#botonReset');
     const spinners = document.querySelector('#spinner');
     const pSpinner = document.querySelector('#p-spinner');
+    
 
     const correo = {
         nombreApellido: '',
@@ -40,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mensaje: '',
     }
 
-
     //EVENTOSLISTENEROS
     inputNombreApellido.addEventListener('input', validar);
     inputEmail.addEventListener('change', validar);
@@ -48,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     inputMensaje.addEventListener('input', validar);
     botonEnviar.addEventListener('click', enviarMail);
     botonReset.addEventListener('click', resetForm);
-
-
 
     //FUNCIONES
     function validar(e) {
@@ -61,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         } 
 
-
         if (e.target.id === 'email' && !validarEmail(e.target.value)) {
             mostrarError(`Tienes que escribir bien el email`, e.target.parentElement);
             correo[e.target.name] = '';
@@ -69,9 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-
         limpiarAlertas(e.target.parentElement);
-
 
         correo[e.target.name] = e.target.value.trim().toLowerCase();
         console.log(correo);
@@ -131,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         botonEnviar.style.opacity = 0;
         botonReset.style.opacity = 0;
         spinners.classList.remove('hidden');
-        cerrarForm.classList.add('hidden');
+        
 
         setTimeout(function(){
             spinners.classList.add('hidden');
@@ -145,16 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 botonEnviar.style.opacity = 100;
                 botonEnviar.disabled = true;
                 botonReset.style.opacity = 100;
-                cerrarForm.classList.remove('hidden');
-                formulario.reset();
                 
+                formulario.reset();
             }, 2000);
-
-
         }, 2000)
-
-        
-        
     }
 
 
@@ -167,12 +141,31 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    
+  
 
-
-
-
-
+    inputNombreApellido.onclick = () => {
+        labelNombreApellido.style.transform = 'translateY(-9px)';
+    }
+    
+    inputEmail.onclick = () => {
+        labelEmail.style.transform = 'translateY(-9px)';
+    }
+    
+    inputAsunto.onclick = () => {
+        labelAsunto.style.transform = 'translateY(-9px)';
+    }
+    inputMensaje.onclick = () => {
+        labelMensaje.style.transform = 'translateY(-9px)';
+    }
 });
+
+
+
+
+
+
+
 
 
 
