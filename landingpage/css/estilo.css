@@ -87,25 +87,31 @@ img {
     display: none;
 }
 
-.submenu {
+/* _________________________CARRITO_____________________ */
+
+.submenu { /*Logo de carrito*/
     position: relative;
 }
 
 .submenu #carrito {
     display: none;
+    overflow-y: auto;
+}
+#img-carrito, #img-close {
+    cursor: pointer;
 }
 
-/* _________________________CARRITO_____________________ */
 
-
-.submenu:hover #carrito {
+.submenu.active #carrito {
     display: block;
     position: absolute;
     right: 0;
-    background-color:rgb(206, 234, 247);
+    height: 80vh;
+    overflow-y: auto;
+    background-color:rgb(230, 242, 247);
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 0 0 20px;
-    background-color: blur(10px);
+    margin-top: 28.5px;    
     z-index: 0.5;
     padding: 20px;
     min-width: 200px;
@@ -114,6 +120,8 @@ img {
 
 .botones-carrito {
     display: flex;
+    
+    bottom: 0;
     justify-content: space-evenly;
     margin: 30px 0 20px 0;
     align-items: center;
@@ -236,31 +244,44 @@ span {
 }
 
 .calcular {
+    font-weight: 800;
     padding: 3px 5px;
     margin-left: 10px;
     border: none;
     background-color: transparent;
-    border-radius: 30%;
     cursor: pointer;
-    box-shadow: 0 10px 15px rgb(255, 255, 255);
+    box-shadow: 0px 7px 15px rgb(134, 196, 223, 0.5);
 }
-
 .calcular:hover {
-    background-color: antiquewhite;
-    transition: 1s;   
-    box-shadow: none;
+    box-shadow: 0px 0px 15px rgb(82, 122, 139);
+    transition: 1s;
 }
 
 .calcular:not(:hover) {
-    background-color: transparent;
+    box-shadow: 0px 7px 15px rgb(134, 196, 223, 0.5);
     transition: 1s;
-    box-shadow: 0 10px 15px rgb(255, 255, 255);
 }
 
 .mostrarEnvio {
     display: flex;
     justify-content: right;
     border: none;
+    flex-direction: row-reverse;
+}
+
+.p-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin: 45px 0 20px 0;
+}
+
+.p-mostrarEnvio {
+    width: 80%;
+    font-size: 18px;
+    justify-content: left;
 }
 
 .probarOtro{
@@ -269,31 +290,14 @@ span {
 }
 
 
-.calculoEnvio-provincia {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.chekers-container{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-evenly;
-}
-.realizarCalculo {
-    padding: 6px;
-    border: none;
-    cursor: pointer;
-}
-
 .calculoEnvio-label {
-    display: block !important;   
+    display: block !important;
+    margin-bottom: 10px;   
 }
 
-.p-calculoEnvio {
-    font-weight: 800;
-    text-decoration: underline;
+.a-pMostrarEnvio {
+   font-weight: 800;
+   text-decoration: underline;
 }
 
 .calcularEnvio2 {
@@ -673,6 +677,7 @@ h2 {
     .logo {
         display: none;
     }
+
 
     .submenu:hover #lista-carrito {
         max-width: 100%;
