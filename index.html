@@ -33,8 +33,11 @@
                 </nav>
                 <div>
                     <ul>
-                        <li class="submenu">
+                        <li class="submenu"> 
+
                             <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
+                            <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="40px" class="esconder">
+                            
                             <div id="carrito">
                                 <table id="lista-carrito">
                                     <thead>
@@ -52,33 +55,17 @@
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <input type="submit" value="probar otro" class="probarOtro calcular esconder" id="probarOtroEnvio" ><p class="p-subtotal p-totalenvio"> Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
+                                        <input type="submit" value="probar otro" class="probarOtro calcular esconder" id="probarOtroEnvio" >
+                                        <p class="p-subtotal p-totalenvio"> *Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
+                                        
                                     </div>
 
                                     <div class="calculoEnvio-provincia esconder" id="divCalculoEnvio">
-                                 
-                                        <p class="p-calculoEnvio">Seleccione su provincia</p>
-                        
+
                                         <div class="chekers-container">
                                             <div  class="chekersProvincia"  id="provincia">
-                                                <label for="santafe" class="calculoEnvio-label">Santa Fe</label>
-                                                    <input type="radio" name="tipo-provinciaSfe" id="provinciaSantafe" value="provincia Santa fe">
-                                                </label>
-                                            </div>
-                                            <div class="chekersProvincia" id="provincia">
-                                                <label for="otraProvincia" class="calculoEnvio-label">Otra provincia</label>
-                                                    <input type="radio" name="tipo-otraProvincia" id="otraProvincia" value="otra Provincia">
-                                                </label>
-                                            </div>
-                                            <div  class="chekersProvincia esconder" id="ciudad">
-                                                <label for="santafe" class="calculoEnvio-label">Rosario</label>
-                                                    <input type="radio" name="tipo-ciudadRosario" id="ciudadRosario" value="ciudad Rosario">
-                                                </label>
-                                            </div>
-                                            <div  class="chekersProvincia esconder" id="ciudad">
-                                                <label for="santafe" class="calculoEnvio-label">Otra ciudad/localidad</label>
-                                                    <input type="radio" name="tipo-otraCiudad" id="otraCiudad" value="otra Ciudad">
-                                                </label>
+                                                <label for="santafe" class="calculoEnvio-label">Escribe tu codigo postal</label>
+                                                <input type="number" name="tipo-codigoPostal" id="codigoPostal" value="Codigo postal">
                                             </div>
                                         </div>
 
@@ -101,6 +88,9 @@
                                     <div class="btn-pagarCarrito"> 
                                         <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
                                     </div>
+                                </div>
+                                <div class="p-container">
+                                    <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="#blog" class="a-pMostrarEnvio">blog. </a></p>
                                 </div>
                             </div>
                         </li>
@@ -227,7 +217,7 @@
         <!-- HASTA ACA LA LISTA DE LOS PRODUCTOS -->
         
 
-        <section class="icons container paraMargin">
+        <section class="icons container paraMargin" id="blog">
 
             <div class="icon-1">
                 <div class="icon-img">
@@ -235,7 +225,8 @@
                 </div>
                 <div class="icon-txt">
                     <h3> Envios a todo el país </h3>
-                    <p> Utilisamos Correo Argentino. El envio se calcula en base a: el peso total del paquete, y si el destino de envio es regional (dentro de la provincia de Santa Fe) o al resto del pais. Podes encontrar los precios e info actualizada haciendo<a href="#" class="btn-2"> click aqui</a></p>
+                    <p> Utilisamos Correo Argentino. </p>
+                    <p> Si sos de la provincia Santa Fe, el envio es el regional y cuesta $2800, para el resto de provincias cuesta $3800.</p>
                     <p> Si sos de Rosario, el envio es gratis!</p>
                 </div>
             </div>
