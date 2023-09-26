@@ -60,7 +60,7 @@
 
                                 <div class="chekers-container">
                                     <div  class="chekersProvincia"  id="provincia">
-                                        <label for="santafe" class="calculoEnvio-label">Escribe tu codigo postal</label>
+                                        <label for="codigoPostal" class="calculoEnvio-label">Escribe tu codigo postal</label>
                                         <input type="number" name="tipo-codigoPostal" id="codigoPostal">
                                     </div>
                                 </div>
@@ -102,9 +102,10 @@
 
 <div class="todomenosfooter">
     <div class="card-containers"> <!-- este seria class="card-container" -->
-
         <div class="wsp-ig">
-            <div class="todo card-content"> 
+            <h3 class="p-titulocontactowspig">Nos puedes contactar mediante un Whatsapp o un mensaje directo a nuestro Instagram</h3>
+           
+            <div class="todo card-content wspeig "> 
                 <div class="card">
                     <div class="front"> <!-- este seria class="card" -->
                         <img src="landingpage/images/wsp.svg">
@@ -115,7 +116,7 @@
                 </div>    
             </div>
             
-            <div class="todo card-content"> 
+            <div class="todo card-content wspeig"> 
                 <div class="card">
                     <div class="front"> <!-- este seria class="card" -->
                         <img src="landingpage/images/insta.svg"> </a>
@@ -131,7 +132,7 @@
         <div class="todo card-content container-email"> 
         
             <div class="tituloForm">
-                <h3> Puedes contactanos via correo electronico si prefieres </h3>
+                <h3> Tambien puedes contactarnos via correo electronico si prefieres </h3>
             </div>
         
             <div class="flex-container">
@@ -139,21 +140,21 @@
                 <!-- action="https://formsubmit.co/julianmanera1889@gmail.com" method="POST" -->
                 <form class="form" id="formulario">
                     <div class="input-group">
+                        <input class="input" type="text" id="nombreApellido" name="Nombre y Apellido" required="">
                         <label for="nombreApellido" class="user-label labelNombreApelido">Nombre y apellido </label>
-                        <input class="input" type="text" id="nombreApellido" name="nombreApellido">
                     </div>
                     <div class="input-group">
+                        <input class="input" type="text" id="email" name="email" autocomplete="email" required="">
                         <label for="email" class="user-label labelEmail">Correo electronico </label>
-                        <input class="input" type="email" id="email" name="email" autocomplete="email">
                     </div>
                     <div class="input-group">
+                        <input class="input" type="text" id="asunto" name="asunto" required="">
                         <label for="asunto" class="user-label labelAsunto">Asunto del correo </label>
-                        <input class="input" type="text" id="asunto" name="asunto">
                     </div>
     
                     <div class="input-group">
+                        <input class="input" id="mensaje" type="textarea" name="mensaje" required="">
                         <label for="mensaje" class="user-label labelMensaje">Mensaje del correo </label>
-                        <input class="input" id="mensaje" type="textarea" name="mensaje">
                     </div>
     
                     <div class="" id="botones">
