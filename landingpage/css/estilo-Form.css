@@ -18,159 +18,19 @@ body {
 }
 
 
-.todo {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  
-}
 
 .titulo {
-	color: black;
+	color: rgb(0, 0, 0);
   	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   	font-size: 60px;
   	font-weight: 600;
 	text-align: center;
 	margin-top: 130px;
-}
-
-h4 {
-    text-align: center;
-    margin-top: 15px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
 }
 
 
-.form {
-	min-width: 230px;;
-	width: 100%;
-	flex: 1;
-	text-align: left;
-	padding: 10px;
-	padding-right: 35px;
-    min-height: auto;
-    
-}
-
-
-label {
-  position: relative;
-	color: rgb(0, 0, 0);
-  font-weight: 400;
-}
-
-
-.form__input {
-  position: inherit;
-	width: 100%;
-	padding: 15px;
-	margin: 10px 0px;
-	margin-bottom: 15px;
-    color: rgb(0, 0, 0);
-	border-style: none;
-	background-color:rgb(248, 238, 226);
-	text-align: left;
-	justify-content: center;
-    font-weight: 400;
-    
-}
-
-#botones {
-	display: flex;
-	justify-content: space-evenly;
-    transition: 2s;
-}
-
-svg {
-  display: block;
-  height: 70px;
-  
-}
-
-.form button[type="submit"] {
-	background-color: transparent;
-    margin-top: 10px;
-	margin-bottom: 15px;
-	opacity: 50%;
-    border: none;
-    cursor: pointer;
-    height: 100px;
-    font-weight: 800;
-
-}
-
-.form button[type="reset"] {
-	background-color: transparent;
-    border: none;
-    cursor: pointer;
-    height: 100px;
-    margin-top: 10px;
-	margin-bottom: 15px;
-    font-weight: 800;
-    text-align: center;
-}
-
-button[type="submit"]:active{
-	background-color: rgb(248, 238, 226);
-}
-
-button[type="reset"]:active{
-	background-color: rgb(248, 238, 226);
-}
-
-button:hover {
-	background-color: #060625;
-    border-radius: 10%;
-}
-
-/* ABAJO ES PARA LA FUNCIONALIDAD DE JAVA */
-
-
-p {
-	margin: auto;
-	color: rgb(0, 0, 0);
-	font-size: 15px;
-	margin-top: -7px;
-	margin-bottom: 20px;
-	align-content: center;
-	width: 70%;
-	padding: 10px;
-	border: 2px solid red;
-	text-align: center;
-    font-weight: 600;
-}
-
-.hidden {
-	opacity: 0;;
-}
-.p-spinner {
-    border: none;
-    font-size: 20px;
-    margin-left: 20px;
-}
-
-.spinner-container {
-    display: flex;
-    margin-top: 30px;
-    text-align: center;
-    justify-content: center;
-
-}
-
-.alertaBien {
-	color: white;
-	border: 3px solid black;
-	padding: 20px;
-	width: 80%;
-	text-align: center;
-	font-weight: bold;
-	margin-top: -100px;
-	margin-bottom: 20px;
-	margin-left: 60px;
-	background-color: #022a05;
-	display: flex;
-	justify-content: center;
-
-}
 
 /* ________________________LOADER__________________________________ */
 
@@ -262,22 +122,29 @@ p {
     display: none;
 }
 
-.submenu {
+.submenu { /*Logo de carrito*/
     position: relative;
 }
 
 .submenu #carrito {
     display: none;
+    overflow-y: auto;
+}
+#img-carrito, #img-close {
+    cursor: pointer;
 }
 
-.submenu:hover #carrito {
+
+.submenu.active #carrito {
     display: block;
     position: absolute;
     right: 0;
-    background-color:rgb(206, 234, 247);
+    height: 80vh;
+    overflow-y: auto;
+    background-color:rgb(230, 242, 247);
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 0 0 20px;
-    background-color: blur(10px);
+    margin-top: 28.5px;    
     z-index: 0.5;
     padding: 20px;
     min-width: 200px;
@@ -286,9 +153,13 @@ p {
 
 .botones-carrito {
     display: flex;
+    
+    bottom: 0;
     justify-content: space-evenly;
     margin: 30px 0 20px 0;
     align-items: center;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 20px;
 }
 
 table {
@@ -305,7 +176,7 @@ th, tr, td {
 th {
     padding: 15px;
     justify-content: space-evenly;
-    font-weight: bold;
+    font-weight: 1200;
     font-size: 20px;
 }
 
@@ -314,32 +185,43 @@ td {
 }
 
 
-.pagar-carrito {
-    color: black;
+#vaciar-carrito {
+    padding: 5px 10px;
+    color: rgb(121, 6, 6);
+    text-decoration: none;
+    cursor: pointer;
     font-weight: 400;
     font-size: 20px;
 }
-
-#vaciar-carrito {
-    
-    padding: 5px 10px;
-    color: rgb(168, 9, 9);
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
+#vaciar-carrito:hover {
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
 }
 
+#vaciar-carrito:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.pagar-carrito {
+    color: rgb(13, 102, 31);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+}
 .pagar-carrito:hover {
     color: rgb(9, 172, 9);
-    padding: 5px;
-    box-shadow: 0 0 10px black;
-    transition: 2s;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.pagar-carrito:not(:hover) {
+    transition: 0.5s;
 }
 
 
 .esconder {
-    display: none;
+    display: none !important;
 }
 
 .nadaCarrito {
@@ -364,6 +246,98 @@ td {
     transition: 0.5s;
 }
 
+.iracomprar {
+    color: black;
+    font-weight: 600;
+}
+
+.iracomprar:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    padding: 6px;
+    border-radius: 6%;
+}
+
+.iracomprar:active {
+    background-color: antiquewhite;
+}
+
+.p-subtotal {
+    text-align: right;
+    padding-right: 40px;
+    padding-bottom: 25px;
+}
+span {
+    font-weight: 600;
+}
+
+.p-totalenvio {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.calcular {
+    font-weight: 800;
+    padding: 3px 5px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0px 7px 15px rgb(134, 196, 223, 0.5);
+}
+.calcular:hover {
+    box-shadow: 0px 0px 15px rgb(82, 122, 139);
+    transition: 1s;
+}
+
+.calcular:not(:hover) {
+    box-shadow: 0px 7px 15px rgb(134, 196, 223, 0.5);
+    transition: 1s;
+}
+
+.mostrarEnvio {
+    display: flex;
+    justify-content: right;
+    border: none;
+    flex-direction: row-reverse;
+}
+
+.p-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin: 45px 0 20px 0;
+}
+
+.p-mostrarEnvio {
+    width: 80%;
+    font-size: 18px;
+    justify-content: left;
+}
+
+.probarOtro{
+    border: none;
+    margin: 0px 40px 30px 0;
+}
+
+
+.calculoEnvio-label {
+    display: block !important;
+    margin-bottom: 10px;   
+}
+
+.a-pMostrarEnvio {
+   font-weight: 800;
+   text-decoration: underline;
+}
+
+.calcularEnvio2 {
+    margin-top: 15px;
+}
+
+
 .menu .titulo .todo {
 	flex: 1;
 	flex-direction: column;
@@ -372,7 +346,7 @@ td {
 /* ____________________________FOOTER____________________________ */
 .todo-footer {
     position: absolute;
-    margin-bottom: -650px;
+    margin-bottom: -350px;
     bottom: 0;
     width: 100%;
 }
@@ -435,7 +409,7 @@ td {
         border-bottom: 3px solid black;
         background-color: rgb(206, 234, 247);
         width: 100%;
-       
+    
     }
 
     .logo {
@@ -469,7 +443,31 @@ td {
         font-size: 50px;
     }
 
-
+    .card:hover .front img { /* Es lo que tarda el icono en ir para la izq*/
+        transition: 1s;
+        transform: translateY(900px)
+    }
+    
+    .card:hover .back {
+        transition: 2s; /* Es lo q tarda en aparecer el texto*/
+        opacity: 90%;
+        color:black
+    }
+    
+    .card:not(:hover) .front img {
+        transition: 1s;
+        transform: translate(0px)
+    }
+    
+    .card:not(:hover) .back {
+        transition: 0.5s;
+        opacity: 0%;
+    }
+    
+    .desplazar-iconoMail {
+        transform: translate(208px, 20px);
+        transition: 1s;
+    }
 
     .footer {
 		display: flex;
@@ -488,14 +486,21 @@ td {
 
 /* __________________ ANIMACION DE LOS ICONOCS____________________ */
 
-.cards-containers {
-    display: flex;
+.card-containers {
+    display: flex !important;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    flex-basis: calc(33.3% - 30px);
+    flex-direction: row !important;
+    justify-content: space-around;
+    margin-top: 60px;
 } 
 
+.wsp-ig {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left:100px;
+    margin-right: 30px;
+}
 
 .card-content h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -548,9 +553,6 @@ td {
 .texto-ig {
     color: darkviolet;
 }
-.texto-email {
-    color: black
-}
 
 .card:hover .front img { /* Es lo que tarda el icono en ir para la izq*/
     transition: 1s;
@@ -573,56 +575,161 @@ td {
     opacity: 0%;
 }
 
-.cerrar-form {
-    padding: 10px;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    border: none;
-    text-transform: uppercase;
-}
-
-.cerrar-form {
-    color: rgb(176, 29, 29);
-    font-weight: bold;
-    padding: 0px 5.5px 0 5px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgb(241, 103, 103);
-    cursor: pointer;
-}
-
-.cerrar-form:hover {
-    box-shadow: 0 4px 6px -2px rgba(241, 103, 103);
-    background-color: transparent;
-}
-
-.cerrar-form:not(:hover){
-    box-shadow: none;
-}
-
-.desplazar-iconoMail {
-    transform: translateY(250px);
-}
-
 
 .flex-container {
-    display: none;
-    flex:1;
-    align-items: center;
-    text-align: center;
     background-color: rgb(206, 234, 247);
-    margin: 40px 50px;
-    justify-content: center;
+    margin: 40px 0;
     padding: 20px;
     border-radius: 60px;
     box-shadow: 0 0 20px;
     border: 3px solid rgb(206, 234, 247);
-    max-width: 600px;
+    max-width: 500px;
     min-width: 300px;
 }
 
 
-.email-logo {
-    height: 90px;
+.tituloForm {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 500px;
+    margin-bottom: -20px;
+}
+
+.form {
+	min-width: 200px;
+	width: 100%;
+	padding: 10px;
+    min-height: auto;
+}
+
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    color: #000000;
+    font-weight: 400;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+.input-group {
+    position: relative;
+}
+.input {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 15px;
+    color: #ff0000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input:focus  {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+}
+
+
+#botones {
+	display: flex;
+	justify-content: space-evenly;
+    margin: 0 50px;
+    transition: 2s;
+}
+
+svg {
+  display: block;
+  height: 70px;
+  
+}
+
+.form button[type="submit"] {
+	background-color: transparent;
+    margin-top: 10px;
+	margin-bottom: 15px;
+	opacity: 50%;
+    border: none;
+    cursor: pointer;
+    height: 100px;
+    font-weight: 800;
+}
+
+.form button[type="reset"] {
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100px;
+    margin-top: 10px;
+	margin-bottom: 15px;
+    font-weight: 800;
+    text-align: center;
+}
+
+button[type="submit"]:active{
+	background-color: rgb(248, 238, 226);
+}
+
+button[type="reset"]:active{
+	background-color: rgb(248, 238, 226);
+}
+
+button:hover {
+	background-color: #060625;
+    border-radius: 10%;
+}
+
+/* ABAJO ES PARA LA FUNCIONALIDAD DE JAVA */
+
+
+p {
+	margin: auto;
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	margin-top: -7px;
+	margin-bottom: 20px;
+	align-content: center;
+	width: 70%;
+	padding: 10px;
+	border: 2px solid red;
+	text-align: center;
+    font-weight: 600;
+}
+
+.hidden {
+	opacity: 0;;
+}
+.p-spinner {
+    border: none;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.spinner-container {
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.alertaBien {
+	color: white;
+	border: 3px solid black;
+	padding: 20px;
+	width: 80%;
+	text-align: center;
+	font-weight: bold;
+	margin-top: -100px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+	background-color: #022a05;
+	display: flex;
+	justify-content: center;
+
 }
 
 
