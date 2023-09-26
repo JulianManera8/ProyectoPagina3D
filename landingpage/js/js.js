@@ -10,6 +10,11 @@ const divNadaCarrito = document.querySelector('.nadaCarrito');
 const divSubtotal = document.querySelector('.subtotal');
 const spanSubtotal = document.querySelector('.precio-subtotal');
 const iconoCarrito = document.querySelector('#img-carrito');
+const imgCarrito = document.getElementById('img-carrito');
+const imgCerrarCarrito = document.getElementById('img-close');
+const submenuCarrito = document.querySelector('.submenu')
+
+const pMostrarEnvio = document.querySelector('.p-mostrarEnvio')
 
 
 let arregloProductos = [];
@@ -56,6 +61,25 @@ function crearEventos() {
 
 }
 
+//mostrar y cerrar carrito
+imgCarrito.onclick = () => {
+   
+    submenuCarrito.classList.add('active');
+    imgCarrito.classList.add('esconder');
+    imgCerrarCarrito.classList.remove('esconder');
+    
+    
+}
+
+imgCerrarCarrito.onclick = () => {
+   
+    submenuCarrito.classList.remove('active');
+    imgCerrarCarrito.classList.add('esconder')
+    imgCarrito.classList.remove('esconder') 
+  
+}
+
+//que no hata botones de pagar y vaciar si no hay elementos
 function sacarBotones() {    
     limpiarPcarrito();
 
@@ -63,6 +87,7 @@ function sacarBotones() {
         botonVaciarCarrito.classList.add('esconder');
         botonPagarCarrito.classList.add('esconder');
         divSubtotal.classList.add('esconder');
+        pMostrarEnvio.classList.add('esconder');
         
 
         const nadaCarrito = document.createElement('p');
@@ -197,6 +222,7 @@ function agregarBotones() {
     botonPagarCarrito.classList.remove('esconder')
     botonVaciarCarrito.classList.remove('esconder')
     divSubtotal.classList.remove('esconder');
+    pMostrarEnvio.classList.remove('esconder');
 }
 
 
@@ -219,12 +245,7 @@ const divCalculoEnvio = document.getElementById('divCalculoEnvio');
 const btnProbarOtro = document.getElementById('probarOtroEnvio');
 const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
 const spanEnvio = document.querySelector('.numero-envioTotal')
-const chekProvincia = document.querySelector('provincia')
-const chekProvinciaSantafe = document.querySelector('input[name="tipo-provinciaSfe"]').value
-const chekProvinciaOtra = document.querySelector('input[name="tipo-otraProvincia"]').value
-const chekCiudad = document.querySelector('ciudad')
-const chekCiudadRosario = document.querySelector('input[name="tipo-ciudadRosario"]').value
-const chekCiudadOtra = document.querySelector('input[name="tipo-otraCiudad"]').value;
+
 
 
 eventosEnvio();
