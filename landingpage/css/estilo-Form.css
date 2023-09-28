@@ -109,6 +109,8 @@ body {
     font-weight: 400;
 }
 
+
+
 #menu {
     display: none;
 }
@@ -692,17 +694,15 @@ svg {
 }
 
 button[type="submit"]:active{
-	background-color: rgb(248, 238, 226);
+	height:70%;
+    transition: 0.2s;
 }
 
 button[type="reset"]:active{
-	background-color: rgb(248, 238, 226);
+	height:70%;
+    transition: 0.2s;
 }
 
-button:hover {
-	background-color: #060625;
-    border-radius: 10%;
-}
 
 /* ABAJO ES PARA LA FUNCIONALIDAD DE JAVA */
 
@@ -780,4 +780,14 @@ p {
     height: 330px;
     margin-right: -150px;
 
+}
+.li-navbar:hover {
+    font-weight: 600 !important;
+    box-shadow: 4px 8px 5px antiquewhite;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+.li-navbar:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
 }
