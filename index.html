@@ -25,10 +25,10 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li> <a href="#"> INICIO </a> </li>
-                        <li> <a href="#lista-productos"> PRODUCTOS </a> </li>
-                        <li> <a href="index-Form.html"> CONTACTO </a> </li>
-                        <li> <a href="#sobre-nosotros"> NOSOTROS </a> </li>
+                        <li> <a href="#" class="li-navbar"> INICIO </a> </li>
+                        <li> <a href="#lista-productos" class="li-navbar"> PRODUCTOS </a> </li>
+                        <li> <a href="index-Form.html" class="li-navbar"> CONTACTO </a> </li>
+                        <li> <a href="#sobre-nosotros" class="li-navbar"> NOSOTROS </a> </li>
                     </ul>
                 </nav>
                 <div>
@@ -56,7 +56,14 @@
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
                                     <div class="mostrarEnvio"> 
                                         <input type="submit" value="probar otro" class="probarOtro calcular esconder" id="probarOtroEnvio" >
-                                        <p class="p-subtotal p-totalenvio"> *Envio: $<span class="numero-envioTotal"><input type="button" value="CALCULAR" class="calcular" id="calcularEnvio1"> </span></p>
+                                        <p class="p-subtotal p-totalenvio"> * Envio: $<span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                            </svg>
+                                            <div class="text">
+                                              Calcular
+                                            </div>   
+                                          </button> </span></p>
                                         
                                     </div>
 
@@ -69,9 +76,14 @@
                                             </div>
                                         </div>
 
-                                        <div class="calcularEnvio2-container">
-                                            <input type="button" value="CALCULAR" class="calcularEnvio2 calcular" id="calcularEnvio2">
-                                        </div>
+                                        <button class="button calcular btn-2" id="calcularEnvio1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                            </svg>
+                                            <div class="text">
+                                              Calcular
+                                            </div>   
+                                          </button>
                                         
                                     </div>
                                 </div>
