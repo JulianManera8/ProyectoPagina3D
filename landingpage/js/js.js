@@ -16,7 +16,6 @@ const submenuCarrito = document.querySelector('.submenu')
 
 const pMostrarEnvio = document.querySelector('.p-mostrarEnvio')
 
-
 let arregloProductos = [];
 const objProducto = {
     img: '',
@@ -31,7 +30,7 @@ crearEventos();
 function crearEventos() {
     
     //agregar producto seleccionado al carrito
-    listaCursos.addEventListener('click',agregarCurso);
+    listaCursos.addEventListener('click', agregarCurso);
 
     //borrar producto desde la X desde el carrito
     contenedorCarrito.addEventListener('click', borrarProducto);
@@ -63,20 +62,14 @@ function crearEventos() {
 
 //mostrar y cerrar carrito
 imgCarrito.onclick = () => {
-   
     submenuCarrito.classList.add('active');
     imgCarrito.classList.add('esconder');
     imgCerrarCarrito.classList.remove('esconder');
-    
-    
 }
-
 imgCerrarCarrito.onclick = () => {
-   
     submenuCarrito.classList.remove('active');
     imgCerrarCarrito.classList.add('esconder')
     imgCarrito.classList.remove('esconder') 
-  
 }
 
 //que no hata botones de pagar y vaciar si no hay elementos
@@ -134,8 +127,8 @@ function leerDatoProducto(producto) {
         cantidad: 1
     }
 
-    const precioBase = producto.querySelector('.precio').textContent;
-    
+    let precioBase = producto.querySelector('.precio').textContent;
+    precioBase = parseInt(precioBase)
     //agregar la info al arreglo 
     //vamos a hacer que si agregamos dos veces el mismo producto, que nos sume una cantidad y no nos lo agregue de nuevo 
     
@@ -155,33 +148,62 @@ function leerDatoProducto(producto) {
     }
     
     //le pasamos el arreglo a la funcion crearHTML para justamente crear el html del carrito
-    crearHTML();
+    crearHTML(producto.precio, infoProducto);
 }
 
 
-function crearHTML() {
+function crearHTML(precio) {
     //primero hay que hacer que no se dupliquen
+    
     limpiarHTML();
-
+    
     //empezamos con para que muestre el total de lo sumado en el carrito
     let subtotalCarrito = 0;
 
-
     //creamos el html para cada elemento del arreglo
     arregloProductos.forEach( producto => {
+
+        let precioBase = document.querySelector('.precio').textContent;
+        precioBase = parseInt(precioBase)
+
         const row = document.createElement('tr');
         row.innerHTML =  `
         <td> <img src="${producto.imagen}" width=100px> </td>
         <td> ${producto.nombre} </td>
         <td> ${producto.$}${producto.precio} </td>
-        <td> ${producto.cantidad} </td>
+        <td> <span class="restar"> - </span> <span>${producto.cantidad}</span> <span class="sumar" > + </span></td>
         <td> <a href="#" class="borrar-curso" data-id="${producto.id}"> X </a></td>
         `;
 
         contenedorCarrito.appendChild(row)
+     
+        //funcionalidad botones de - y + cantidades
+        
+        const restar = row.querySelector('.restar')
+        const sumar = row.querySelector('.sumar')
+
+        restar.addEventListener('click', () => {
+            if(producto.cantidad !== 1) {
+                producto.cantidad--;
+                producto.precio = precioBase * producto.cantidad
+                crearHTML();
+            } 
+            
+        });
+        
+        sumar.addEventListener('click', () => {
+            producto.cantidad++;
+            producto.precio = precioBase * producto.cantidad
+            crearHTML();
+
+        });
+
 
         //que me agregue los precios cada vez q sumo algo al subtotal
         subtotalCarrito = subtotalCarrito + parseInt(producto.precio)
+
+
+
 
     });
 
@@ -247,21 +269,14 @@ const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
 const spanEnvio = document.querySelector('.numero-envioTotal')
 
 
-
 eventosEnvio();
 function eventosEnvio() {
     btnCalcularEnvio1.addEventListener('click', mostrarCalcularEnvio)
-
-    
-
-
 }
 
 function mostrarCalcularEnvio() {
     divCalculoEnvio.classList.remove('esconder');
     btnCalcularEnvio1.classList.add('esconder');
     spanEnvio.textContent = '...';
-
-    
 }
 
