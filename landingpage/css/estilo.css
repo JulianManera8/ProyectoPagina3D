@@ -137,20 +137,32 @@ table {
 
 th, tr, td {
     padding: 15px;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 th {
     padding: 15px;
-    justify-content: space-evenly;
+    justify-content: center;
     font-weight: 1200;
     font-size: 20px;
 }
 
+
 td {
-    font-size: 18px;
+    font-size: 22px;
+    
 }
 
+.restar { 
+    cursor: pointer;
+    padding: 5px;
+}
+    
+
+.sumar {
+    cursor: pointer;
+    padding: 5px;    
+}
 
 #vaciar-carrito {
     padding: 5px 10px;
