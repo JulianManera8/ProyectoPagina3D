@@ -55,7 +55,6 @@
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <input type="submit" value="probar otro" class="probarOtro calcular esconder" id="probarOtroEnvio" >
                                         <p class="p-subtotal p-totalenvio"> * Envio: $<span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
@@ -63,20 +62,46 @@
                                             <div class="text">
                                               Calcular
                                             </div>   
-                                          </button> </span></p>
-                                        
+                                          </button> </span>
+                                        </p>
                                     </div>
 
                                     <div class="calculoEnvio-provincia esconder" id="divCalculoEnvio">
 
-                                        <div class="chekers-container">
-                                            <div  class="chekersProvincia"  id="provincia">
-                                                <label for="codigoPostal" class="calculoEnvio-label">Escribe tu codigo postal</label>
-                                                <input type="number" name="tipo-codigoPostal" id="codigoPostal">
+                                        <div class="checkers-container">
+                                            <div class="check-provinciasContainer">
+                                                <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
+                                                <div class="check-provinciasContent">
+                                                    <div>
+                                                        <label class="label-checked" for="santaFe">Santa Fe</label>
+                                                            <input type="radio" name="provincia" value="Santa Fe" id="santaFe" >
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="label-checked" for="otraProvincia">Otra provincia</label>
+                                                        <input type="radio" name="provincia" value="Otra provincia" id="otraProvincia">
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="check-provinciasContainer esconder">
+                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
+                                                <div class="check-provinciasContent">
+                                                    <div>
+                                                        <label class="label-checked" for="rosario">Rosario</label>
+                                                            <input type="radio" name="ciudad" value="rosario" id="rosario">
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="label-checked" for="otraCiudad">Otra ciudad/localidad</label>
+                                                        <input type="radio" name="provincia" value="otraCiudad" id="otraCiudad">
+                                                    </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <button class="button calcular btn-2" id="calcularEnvio1">
+                                        <button class="button calcular btn-2" id="calcularEnvio1" disabled>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                                             </svg>
@@ -239,7 +264,7 @@
                     <h3> Envios a todo el país </h3>
                     <p> Utilisamos Correo Argentino. </p>
                     <p> Si sos de la provincia Santa Fe, el envio es el regional y cuesta $2800, para el resto de provincias cuesta $3800.</p>
-                    <p> Si sos de Rosario, el envio es gratis!</p>
+                    <p> Si sos de Rosario, el envio lo coordinamos por Whatsapp</p>
                 </div>
             </div>
 
