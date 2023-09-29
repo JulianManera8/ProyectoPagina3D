@@ -12,7 +12,9 @@ const spanSubtotal = document.querySelector('.precio-subtotal');
 const iconoCarrito = document.querySelector('#img-carrito');
 const imgCarrito = document.getElementById('img-carrito');
 const imgCerrarCarrito = document.getElementById('img-close');
-const submenuCarrito = document.querySelector('.submenu')
+const submenuCarrito = document.querySelector('.submenu');
+const spanTotal = document.querySelector('#totalCarrito');
+let totalCarrito = 0;
 
 const pMostrarEnvio = document.querySelector('.p-mostrarEnvio')
 
@@ -202,9 +204,6 @@ function crearHTML(precio) {
         //que me agregue los precios cada vez q sumo algo al subtotal
         subtotalCarrito = subtotalCarrito + parseInt(producto.precio)
 
-
-
-
     });
 
     //que me saque los botones si no tengo productos en el carrito
@@ -218,6 +217,8 @@ function crearHTML(precio) {
 
     //PARA QUE MUESTRE EN EL CARRITO EL SUBTOTAL
     spanSubtotal.textContent = `${subtotalCarrito}`;
+    calcularTotal(subtotalCarrito.textContent);
+
 }
 
 function sincronizarStorage() {
@@ -268,17 +269,13 @@ const btnProbarOtro = document.getElementById('probarOtroEnvio');
 const divSelecProvincia = document.querySelector('.divSelecProvincia');
 const divSelecCiudad = document.querySelector('.divSelecCiudad');
 const divSelecTipoenvio = document.querySelector('.divSelecTipoenvio');
-
-
+const pTotal = document.querySelector('.totalApagar')
 const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
 const btnCalcularEnvio2 = document.getElementById('calcularEnvio2')
 const spanEnvio = document.querySelector('.numero-envioTotal')
-
 const opciones = document.querySelectorAll('input[name="opciones"]');
-
-
-
-
+let opcionSeleccionada;
+let totalEnvio = 0;
 
 eventosEnvio();
 function eventosEnvio() {
@@ -301,7 +298,7 @@ function mostrarCalcularEnvio() {
 }
 
 function leerCheck() {
-    let opcionSeleccionada;
+    
 
     for (const opcion of opciones) {
         if (opcion.checked) {
@@ -309,36 +306,69 @@ function leerCheck() {
 
             if(opcionSeleccionada === 'Santa Fe') {
                 divSelecProvincia.classList.add('esconder')
-                divSelecCiudad.classList.remove('esconder')        
+                divSelecCiudad.classList.remove('esconder') 
+
+                
             } else if ( opcionSeleccionada === 'Otra provincia') {
                 spanEnvio.textContent = '$ 3800'
                 divCalculoEnvio.classList.add('esconder')
                 btnProbarOtro.classList.remove('esconder')
+                pTotal.classList.remove('esconder')
+                totalEnvio = 3800
+                calcularTotal('',totalEnvio)
+                spanTotal.classList.remove('esconder')
+
             } else if ( opcionSeleccionada === 'Rosario') {
                 divSelecTipoenvio.classList.remove('esconder')
                 divSelecCiudad.classList.add('esconder')
+
+
             } else if (opcionSeleccionada === 'otraCiudad') {
+                totalEnvio=2800
                 spanEnvio.textContent = '$ 2800'
                 divCalculoEnvio.classList.add('esconder')
                 btnProbarOtro.classList.remove('esconder')
+                pTotal.classList.remove('esconder')
+                calcularTotal('',totalEnvio)
+                spanTotal.classList.remove('esconder')
+
             } else if(opcionSeleccionada === 'retiro') {
+                totalEnvio=0
                 spanEnvio.textContent = '$ 0';
                 divCalculoEnvio.classList.add('esconder')
                 btnProbarOtro.classList.remove('esconder')
+                pTotal.classList.remove('esconder')
+                calcularTotal('',totalEnvio)
+                spanTotal.classList.remove('esconder')
+
             } else if(opcionSeleccionada === 'domicilio') {
+                totalEnvio = 600
                 spanEnvio.textContent = '$ 600'
                 divCalculoEnvio.classList.add('esconder')
                 btnProbarOtro.classList.remove('esconder')
+                pTotal.classList.remove('esconder')
+                calcularTotal('',totalEnvio)
+                spanTotal.classList.remove('esconder')
             }
 
             break; // Termina la iteración cuando encuentres la opción seleccionada
         }
     }
+    //spanTotal.textContent = spanSubtotal+spanEnvio
     
 }
 
 function resetCalculo() {
-    
-    console.log('wef')
+    mostrarCalcularEnvio();
+    opciones.forEach(opcion => opcion.checked = false);
+    btnProbarOtro.classList.add('esconder')
+    spanTotal.classList.add('esconder')
+
+    return;
 }
+
+function calcularTotal() {
+    spanTotal.textContent = parseInt(spanSubtotal.textContent) + totalEnvio
+}
+
 
