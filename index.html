@@ -55,7 +55,7 @@
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <p class="p-subtotal p-totalenvio"> * Envio: $<span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                        <p class="p-subtotal p-totalenvio"> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                                             </svg>
@@ -66,51 +66,67 @@
                                         </p>
                                     </div>
 
-                                    <div class="calculoEnvio-provincia esconder" id="divCalculoEnvio">
+                                    <div class="calculoEnvio esconder" id="divCalculoEnvio">
 
                                         <div class="checkers-container">
-                                            <div class="check-provinciasContainer">
+                                            <div class="check-provinciasContainer divSelecProvincia" >
                                                 <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
                                                 <div class="check-provinciasContent">
                                                     <div>
                                                         <label class="label-checked" for="santaFe">Santa Fe</label>
-                                                            <input type="radio" name="provincia" value="Santa Fe" id="santaFe" >
+                                                            <input type="radio" name="opciones" value="Santa Fe" id="santaFe">
                                                         </label>
                                                     </div>
                                                     <div>
                                                         <label class="label-checked" for="otraProvincia">Otra provincia</label>
-                                                        <input type="radio" name="provincia" value="Otra provincia" id="otraProvincia">
+                                                        <input type="radio" name="opciones" value="Otra provincia" id="otraProvincia">
                                                     </label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="check-provinciasContainer esconder">
+                                            <div class="check-provinciasContainer esconder divSelecCiudad" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
                                                 <div class="check-provinciasContent">
                                                     <div>
                                                         <label class="label-checked" for="rosario">Rosario</label>
-                                                            <input type="radio" name="ciudad" value="rosario" id="rosario">
+                                                            <input type="radio" name="opciones" value="Rosario" id="rosario">
                                                         </label>
                                                     </div>
                                                     <div>
                                                         <label class="label-checked" for="otraCiudad">Otra ciudad/localidad</label>
-                                                        <input type="radio" name="provincia" value="otraCiudad" id="otraCiudad">
+                                                        <input type="radio" name="opciones" value="otraCiudad" id="otraCiudad">
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="check-provinciasContainer esconder divSelecTipoenvio" >
+                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
+                                                <div class="check-provinciasContent">
+                                                    <div>
+                                                        <label class="label-checked" for="rosario">Retiro en persona</label>
+                                                            <input type="radio" name="opciones" value="retiro" id="rosario">
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="label-checked" for="otraCiudad">A domicilio</label>
+                                                        <input type="radio" name="opciones" value="domicilio" id="otraCiudad">
                                                     </label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <button class="button calcular btn-2" id="calcularEnvio1" disabled>
+                                        <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                                             </svg>
                                             <div class="text">
-                                              Calcular
+                                              
                                             </div>   
                                           </button>
                                         
                                     </div>
+                                    <button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro</button>
                                 </div>
 
 
