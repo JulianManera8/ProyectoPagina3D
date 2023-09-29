@@ -268,10 +268,22 @@ const btnProbarOtro = document.getElementById('probarOtroEnvio');
 const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
 const spanEnvio = document.querySelector('.numero-envioTotal')
 
+const inputSantafe = document.getElementById('santaFe').value;
+const inputOtraProv = document.getElementById('otraProvincia').value;
+const inputRosario = document.getElementById('rosario').value;
+const inputOtraCiudad = document.getElementById('otraCiudad').value;
+
+
 
 eventosEnvio();
 function eventosEnvio() {
+    //mostrar todo para calcular el envio
     btnCalcularEnvio1.addEventListener('click', mostrarCalcularEnvio)
+
+
+
+
+
 }
 
 function mostrarCalcularEnvio() {
