@@ -265,13 +265,18 @@ function limpiarPcarrito() {
 //TODO LO DEL ENVIO
 const divCalculoEnvio = document.getElementById('divCalculoEnvio');
 const btnProbarOtro = document.getElementById('probarOtroEnvio');
+const divSelecProvincia = document.querySelector('.divSelecProvincia');
+const divSelecCiudad = document.querySelector('.divSelecCiudad');
+const divSelecTipoenvio = document.querySelector('.divSelecTipoenvio');
+
+
 const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
+const btnCalcularEnvio2 = document.getElementById('calcularEnvio2')
 const spanEnvio = document.querySelector('.numero-envioTotal')
 
-const inputSantafe = document.getElementById('santaFe').value;
-const inputOtraProv = document.getElementById('otraProvincia').value;
-const inputRosario = document.getElementById('rosario').value;
-const inputOtraCiudad = document.getElementById('otraCiudad').value;
+const opciones = document.querySelectorAll('input[name="opciones"]');
+
+
 
 
 
@@ -280,8 +285,11 @@ function eventosEnvio() {
     //mostrar todo para calcular el envio
     btnCalcularEnvio1.addEventListener('click', mostrarCalcularEnvio)
 
+    //leer datos de los checkers
+    btnCalcularEnvio2.addEventListener('click', leerCheck)
 
-
+    //volver a setear el calculo de envio
+    btnProbarOtro.addEventListener('click', resetCalculo)
 
 
 }
@@ -290,5 +298,47 @@ function mostrarCalcularEnvio() {
     divCalculoEnvio.classList.remove('esconder');
     btnCalcularEnvio1.classList.add('esconder');
     spanEnvio.textContent = '...';
+}
+
+function leerCheck() {
+    let opcionSeleccionada;
+
+    for (const opcion of opciones) {
+        if (opcion.checked) {
+            opcionSeleccionada = opcion.value;
+
+            if(opcionSeleccionada === 'Santa Fe') {
+                divSelecProvincia.classList.add('esconder')
+                divSelecCiudad.classList.remove('esconder')        
+            } else if ( opcionSeleccionada === 'Otra provincia') {
+                spanEnvio.textContent = '$ 3800'
+                divCalculoEnvio.classList.add('esconder')
+                btnProbarOtro.classList.remove('esconder')
+            } else if ( opcionSeleccionada === 'Rosario') {
+                divSelecTipoenvio.classList.remove('esconder')
+                divSelecCiudad.classList.add('esconder')
+            } else if (opcionSeleccionada === 'otraCiudad') {
+                spanEnvio.textContent = '$ 2800'
+                divCalculoEnvio.classList.add('esconder')
+                btnProbarOtro.classList.remove('esconder')
+            } else if(opcionSeleccionada === 'retiro') {
+                spanEnvio.textContent = '$ 0';
+                divCalculoEnvio.classList.add('esconder')
+                btnProbarOtro.classList.remove('esconder')
+            } else if(opcionSeleccionada === 'domicilio') {
+                spanEnvio.textContent = '$ 600'
+                divCalculoEnvio.classList.add('esconder')
+                btnProbarOtro.classList.remove('esconder')
+            }
+
+            break; // Termina la iteración cuando encuentres la opción seleccionada
+        }
+    }
+    
+}
+
+function resetCalculo() {
+    
+    console.log('wef')
 }
 
