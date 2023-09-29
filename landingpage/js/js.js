@@ -298,7 +298,6 @@ function mostrarCalcularEnvio() {
 }
 
 function leerCheck() {
-    
 
     for (const opcion of opciones) {
         if (opcion.checked) {
@@ -360,11 +359,16 @@ function leerCheck() {
 
 function resetCalculo() {
     mostrarCalcularEnvio();
-    opciones.forEach(opcion => opcion.checked = false);
+    opciones.forEach(opcion => {
+        opcion.checked = false
+    });
     btnProbarOtro.classList.add('esconder')
     spanTotal.classList.add('esconder')
+    
+    alert('Si quieres completar el calculo del envio de nuevo, refresca la pagina. Y no te preocupes, se te guardarán los productos del carrito. Sinó, solo dale a ACEPTAR y modifica lo ultimo que seleccionaste.')
+    
 
-    return;
+
 }
 
 function calcularTotal() {
