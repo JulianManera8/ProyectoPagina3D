@@ -310,6 +310,38 @@ span {
     margin-left: -1px;
 }
 
+#calcularEnvio2 {
+    background-color: #ffffff00;
+    color: #000000;
+    width:7em;
+    height: 1.8em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+   
+}  
+#calcularEnvio2:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+  
+#calcularEnvio2 svg {
+    width: 1.8em;
+    margin: auto;
+    position: relative;
+    display: flex;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+#calcularEnvio2:hover svg {
+    transform: translateX(35px);
+}
+
+.calculoEnvio {
+    font-size: 20px;
+}
+
 
 .mostrarEnvio {
     display: flex;
@@ -334,8 +366,11 @@ span {
 }
 
 .probarOtro{
-    border: none;
-    margin: 0px 40px 30px 0;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 2rem;
+    margin: 0px 40px 5px 0;
+    cursor: pointer;
 }
 
 
