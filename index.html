@@ -53,9 +53,11 @@
                                 </table>
                                 <div class="subtotal">
                                     <br>
-                                    <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal"> </span></p>
+                                    <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <p class="p-subtotal p-totalenvio"> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                        
+
+                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                                             </svg>
@@ -104,12 +106,12 @@
                                                 <div class="check-provinciasContent">
                                                     <div>
                                                         <label class="label-checked" for="rosario">Retiro en persona</label>
-                                                            <input type="radio" name="opciones" value="retiro" id="rosario">
+                                                            <input type="radio" name="opciones" value="retiro" id="retiro">
                                                         </label>
                                                     </div>
                                                     <div>
                                                         <label class="label-checked" for="otraCiudad">A domicilio</label>
-                                                        <input type="radio" name="opciones" value="domicilio" id="otraCiudad">
+                                                        <input type="radio" name="opciones" value="domicilio" id="domicilio">
                                                     </label>
                                                     </div>
                                                 </div>
@@ -126,7 +128,9 @@
                                           </button>
                                         
                                     </div>
-                                    <button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro</button>
+                                    <div class="totalApagar esconder">
+                                        <p class="p-total"> Total a pagar: $<span class="precio-subtotal" id="totalCarrito"> </span></p>
+                                    </div>
                                 </div>
 
 
