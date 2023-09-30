@@ -25,6 +25,7 @@ PRODUCTOS:
 - IDEA:
     - Poner un boton que diga "mostrar mas" y ahi que me muestre en otra pestaña todo con los filtros y todo.
 - Ponerle un active o hover a los botones para agregar el producto al carrito.
+- https://www.youtube.com/watch?v=gW-q6G9KYTg ahi explica como hacer una buena seccion de productos
 
 
 
