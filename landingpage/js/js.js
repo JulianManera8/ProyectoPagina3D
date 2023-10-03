@@ -67,6 +67,7 @@ imgCarrito.onclick = () => {
     submenuCarrito.classList.add('active');
     imgCarrito.classList.add('esconder');
     imgCerrarCarrito.classList.remove('esconder');
+    iconoCarrito.classList.remove('agregado');
 }
 imgCerrarCarrito.onclick = () => {
     submenuCarrito.classList.remove('active');
@@ -110,7 +111,12 @@ function agregarCurso(e) {
     if (e.target.classList.contains('agregar-carrito')) {
         const productoSeleccionado = e.target.parentElement.parentElement;
         leerDatoProducto(productoSeleccionado);
+        iconoCarrito.classList.add('agregado');
+        e.target.textContent = 'AGREGADO';
         
+        setTimeout(() => {
+            e.target.textContent = 'Agregar al carrito';
+        }, 2250);
     }
     
 };
