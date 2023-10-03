@@ -9,8 +9,7 @@
 + Agregar la funcionalidad de mercado pago, y que te pida el domicilio para el envio
 https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
-+ hacer que cuando agregue un producto al carrito, me muestre que se agregó al carrito, dandole animacion al carrito que se agrande o rebote algo asi
-
++ ver de agregar el contador de productos en el carrito
 
         
 
