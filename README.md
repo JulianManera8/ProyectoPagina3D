@@ -6,7 +6,10 @@
 
 + Meter un enlace directo a wsp cuando sea de rosario
 
++ Agregar la funcionalidad de mercado pago, y que te pida el domicilio para el envio
+https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
++ hacer que cuando agregue un producto al carrito, me muestre que se agregó al carrito, dandole animacion al carrito que se agrande o rebote algo asi
 
 
         
@@ -19,6 +22,7 @@
 - IDEA:
     - Poner un boton que diga "mostrar mas" y ahi que me muestre en otra pestaña todo con los filtros y todo.
 - Ponerle un active o hover a los botones para agregar el producto al carrito.
+- https://www.youtube.com/watch?v=Mr7eWzGyq3E estilo
 
 
 
