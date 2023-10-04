@@ -13,6 +13,14 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
         
 
+                                OFERTAS
++ EN VEZ DE OFERTAS, PONER QUE:
+    1) sea de productos por mayor (llaveros, boludeces asi)
+    2) sea de impresiones personalizadas onda t mando un link del thingsdiverse
+    3) muñecos o figuras pintadas y todo
+
++ TODO ESTO QUE TENGA EL LOGO DE WSP (CUANDO ESTA ESTO A LA VISTA (VER TEMA DE PIXELES Y ESO) QUE MUESTRE EL LOGO D WSP AHI EN EL MEDIO Y CUANDO BAJO QUE VAYA A LA IZQ D NUEVO)
+
 
 
 
@@ -21,15 +29,14 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 - IDEA:
     - Poner un boton que diga "mostrar mas" y ahi que me muestre en otra pestaña todo con los filtros y todo.
 - Ponerle un active o hover a los botones para agregar el producto al carrito.
-- https://www.youtube.com/watch?v=Mr7eWzGyq3E estilo
+- https://www.youtube.com/watch?v=gW-q6G9KYTg&t=0s estilo cada producto individual
+
 
 
 
 
                                 FORMULARIO:
 
-+ Hacer que el carrito muestre la info en la pestaña de contacto 
-     (se me ocurre que podemos poner un domcontentload y q muestre lo que hay en el localStorage, IF si muestra algo entonces que muestre los botones, ELSE el p de no hay nada)
 
 + HACER QUE ENVIE EL MAIL, PERO SIN BACKEND: https://www.youtube.com/watch?v=qtH8PLuy1Ck USANDO UNA API 
 (es una solucion momentanea para salir del pas hasta q use todo el backend)
