@@ -5,7 +5,7 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="landingpage/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="landingpage/css/inicio.css">
         <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
         <link rel="icon" href="landingpage/images/pdImpresionesLogo.jpeg">
 
@@ -25,9 +25,9 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li> <a href="#" class="li-navbar"> INICIO </a> </li>
-                        <li> <a href="#lista-productos" class="li-navbar"> PRODUCTOS </a> </li>
-                        <li> <a href="index-Form.html" class="li-navbar"> CONTACTO </a> </li>
+                        <li> <a href="inicio.html" class="li-navbar"> INICIO </a> </li>
+                        <li> <a href="productos.html" class="li-navbar"> PRODUCTOS </a> </li>
+                        <li> <a href="contacto.html" class="li-navbar"> CONTACTO </a> </li>
                         <li> <a href="#sobre-nosotros" class="li-navbar"> NOSOTROS </a> </li>
                     </ul>
                 </nav>
@@ -35,7 +35,7 @@
                     <ul>
                         <li class="submenu"> 
 
-                            <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
+                            <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="50px">
                             <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="60px" class="esconder">
                             
                             <div id="carrito">
@@ -281,7 +281,17 @@
                 </div>
 
             </div>
+            
         </main>
+        <div class="irAproductos">
+            <a class="cta" href="productos.html">
+                <span class="hover-underline-animation"> Ver mas productos </span>
+                <svg viewBox="0 0 46 16" height="20" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </a>
+        </div>
+        
         <!-- HASTA ACA LA LISTA DE LOS PRODUCTOS -->
         
 
@@ -305,7 +315,7 @@
                 </div>
                 <div class="icon-txt">
                     <h3> Atencion en todo momento </h3>
-                    <p> Contactese mediante cualquiera de nuestras<a href="index-Form.html" class="btn-2"> opciones de contacto.</a> Respoderemos lo antes posible!</p>
+                    <p> Contactese mediante cualquiera de nuestras<a href="contacto.html" class="btn-2"> opciones de contacto.</a> Respoderemos lo antes posible!</p>
                 </div>
             </div>
 
@@ -417,6 +427,7 @@
 
             </div>
         </footer>
+
         <div class="wsp-container"> 
             <div class="wsp-fondo">
                 <div class="wsp-content"> <!-- este seria class="card" -->
@@ -424,17 +435,9 @@
                 </div>  <!-- este seria class="card" -->
             </div>    
         </div>
-        <!-- HASTA ACA EL FOOTER -->
-
-        <!-- ME FALTARIA:
-        + CONECTAR LOS LINKS A SUS RESPECTIVAS UBICACIONES
-        + PONER LAS FOTOS BIEN
-        + PONER LAS GALERIAS DE CLIENTES
-        + HACER EXISTIR LOS FORMULARIOS DE CONSULTAS Y DE "QUEJAS"
-        + HACER EXISTIR EL COTIZADOR DE ENVIO
-        -->
+    
 
     </body>
 
-    <script src="landingpage/js/js.js"> </script>
+    <script src="landingpage/js/carrito.js"> </script>
 </html>
