@@ -89,7 +89,7 @@ function sacarBotones() {
         const nadaCarrito = document.createElement('p');
         nadaCarrito.innerHTML = 'No hay nada en el carrito.';
         nadaCarrito.innerHTML = 
-        '<p> No hay nada en el carrito</p> <br><a href="#lista-productos" class="iracomprar" > Ir a PRODUCTOS </a>';
+        '<p> No hay nada en el carrito</p> <br><a href="index-Shop.html" class="iracomprar" > Ir a PRODUCTOS </a>';
 
         botonesCarrito.style.alignItems = 'center';
         divNadaCarrito.appendChild(nadaCarrito); 
