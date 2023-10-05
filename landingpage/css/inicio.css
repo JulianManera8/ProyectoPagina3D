@@ -159,7 +159,6 @@ img {
 
 .botones-carrito {
     display: flex;
-    
     bottom: 0;
     justify-content: space-evenly;
     margin: 30px 0 20px 0;
@@ -283,7 +282,8 @@ td {
 .p-subtotal {
     text-align: right;
     padding-right: 40px;
-    padding-bottom: 25px;
+    margin-top: 17px;
+    margin-bottom: 20px;
     font-size: 23px;
 }
 span {
@@ -445,6 +445,7 @@ span {
     border-top: 7px double rgb(0, 0, 0);
     padding-top: 15px;
     margin-top: 10px;
+    font-size: 24px;
 }
 
 /* ____________________________________________________________ */
