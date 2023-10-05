@@ -14,6 +14,10 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
         
 
                                 OFERTAS
+
++ Pero en el grande poner que cuando vos tocas ahi en +info que te muestre una seccion de ofertas, podemos hacer que muestre tal cual como estan las ofertas ahora o que t aparezca como un showup con 3 ofertas
+
+
 + EN VEZ DE OFERTAS, PONER QUE:
     1) sea de productos por mayor (llaveros, boludeces asi)
     2) sea de impresiones personalizadas onda t mando un link del thingsdiverse
@@ -26,9 +30,10 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
                                 PRODUCTOS:
 - Ponerle filtros de busqueda
-- IDEA:
-    - Poner un boton que diga "mostrar mas" y ahi que me muestre en otra pestaña todo con los filtros y todo.
-- Ponerle un active o hover a los botones para agregar el producto al carrito.
+
+- Poner un boton que diga "mostrar mas" y agregarle el onclick ahi que me muestre en otra pestaña todo con 1producto
+- Armar las estructuras de los otros productos
+
 - https://www.youtube.com/watch?v=gW-q6G9KYTg&t=0s estilo cada producto individual
 
 
