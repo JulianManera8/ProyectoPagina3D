@@ -19,7 +19,7 @@
         <header id="header" class="header">
             
             <div class="menu container">
-                <a href="#" class="logo"> PD Impresiones </a>
+                <a href="inicio.html" class="logo"> PD Impresiones </a>
                 <input type="checkbox" id="menu" />
                 <label for="menu" class="labelhide">
                     <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
@@ -157,7 +157,7 @@
         </header>
 
         <section>
-            <div class="sectionContainer">
+            <div class="sectionContainer" id="lista-productos">
                 <div class="fotoContainer">
                     <img src="landingpage/images/img 1.jpeg" width="600px" id="fotoPrincipal">
     
@@ -189,14 +189,14 @@
                         <option>9cm</option>
                         <option>12cm</option>
                     </select>
-                    <p> Precio $<span class="precio-producto">500</span></p>
+                    <p> Precio: <b> $</b><spam class="precio">600</spam></p>
                                     
                     <a class="agregar-carrito btn-2" data-id="1">
                         Agregar al carrito
                     </a>
-                    <a class="agregar-carrito btn-2" href="productos.html">
+                    <button class="btn-volver" onclick="window.location.href='productos.html'">
                         Volver
-                    </a>
+                    </button>
                 </div>  
             </div>
             
@@ -561,7 +561,6 @@
         </main>
     </body>
 
-    <script src="landingpage/js/carrito.js"> </script>
     <script src="landingpage/js/1producto.js"> </script>
 
 </html>
