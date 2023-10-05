@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="landingpage/css/inicio.css">
+        <link rel="stylesheet" type="text/css" href="landingpage/css/1producto.css">
+        <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
+        <link rel="icon" href="landingpage/images/pdImpresionesLogo.jpeg">
+
+        <title> PDImpresiones </title>
+
+    </head>
+
+    <body>
+        
+        <header id="header" class="header">
+            
+            <div class="menu container">
+                <a href="inicio.html" class="logo"> PD Impresiones </a>
+                <input type="checkbox" id="menu" />
+                <label for="menu" class="labelhide">
+                    <img src="landingpage/images/menu.svg" class="menu-icono" alt="menu">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+                        <li> <a href="inicio.html" class="li-navbar"> INICIO </a> </li>
+                        <li> <a href="productos.html" class="li-navbar"> PRODUCTOS </a> </li>
+                        <li> <a href="contacto.html" class="li-navbar"> CONTACTO </a> </li>
+                        <li> <a href="inicio.html" class="li-navbar"> NOSOTROS </a> </li>
+                    </ul>
+                </nav>
+                <div>
+                    <ul>
+                        <li class="submenu"> 
+
+                            <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
+                            <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="60px" class="esconder">
+                            
+                            <div id="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th> Imagen </th>
+                                            <th> Nombre </th>
+                                            <th> Precio </th>
+                                            <th class="cantidad-th"> Cantidad </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <div class="subtotal">
+                                    <br>
+                                    <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
+                                    <div class="mostrarEnvio"> 
+                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                            </svg>
+                                            <div class="text">
+                                              Seleccionar
+                                            </div>   
+                                          </button> </span>
+                                        </p>
+                                    </div>
+
+                                    <div class="calculoEnvio esconder" id="divCalculoEnvio">
+
+                                        <div class="checkers-container">
+                                            <div class="check-provinciasContainer divSelecProvincia" >
+                                                <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
+                                                <div class="check-provinciasContent">
+                                                    <div>
+                                                        <label class="label-checked" for="santaFe">Santa Fe</label>
+                                                            <input type="radio" name="opciones" value="Santa Fe" id="santaFe">
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="label-checked" for="otraProvincia">Otra provincia</label>
+                                                        <input type="radio" name="opciones" value="Otra provincia" id="otraProvincia">
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="check-provinciasContainer esconder divSelecCiudad" >
+                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
+                                                <div class="check-provinciasContent">
+                                                    <div>
+                                                        <label class="label-checked" for="rosario">Rosario</label>
+                                                            <input type="radio" name="opciones" value="Rosario" id="rosario">
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="label-checked" for="otraCiudad">Otra ciudad/localidad</label>
+                                                        <input type="radio" name="opciones" value="otraCiudad" id="otraCiudad">
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="check-provinciasContainer esconder divSelecTipoenvio" >
+                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
+                                                <div class="check-provinciasContent">
+                                                    <div>
+                                                        <label class="label-checked" for="rosario">Retiro en persona</label>
+                                                            <input type="radio" name="opciones" value="retiro" id="retiro">
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="label-checked" for="otraCiudad">A domicilio</label>
+                                                        <input type="radio" name="opciones" value="domicilio" id="domicilio">
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                            </svg>
+                                            <div class="text">
+                                              
+                                            </div>   
+                                          </button>
+                                        
+                                    </div>
+                                    <div class="totalApagar esconder">
+                                        <p class="p-total"> Total a pagar: $<span class="precio-subtotal" id="totalCarrito"> </span></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="botones-carrito"> 
+
+                                    <div class="btn-vaciarCarrito"> 
+                                        <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
+                                    </div>
+                                    <div class="nadaCarrito">
+                                        <!-- ACA VA EL P CUANDO NO HAY NADA -->
+                                    </div>
+                                    <div class="btn-pagarCarrito"> 
+                                        <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
+                                    </div>
+                                </div>
+                                <div class="p-container">
+                                    <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="#inicio.html" class="a-pMostrarEnvio">blog.</a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="sectionContainer" id="lista-productos">
+                <div class="fotoContainer">
+                    <img src="landingpage/images/img 1.jpeg" width="600px" id="fotoPrincipal">
+    
+                    <div class="otrasFotos">
+                        <div class="foto">
+                            <img src="landingpage/images/img 1.jpeg" width="100px" class="otraFoto">
+                        </div>
+                        <div class="foto">
+                            <img src="landingpage/images/img 2.jpeg" width="100px" class="otraFoto">
+                        </div>
+                        <div class="foto">
+                            <img src="landingpage/images/img 6.jpeg" width="100px" class="otraFoto">
+                        </div>
+                        <div class="foto">
+                            <img src="landingpage/images/img 4.jpeg" width="100px" class="otraFoto">
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <div class="textoContainer">
+                    <h3>Producto 1</h3>
+                    <h5>Product descripcion</h5>
+                    <p class="descripcion-producto"> Lorem ipsum dolor sit esf  fwefwf gwergwg qwedqw suoefv ouhfd yfefg oYFG OSUEFG OSEYFB SUEF auehf iwug</p>
+                    <select>
+                        <option>Seleccionar tamaño</option>
+                        <option>3cm</option>
+                        <option>6cm</option>
+                        <option>9cm</option>
+                        <option>12cm</option>
+                    </select>
+                    <p> <b>$</b><spam class="precio">600</spam></p>
+                                    
+                    <a class="agregar-carrito btn-2" data-id="11">
+                        Agregar al carrito
+                    </a>
+                    <button class="btn-volver" onclick="window.location.href='productos.html'">
+                        Volver
+                    </button>
+                </div>  
+            </div>
+            
+        </section>
+
+
+
+
+        <footer class="footer">
+            <div class="footer-content container">
+
+                <div class="link">
+                    <h3> Redes sociales </h3>
+                    <ul>
+                        <li> <a href="#"> Insta </a> </li>
+                        <li> <a href="#"> Facebook </a> </li>
+                        <li> <a href="#"> Whatsapp </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Lorem </h3>
+                    <ul>
+                        <li> <a href="#"> lorem  </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                        <li> <a href="#"> lorem </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+
+        <div class="wsp-container"> 
+            <div class="wsp-fondo">
+                <div class="wsp-content"> <!-- este seria class="card" -->
+                    <a href="https://wa.me/543413076880" target="_blank" class="texto-wsp"><img src="landingpage/images/wsp.svg" width="110px"></a>
+                </div>  <!-- este seria class="card" -->
+            </div>    
+        </div>
+    
+        <main id="lista-productos" class="products container paraMargin esconder" >
+            <h2> Productos </h2>
+            <div class="product-content">
+
+                <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
+                    <img src="landingpage/images/img 1.jpeg" alt="">
+                    <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
+                        <h3> Impresion 1</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="1">
+                            Agregar al carrito
+                        </a>
+                        
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 2.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 2</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="2">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 3.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 3</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="3">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 4.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 4</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="4">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 5.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 5</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="5">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 6</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="6">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 7</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="7">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 8</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="8">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 9</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="9">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 10</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="10">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 11</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="11">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 12</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="12">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 13</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="13">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 14</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="14">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 15</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="15">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 16</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="16">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 17</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="17">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 18</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="18">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 19</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="19">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 20</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="20">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 21</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="21">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 22</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="22">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 23</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="23">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 24</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="24">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3> Impresion 25</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <a class="agregar-carrito btn-2" data-id="25">
+                            Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </body>
+
+    <script src="landingpage/js/1producto.js"> </script>
+
+</html>
