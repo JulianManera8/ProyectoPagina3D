@@ -14,6 +14,11 @@ const imgCarrito = document.getElementById('img-carrito');
 const imgCerrarCarrito = document.getElementById('img-close');
 const submenuCarrito = document.querySelector('.submenu');
 const spanTotal = document.querySelector('#totalCarrito');
+const ofertasEspeciales = document.getElementById('listadoOfertas') 
+const btnOfertas = document.getElementById('btn-ofertas')
+const btnOfertas2 = document.getElementById('btn-ofertas2')
+
+
 let totalCarrito = 0;
 
 const pMostrarEnvio = document.querySelector('.p-mostrarEnvio')
@@ -58,6 +63,19 @@ function crearEventos() {
     //que no me muestre los botones de vaciar o pagar si no tengo nada en el carrito
     iconoCarrito.addEventListener('mouseenter', sacarBotones);
 
+
+    //mostrar listado de ofertas
+    btnOfertas.addEventListener('click', (e) => {
+        e.preventDefault()
+        ofertasEspeciales.classList.remove('esconder')
+        btnOfertas2.classList.remove('esconder')
+    })
+
+    btnOfertas2.addEventListener('click', (e) => {
+        e.preventDefault()
+        ofertasEspeciales.classList.add('esconder')
+        btnOfertas2.classList.add('esconder')
+    })
     
 
 }
