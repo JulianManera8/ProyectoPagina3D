@@ -544,12 +544,49 @@ span {
     font-size: 15px;
 }
 
+.titulo-sectionPE {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 60px auto 20px;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.esconderOfertas {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+#btn-ofertas2 {
+    border: 2px solid black;
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 15px;
+}
 
 /*__________________PRODUCTOS____________________*/
 
 .products {
     padding: 75px 0;
     text-align: center;
+}
+
+
+.product:hover {
+    scale: 110%;
+    transition: 0.3s;
+}
+.product:not(:hover) {
+    scale: 100%;
+    transition: 0.2s;
 }
 
 .products h2 {
@@ -716,6 +753,10 @@ span {
 .icon-txt a {
     text-decoration: underline;
     font-weight: 600;
+}
+
+.btn-3 {
+    margin: 0 15px;
 }
 
 /* _______________________BLOG/NOSOTROS______________________________________ */
