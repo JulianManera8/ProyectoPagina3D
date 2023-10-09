@@ -23,9 +23,36 @@ body {
     display: flex !important;
     justify-content: center;
     margin: auto;
+    margin-bottom: -50px;
     flex-direction: column;
+}
+
+.product {
+    margin: 20px;
 }
 
 .ofert {
     margin-top: 50px;
+}
+
+.titulo-sectionPE {
+    margin-top: 90px;
+    margin-bottom: -30px;
+}
+
+.esconderOfertas {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+#btn-ofertas2 {
+    border: 2px solid black;
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 15px;
 }
