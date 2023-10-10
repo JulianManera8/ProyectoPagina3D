@@ -453,6 +453,14 @@ span {
 
 /* _____________________________OFERTAS_______________________________ */
 
+.header {
+    margin-top: -83px;
+    margin-bottom: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
 .header-content {
     
     margin-top: 30px;
@@ -500,6 +508,7 @@ span {
 
 .ofert {
     padding: 20px 0 0 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -544,11 +553,16 @@ span {
     font-size: 15px;
 }
 
+#listadoOfertas {
+    margin-top: -80px;
+    margin-bottom: 200px;
+}
+
 .titulo-sectionPE {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 60px auto 20px;
+    margin: -150px auto 20px;
     font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
@@ -560,6 +574,8 @@ span {
     text-align: center;
     justify-content: center;
     margin: 30px;
+    margin-top: -150px;
+    margin-bottom: 250px;
 }
 
 #btn-ofertas2 {
@@ -577,8 +593,15 @@ span {
 .products {
     padding: 75px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
+.products h2 {
+    margin: auto;
+    font-size: 35px;
+}
 
 .product:hover {
     scale: 105%;
@@ -599,17 +622,16 @@ span {
 .product-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-   
+    gap: 25px;
 }
 
 .product {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 10px;
-    padding: 30px;
+    padding: 40px;
     box-shadow: 0 0 20px rgb(109, 109, 109);
+    min-width: 400px;
 }
 
 .product h3  {
@@ -620,6 +642,9 @@ span {
     cursor: pointer;
     width: 300px;
     height: 250px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
 }
 
 .product p {
@@ -662,6 +687,22 @@ span {
 .agregar-carrito:active {
   transform: scale(0.95);
   
+}
+
+.btn-3 {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.btn-3:hover {
+    transition: 0.2s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+}
+
+.btn-3:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
 }
 
 .nadaCarrito p {
@@ -717,6 +758,12 @@ span {
 .cta:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+
+.irAproductos {
+    text-align: center;
+    margin-bottom: 80px;
 }
 
 .icons {
