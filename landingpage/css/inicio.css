@@ -581,7 +581,7 @@ span {
 
 
 .product:hover {
-    scale: 110%;
+    scale: 105%;
     transition: 0.3s;
 }
 .product:not(:hover) {
@@ -604,7 +604,6 @@ span {
 }
 
 .product {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -618,6 +617,7 @@ span {
 }
 
 .product img {
+    cursor: pointer;
     width: 300px;
     height: 250px;
 }
@@ -664,12 +664,8 @@ span {
   
 }
 
-.irAproductos {
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-    margin-bottom: 70px;
-
+.nadaCarrito p {
+    margin: 20px 0 40px;
 }
 
 .cta {
