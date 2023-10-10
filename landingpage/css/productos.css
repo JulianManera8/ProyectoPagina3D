@@ -19,25 +19,548 @@ body {
     
 }
 
-.ofertas-todo {
-    display: flex !important;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: -50px;
-    flex-direction: column;
+img {
+    max-width: 100%;
 }
 
-.product {
-    margin: 20px;
+.container {
+    margin: 0 auto;
+}
+
+/*_____________________HEADER___________________*/
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 70px 0;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu  {
+    z-index: 1;
+    background-color:rgb(206, 234, 247);
+    width: 100vw;
+    padding: 20px;
+    position: fixed;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+}
+
+.menu .navbar ul li {
+    float: left;
+    position: relative;
+    align-items: center;
+}
+
+.menu .navbar ul li a {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+
+.li-navbar:hover {
+    box-shadow: 0px 8px 5px antiquewhite;
+    border-radius: 2.5rem;
+    transition: 0.5s;
+}
+.li-navbar:not(:hover) {
+    box-shadow: none;
+    transition: .8s;
+}
+.li-navbar:active {
+    box-shadow: 0px 8px 5px rgb(255, 251, 0);
+    transition: .2s;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 45px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* _________________________CARRITO_____________________ */
+
+.submenu { /*Logo de carrito*/
+    position: relative;
+    right: 70%;
+
+}
+
+.submenu #carrito {
+    display: none;
+    overflow-y: auto;
+    
+}
+#img-carrito, #img-close {
+    cursor: pointer;
+    
+}
+
+.agregado {
+    animation: bounce 1s infinite; 
+    scale: 130%; 
+    transition: 0.5s;
+    
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.submenu.active #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 80vh;
+    overflow-y: auto;
+    background-color:rgb(230, 242, 247);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px;
+    margin-top: 28.5px;    
+    z-index: 0.5;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.botones-carrito {
+    display: flex;
+    bottom: 0;
+    justify-content: space-evenly;
+    margin: 30px 0 20px 0;
+    align-items: center;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 20px;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(248, 238, 226);
+}
+
+th, tr, td {
+    padding: 15px;
+    justify-content: space-around;
+}
+
+th {
+    padding: 15px;
+    justify-content: center;
+    font-weight: 1200;
+    font-size: 20px;
+}
+
+
+td {
+    font-size: 22px;
+    
+}
+
+.restar { 
+    cursor: pointer;
+    padding: 5px;
+}
+    
+
+.sumar {
+    cursor: pointer;
+    padding: 5px;    
+}
+
+#vaciar-carrito {
+    padding: 5px 10px;
+    color: rgb(121, 6, 6);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+}
+#vaciar-carrito:hover {
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
+}
+
+#vaciar-carrito:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.pagar-carrito {
+    color: rgb(13, 102, 31);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+}
+.pagar-carrito:hover {
+    color: rgb(9, 172, 9);
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.pagar-carrito:not(:hover) {
+    transition: 0.5s;
+}
+
+
+.esconder {
+    display: none !important;
+}
+
+.nadaCarrito {
+    text-align: center;
+}
+
+.borrar-curso {
+    color: rgb(176, 29, 29);
+    font-weight: bold;
+    border: 3px solid transparent;
+    padding: 0px 5.5px 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(241, 103, 103);
+}
+
+.borrar-curso:hover {
+    box-shadow: 0 0 25px rgb(241, 103, 103);
+    transition: 0.5s;
+}
+
+.borrar-curso:not(:hover){
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.iracomprar {
+    color: black;
+    font-weight: 600;
+}
+
+.iracomprar:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    padding: 6px;
+    border-radius: 6%;
+}
+
+.iracomprar:active {
+    background-color: antiquewhite;
+}
+
+.p-subtotal {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+span {
+    font-weight: 600;
+}
+
+.p-totalenvio {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #000000;
+    width: 7em;
+    height: 1.6em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-left: 15px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    font-size: 18px;
+  }
+  
+  .button:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    width: 1.4em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: none;
+    text-align: center;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+    display: none;
+  }
+  
+  .text {
+    margin: 0 1.5em;
+  }
+
+.btn-2{
+    margin-top: 15px;
+    margin-left: -1px;
+}
+.text {
+    margin-left: 9px;
+}
+#calcularEnvio2 {
+    background-color: #ffffff00;
+    color: #000000;
+    width:7em;
+    height: 1.8em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+   
+}  
+#calcularEnvio2:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+  
+#calcularEnvio2 svg {
+    width: 1.8em;
+    margin: auto;
+    position: relative;
+    display: flex;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+#calcularEnvio2:hover svg {
+    transform: translateX(35px);
+}
+
+.calculoEnvio {
+    font-size: 20px;
+}
+
+
+.mostrarEnvio {
+    display: flex;
+    justify-content: right;
+    border: none;
+    flex-direction: row-reverse;
+}
+
+.p-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin: 45px 0 20px 0;
+}
+
+.p-mostrarEnvio {
+    width: 80%;
+    font-size: 18px;
+    justify-content: left;
+}
+
+.probarOtro{
+    position: relative;
+    border: none;
+    padding: 0px 5px 5px 5px;
+    border-radius: 2rem;
+    margin-right: 35px;
+    cursor: pointer;
+    font-size: 19px;
+    background-color: transparent;
+    box-shadow: 0px 5px 10px rgba(247, 212, 130, 0.685);
+}
+
+
+.label-checked {
+    display: block !important;
+    margin-bottom: 10px;   
+}
+
+.a-pMostrarEnvio {
+   font-weight: 800;
+   text-decoration: underline;
+}
+
+.check-provinciasContent {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.p-checkProvincia {
+    text-decoration: underline;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+.calcularEnvio2 {
+    margin-top: 15px;
+}
+
+.totalApagar {
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
+
+.p-total {
+    border-top: 7px double rgb(0, 0, 0);
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+/* _____________________________OFERTAS_______________________________ */
+
+.header {
+    margin-top: -83px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-content {
+    
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 10px;
+    
+}
+
+.header-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+
+.header-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt h3 {
+    font-size: 70px;
+    text-transform: uppercase;
+    margin: 0px 20px;
+    line-height: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.header-txt p {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.header-txt a {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
 }
 
 .ofert {
-    margin-top: 50px;
+    padding: 20px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ofert-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 15px);
+    padding: 15px;
+    background-color: rgb(248, 238, 226);
+    
+}
+
+.ofert-img {
+    flex-basis: 50%;
+    margin-right: 15px;
+    
+}
+
+.ofert-img img {
+    width: 250px;
+}
+
+.ofert-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.ofert-txt h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ofert-txt a {
+    border: 2px solid black;
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 15px;
 }
 
 .titulo-sectionPE {
-    margin-top: 90px;
-    margin-bottom: -30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 60px auto 20px;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .esconderOfertas {
@@ -56,3 +579,530 @@ body {
     border-radius: 7px;
     font-size: 15px;
 }
+
+/*__________________PRODUCTOS____________________*/
+
+.products {
+    padding: 75px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.products h2 {
+    margin: auto;
+    font-size: 35px;
+}
+
+.product:hover {
+    scale: 105%;
+    transition: 0.3s;
+}
+.product:not(:hover) {
+    scale: 100%;
+    transition: 0.2s;
+}
+
+.products h2 {
+    margin-bottom: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 0 20px rgb(109, 109, 109);
+    min-width: 400px;
+}
+
+.product h3  {
+    margin: 10px;
+}
+
+.product img {
+    cursor: pointer;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.product p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.product .precio span {
+    font-weight: 800;
+    padding: 30px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.agregar-carrito {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+    padding: 6px 11px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+
+.agregar-carrito:hover {
+  background: rgb(247, 221, 160);
+  color: black;
+  transition: .5s;
+}
+.agregar-carrito:not(:hover) {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition:0.5s;
+}
+
+.agregar-carrito:active {
+  transform: scale(0.95);
+  
+}
+
+.btn-3 {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.btn-3:hover {
+    transition: 0.2s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+}
+
+.btn-3:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.nadaCarrito p {
+    margin: 20px 0 40px;
+}
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding-right: 15px;
+  text-transform: uppercase;
+
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.irAproductos {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.icons {
+    display: flex;
+    padding: 50px 0 100px 0;
+    justify-content: space-between;
+}
+
+.icon-1  {
+    flex-basis: calc(33.3% - 30px);
+    text-align: center;
+    align-items: center;
+    background-color: rgb(248, 238, 226);
+    padding: 30px;
+}
+
+.icon-img img {
+    width: 50px;
+    margin: 30px;
+}
+
+.icon-txt h3 {
+    margin-bottom: 30px;
+}
+
+.icon-txt p {
+    font-size: 18px;
+}
+
+.icon-txt a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.btn-3 {
+    margin: 0 15px;
+}
+
+/* _______________________BLOG/NOSOTROS______________________________________ */
+
+.blog {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 75px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 43px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.blog p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.blog-1 {
+    text-align: center;
+}
+
+.cards-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-basis: calc(33.3% - 30px);
+
+} 
+
+
+.card-content h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    color: black;
+
+}
+
+.card-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    opacity: 100%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    backface-visibility: hidden;
+}
+
+
+.back { 
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(248, 238, 226);
+    padding: 30px;
+}
+
+
+.back p {
+    display: flex;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.card:hover .front img {
+    filter: blur(1px);
+}
+
+.card:hover .back {
+    transition: 1s;
+    opacity: 90%;
+    color:black
+}
+
+.card:not(:hover) .front img {
+    filter: blur(0);
+}
+
+.card:not(:hover) .back {
+    transition: 1s;
+    opacity: 0%;
+}
+
+/* _______________________FOOTER______________________________________ */
+
+
+.footer {
+    padding: 50px;
+    background-color: rgb(206, 234, 247);
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.footer-content {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.link {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 60px;
+}
+
+.footer-content a {
+    font-size: 15px;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 20px; 
+}
+
+
+.menu  {
+    z-index: 1;
+    background-color:rgb(206, 234, 247);
+    padding: 20px;
+    position: fixed;
+}
+
+/*_____________________BOTON WSP_______________________*/
+
+.wsp-content {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    margin-right: 90px;
+    margin-bottom: 75px;
+    z-index: 0.6;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.wsp-content:hover {
+    scale: 130%;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 60px rgba(207, 247, 147, 0.987);
+}
+
+.wsp-content:not(:hover) {
+
+    transition: 0.5s ease-in-out;
+}
+
+
+/*_______________________RESPONSIVE______________________*/
+
+
+@media (max-width: 902px) {
+    .menu {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 100%;
+        background-color: rgb(206, 234, 247);
+        display: none;
+        
+    }
+
+    .menu .navbar ul li a {
+        width: 100%;
+        font-weight: 600;
+    }
+
+
+    #menu:checked ~ .navbar  {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        background-color: rgb(206, 234, 247);
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+
+    .submenu:hover #lista-carrito {
+        max-width: 100%;
+    }
+
+    .header {
+        min-height: 0vh;
+        margin-bottom: -60px;
+    }
+
+    .header-content {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-txt {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .header-txt h3 {
+        font-size: 50px;
+    }
+
+    .ofert {
+        padding: 30px 30px 0 30px;
+        flex-direction: column;
+    }
+
+    .ofert-1 {
+        margin-bottom: 30px;
+    }
+
+    .products {
+        padding: 0 30px 30px 30px;
+    }
+
+    .products h3 {
+        margin: 20px;
+    }
+
+    .products p {
+        font-size: 20px;
+        margin: 30px;
+    }
+
+    .products a {
+        font-size: 20px;
+        
+    }
+
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .product img {
+        width: 200px;
+        height: 280px;
+    }
+
+    .icons {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .icon-1 {
+        margin-bottom: 30px;
+    }
+
+    .cards-containers {
+        padding: 0 30px 30px 30px;
+        flex-direction: column;
+    }
+
+    .blog-1 {
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}
+    
+.paraMargin {
+    max-width: 1200px;
+}
+
+/*Stilo boton calcular envio*/
+
