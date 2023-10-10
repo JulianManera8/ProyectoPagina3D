@@ -25,11 +25,18 @@ body {
   	font-size: 60px;
   	font-weight: 600;
 	text-align: center;
-	margin-top: 130px;
     border-bottom: 2px solid black;
     padding-bottom: 20px;
+    margin-top: 140px;
 }
 
+.titulo-h3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 25px 60px;
+    font-weight: 600;
+}
 
 
 /* ________________________LOADER__________________________________ */
@@ -110,7 +117,6 @@ body {
 }
 
 
-
 #menu {
     display: none;
 }
@@ -125,22 +131,19 @@ body {
 }
 
 
-
 /* ____________________________FOOTER____________________________ */
-.todo-footer {
+footer {
     position: absolute;
-    margin-bottom: -350px;
     bottom: 0;
     width: 100%;
+    padding: 20px;
+    background-color: rgb(206, 234, 247);  
+    margin-bottom: -150px; 
 }
 
-.footer {
-	width: 100%;
-	padding: 20px;
-    background-color: rgb(206, 234, 247);   
-}
 
 .footer-content {
+
     display: flex;
 	text-align: center;
     justify-content: space-around;
@@ -279,37 +282,25 @@ body {
 } 
 
 
-
 .wsp-ig {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin-left:100px;
-    margin-right: 30px;
-
 }
 
 
-
-.card-content h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    margin: 20px;
-    color: black;
-    
+.card {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 30px;
 }
 
 .card-content img {
     width: 150px;
+    
     opacity: 100%;
-}
-
-.card {
-    width: 150px;
-    height: 150px;
-    position: relative;
-    margin: 30px;
 }
 
 .card div {
@@ -317,16 +308,21 @@ body {
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: space-between;
-    backface-visibility: hidden;
+    justify-content: center;
 }
 
+.front {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+}
 
 .back { 
     display: flex;
-    text-align: center;
-    flex-direction: row;
     background-color: transparent;
+    text-align: center;
+    justify-content: center;
     opacity: 0%;
     padding: 30px;
 }
@@ -351,7 +347,7 @@ body {
 }
 
 .card:hover .back {
-    transition: 1s; /* Es lo q tarda en aparecer el texto*/
+    transition: 1.6s; /* Es lo q tarda en aparecer el texto*/
     opacity: 90%;
     color:black
 }
@@ -362,7 +358,7 @@ body {
 }
 
 .card:not(:hover) .back {
-    transition: 0.5s;
+    transition: 0.4s;
     opacity: 0%;
 }
 
@@ -380,10 +376,8 @@ body {
 
 
 .tituloForm {
-    display: flex;
     text-align: center;
-    justify-content: center;
-    width: 500px;
+    width: 450px;
     margin-bottom: -20px;
     margin: 0 200px;
 }
@@ -542,24 +536,14 @@ p {
     margin-bottom: 40px;
 }
 
-.p-titulocontactowspig {
-    margin: 0 auto;
-    border: none;
-    width: 75%;
-    font-size: 25px;
-    font-weight: 400;
-    margin-right: 0px;
-}
-
 
 .wspeig{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 330px;
+    height: 300px;
     margin-right: -150px;
-
 }
 
 .li-navbar:hover {
@@ -607,7 +591,6 @@ p {
 }
 
 
-
 .submenu.active #carrito {
     display: block;
     position: absolute;
@@ -649,7 +632,7 @@ th, tr, td {
 th {
     padding: 15px;
     justify-content: center;
-    font-weight: 1200;
+    font-weight: 800;
     font-size: 20px;
 }
 
@@ -712,6 +695,17 @@ td {
 .nadaCarrito {
     text-align: center;
 }
+.nadaCarrito p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+}
+.nadaCarrito a {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    
+}
 
 .borrar-curso {
     color: rgb(176, 29, 29);
@@ -732,8 +726,10 @@ td {
 }
 
 .iracomprar {
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: 600;
+    font-size: 20px;
+    width: 200px;
 }
 
 .iracomprar:hover {
