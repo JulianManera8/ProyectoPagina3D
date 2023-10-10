@@ -71,6 +71,8 @@ function crearEventos() {
         btnOfertas2.classList.remove('esconder')
     })
 
+
+    //cerrar ofertas
     btnOfertas2.addEventListener('click', (e) => {
         e.preventDefault()
         ofertasEspeciales.classList.add('esconder')
