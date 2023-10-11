@@ -47,6 +47,20 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 (es una solucion momentanea para salir del pas hasta q use todo el backend)
 
 
+                                FOOTER:
++ LInks de pags para buscar impresiones
++ Redes sociales con sus logos
++ links dentro d la pag
++ Lo de producto registrado y todo eso
++ Medios de pago
++ Envio
++ teléfono y mail de contacto ?
++ zona de rosario maome ?
+
+
++preguntar a juampi q mas va
+
+
 
 
                             
