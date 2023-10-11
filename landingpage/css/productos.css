@@ -609,6 +609,12 @@ span {
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.p-titulosectionPE {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
 
 .prodEsp-content {
     margin: 0 100px -50px 100px;
