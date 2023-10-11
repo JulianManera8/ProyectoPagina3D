@@ -577,7 +577,7 @@ span {
 }
 
 #listadoOfertas {
-    margin-top: -280px;
+    margin-top: -150px;
     margin-bottom: 200px;
 }
 
@@ -608,6 +608,12 @@ span {
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.p-titulosectionPE {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
 }
 
 .prodEsp-content {
