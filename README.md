@@ -13,17 +13,14 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
         
 
-                                OFERTAS
-
-+ Pero en el grande poner que cuando vos tocas ahi en +info que te muestre una seccion de ofertas, podemos hacer que muestre tal cual como estan las ofertas ahora o que t aparezca como un showup con 3 ofertas
+                                OFERTAS ESPECIALES
 
 
-+ EN VEZ DE OFERTAS, PONER QUE:
-    1) sea de productos por mayor (llaveros, boludeces asi)
-    2) sea de impresiones personalizadas onda t mando un link del thingsdiverse
-    3) muñecos o figuras pintadas y todo
++ Que no sea la foto grande, sino que esa foto sea un carrusel (video que tengo en wsp y codigo en carpeta de pruebas) con las ofertas.
 
-+ TODO ESTO QUE TENGA EL LOGO DE WSP (CUANDO ESTA ESTO A LA VISTA (VER TEMA DE PIXELES Y ESO) QUE MUESTRE EL LOGO D WSP AHI EN EL MEDIO Y CUANDO BAJO QUE VAYA A LA IZQ D NUEVO)
+
++Obiamente sacar el boton de ver ofertas y que aparezcan y desaparezcan
+
 
 
 
@@ -66,12 +63,12 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
                             
                             GALERIA DE CLIENTES:
 - Crear la galeria de clientes, o piezas ya impresas
-
+- USAR EL VIDEO DE GALERIA LIGHTROOM QUE TENGO EN WSP
 
 
 
                             BLOG/NOSOTROS:
-
++ CUANDO TOQUE EN VER LINK EN PRODESPEC. QUE SE ILUMINE O DESTAQUE ESOS LINKS O EL FOOTER
 
 
 
