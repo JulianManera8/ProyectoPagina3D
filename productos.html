@@ -26,9 +26,9 @@
                 <nav class="navbar">
                     <ul>
                         <li> <a href="inicio.html" class="li-navbar"> INICIO </a> </li>
-                        <li> <a href="#" class="li-navbar"> PRODUCTOS </a> </li>
+                        <li> <a href="productos.html" class="li-navbar"> PRODUCTOS </a> </li>
                         <li> <a href="contacto.html" class="li-navbar"> CONTACTO </a> </li>
-                        <li> <a href="inicio.html" class="li-navbar"> NOSOTROS </a> </li>
+                        <li> <a href="#sobre-nosotros" class="li-navbar"> NOSOTROS </a> </li>
                     </ul>
                 </nav>
                 <div>
@@ -55,7 +55,7 @@
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro envio</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                                             </svg>
@@ -152,118 +152,138 @@
                     </ul>
                 </div>
             </div>
-            <div class="ofertas-todo">
-                <div class="header-content container paraMargin">
-                    <div class="header-img">
-                        <img src="landingpage/images/img 5.jpeg" width="600px">
-                    </div>
-                    <div class="header-txt">
-                        <h3> Ofertas especiales </h3>
-                        <p> No te pierdas estas impresiones </p>
-                        <a href="#" class="btn-1" id="btn-ofertas"> VER OFERTAS </a>
-                    </div>
-                </div>
 
-                <section class="ofert container paraMargin esconder" id="listadoOfertas">
-            
-
-                    <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
-                            <img src="landingpage/images/img 1.jpeg" alt="" onclick="window.location.href='1producto.html'">
-                            <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
-                                <h3> Impresion 1</h3>
-                                <p> Altura de capa: 0,4 </p>
-                                <p> <b>$</b><spam class="precio">600</spam></p>
-                                <br>
-                                <a class="agregar-carrito btn-2" data-id="1">
-                                    Agregar al carrito
-                                </a>
-                                <a class= "btn-3" onclick="window.location.href='1producto.html'">
-                                    Ver Info
-                                </a>
-                            </div>
-                        </div>
-        
-                        <div class="product">
-                            <img src="landingpage/images/img 2.jpeg" alt="" onclick="window.location.href='2producto.html'">
-                            <div class="product-txt">
-                                <h3> Impresion 2</h3>
-                                <p> Altura de capa: 0,4 </p>
-                                <p> <b>$</b><spam class="precio">600</spam></p>
-                                <br>
-                                <a class="agregar-carrito btn-2" data-id="2">
-                                    Agregar al carrito
-                                </a>
-                                <a class= "btn-3" onclick="window.location.href='2producto.html'">
-                                    Ver Info
-                                </a>
-                            </div>
-                        </div>
-        
-                        <div class="product">
-                            <img src="landingpage/images/img 3.jpeg" alt="" onclick="window.location.href='3producto.html'">
-                            <div class="product-txt">
-                                <h3> Impresion 3</h3>
-                                <p> Altura de capa: 0,4 </p>
-                                <p> <b>$</b><spam class="precio">600</spam></p>
-                                <br>
-                                <a class="agregar-carrito btn-2" data-id="3">
-                                    Agregar al carrito
-                                </a>
-                                <a class= "btn-3" onclick="window.location.href='3producto.html'">
-                                    Ver Info
-                                </a>
-                            </div>
-                        </div>
-                    
-                </section>
-                <div class="esconderOfertas">
-                    <a href="#" class="btn-1 esconder" id="btn-ofertas2"> CERRAR </a>    
+            <div class="header-content container paraMargin">
+                <div class="header-img">
+                    <img src="landingpage/images/img 5.jpeg" width="600px">
                 </div>
-    
-                <div class="titulo-sectionPE">
-                    <h3> Productos especiales </h3>
+                <div class="header-txt">
+                    <h3> Ofertas especiales </h3>
+                    <p> No te pierdas estas impresiones </p>
+                    <a href="#" class="btn-1" id="btn-ofertas"> VER OFERTAS </a>
                 </div>
-                <section class="ofert container paraMargin">
-                    
-        
-                    <div class="ofert-1">
-                        <div class="ofert-img">
-                            <img src="landingpage/images/img 2.jpeg" alt="">
-                        </div>
-                        <div class="ofert-txt">
-                            <h3> Compras por mayor </h3>
-                            <a href="#" class="btn-2"> + Info</a>
-                        </div>
-                    </div>
-        
-                    <div class="ofert-1">
-                        <div class="ofert-img">
-                            <img src="landingpage/images/img 4.jpeg" alt="">
-                        </div>
-                        <div class="ofert-txt">
-                            <h3> Impresiones personalizadas </h3>
-                            <a href="#" class="btn-2"> + Info</a>
-                        </div>
-        
-                    </div>
-        
-                    <div class="ofert-1">
-                        <div class="ofert-img">
-                            <img src="landingpage/images/img 1.jpeg" alt="">
-                        </div>
-                        <div class="ofert-txt">
-                            <h3> Figuras de coleccion pintadas </h3>
-                            <a href="#" class="btn-2"> + Info</a>
-                        </div>
-        
-                    </div>
-        
-                </section>
-                <!-- HASTA SECCION DE OFERTAS YA ESTA TODO ACTUALIZADO-->
             </div>
-            
 
         </header>
+
+        <section class="ofert container paraMargin esconder" id="listadoOfertas">
+            
+
+            <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
+                    <img src="landingpage/images/img 1.jpeg" alt="" onclick="window.location.href='1producto.html'">
+                    <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
+                        <h3> Impresion 1</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="1">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='1producto.html'">
+                            Ver Info
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 2.jpeg" alt="" onclick="window.location.href='2producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 2</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="2">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='2producto.html'">
+                            Ver Info
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 3.jpeg" alt="" onclick="window.location.href='3producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 3</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b>$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="3">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='3producto.html'">
+                            Ver Info
+                        </a>
+                    </div>
+                </div>
+
+        </section>
+        <div class="esconderOfertas">
+            <a href="#" class="btn-1 esconder" id="btn-ofertas2"> CERRAR </a>    
+        </div>
+
+        <!-- HASTA ACA ES EL HEADER -->
+
+        <div class="titulo-sectionPE">
+            <h3> Productos especiales </h3>
+        </div>
+        <p>Contactanos si estas buscando alguna de estas opciones</p>
+
+        <section class="ofert container prodEspeciales">
+            
+            <div class="prodEsp-content">
+                <div class="prodEspeciales-1">
+                    <div class="pe-img">
+                        <img src="landingpage/images/img 2.jpeg" alt="" width="260px">
+                    </div>
+                    <div class="pe-text">
+                        <h3> Compras por mayor </h3>
+                        <div class="textoPE">
+                            <p>Si quieres realizar un encargue de muchas impresiones (ejemplo llaveros), puedes contactarnos por Whatsapp o el medio que prefieras.</p>
+                        </div>
+                        <!-- meter btn para wsp -->
+                    </div>
+                </div>
+    
+                <div class="prodEspeciales-1">
+                    <div class="pe-img">
+                        <img src="landingpage/images/img 6.jpeg" alt="" width="260px">
+                    </div>
+                    <div class="pe-text">
+                        <h3> Impresiones personalizadas </h3>
+                        <div class="textoPE">
+                            <p> Puedes enviarnos un archivo STL o un link con lo que quieras que imprimamos. Puedes visitar las paginas que dejamos para que busques modelos haciendo <a href="#footer"> click aqui.</a></p>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="prodEspeciales-1">
+                    <div class="pe-img">
+                        <img src="landingpage/images/img 1.jpeg" alt="" width="250px">
+                    </div>
+                    <div class="pe-text">
+                        <h3> Figuras de coleccion pintadas </h3>
+                        <div class="textoPE">
+                            <p> Contamos con figuras pintadas a mano, solo tienes que pedirlo y tendras una pieza unica para tu coleccion! Puedes visitar nuestra galeria de impresiones pintadas a mano haciendo <a href="#"> click aqui</a></p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+                
+
+        </section>
+        <div class="irAproductos">
+            <a class="cta" href="contacto.html">
+                <span class="hover-underline-animation"> Ir a contacto </span>
+                <svg viewBox="0 0 46 16" height="20" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </a>
+        </div>
+
         <!-- HASTA ACA ES EL HEADER -->
 
         <main id="lista-productos" class="products container paraMargin" >
@@ -675,7 +695,7 @@
             </div>
         </main>
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer-content container">
 
                 <div class="link">
