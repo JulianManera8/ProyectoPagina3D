@@ -53,7 +53,7 @@ img {
     background-color:rgb(206, 234, 247);
     width: 100vw;
     padding: 20px;
-    position: fixed;
+    position: sticky;
 }
 
 .logo {
@@ -149,7 +149,7 @@ img {
     right: 0;
     height: 80vh;
     overflow-y: auto;
-    background-color:rgb(230, 242, 247);
+    background-color:rgb(230, 244, 247);
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 0 0 20px;
     margin-top: 28.5px;    
