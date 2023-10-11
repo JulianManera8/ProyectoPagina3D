@@ -84,21 +84,29 @@ select {
     width: 600px;
 }
 
+.btn-3:hover {
+    transition: 0.2s;
+    
+}
+
+.btn-3:not(:hover) {
+    transition: 0.5s;
+}
+
 .btn-volver{
     cursor: pointer;
-    background-color: rgba(255, 227, 137, 0.411);
-    padding: 8px;
+    padding: 8px 6px 4px 6px;
+    background-color: #f5f5f5;
     border: none;
     border-radius: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
     margin-left: 60px;
 }
 
 .btn-volver:hover {
-    background-color: rgba(255, 227, 137, 1);
-    transition: 0.5s;
-}
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.601);}
 
 .btn-volver:not(:hover) {
-    background-color: rgba(255, 227, 137, 0.411);
     transition: 0.5s;
 }
