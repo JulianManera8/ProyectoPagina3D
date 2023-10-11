@@ -1,546 +1,1182 @@
-<!DOCTYPE html>
-<html>
-    <head>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;600&display=swap');
 
-        <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+/*
+font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
 
-        <link rel="stylesheet" type="text/css" href="landingpage/css/inicio.css">
-        <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
-        <link rel="icon" href="landingpage/images/pdImpresionesLogo.jpeg">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
-        <title> PDImpresiones </title>
-
-    </head>
-
-    <body>
-        <header id="header" class="header">
-            
-            <div class="menu container">
-                <a href="#" class="logo"> PD Impresiones </a>
-                <input type="checkbox" id="menu" />
-                <label for="menu" class="labelhide">
-                    <img src="landingpage/images/menu.svg" loading="lazy" class="menu-icono" alt="menu">
-                </label>
-
-                <nav class="navbar">
-                    <ul>
-                        <li> <a href="inicio.html" class="li-navbar"> INICIO </a> </li>
-                        <li> <a href="productos.html" class="li-navbar"> PRODUCTOS </a> </li>
-                        <li> <a href="contacto.html" class="li-navbar"> CONTACTO </a> </li>
-                        <li> <a href="#sobre-nosotros" class="li-navbar"> NOSOTROS </a> </li>
-                    </ul>
-                </nav>
-                <div>
-                    <ul>
-                        <li class="submenu"> 
-
-                            <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="50px">
-                            <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="60px" class="esconder">
-                            
-                            <div id="carrito">
-                                <table id="lista-carrito">
-                                    <thead>
-                                        <tr>
-                                            <th> Imagen </th>
-                                            <th> Nombre </th>
-                                            <th> Precio </th>
-                                            <th class="cantidad-th"> Cantidad </th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                                <div class="subtotal">
-                                    <br>
-                                    <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
-                                    <div class="mostrarEnvio"> 
-                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro envio</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                            </svg>
-                                            <div class="text">
-                                              Seleccionar
-                                            </div>   
-                                          </button> </span>
-                                        </p>
-                                    </div>
-
-                                    <div class="calculoEnvio esconder" id="divCalculoEnvio">
-
-                                        <div class="checkers-container">
-                                            <div class="check-provinciasContainer divSelecProvincia" >
-                                                <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
-                                                <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="santaFe">Santa Fe</label>
-                                                            <input type="radio" name="opciones" value="Santa Fe" id="santaFe">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraProvincia">Otra provincia</label>
-                                                        <input type="radio" name="opciones" value="Otra provincia" id="otraProvincia">
-                                                    </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="check-provinciasContainer esconder divSelecCiudad" >
-                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
-                                                <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="rosario">Rosario</label>
-                                                            <input type="radio" name="opciones" value="Rosario" id="rosario">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraCiudad">Otra ciudad/localidad</label>
-                                                        <input type="radio" name="opciones" value="otraCiudad" id="otraCiudad">
-                                                    </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="check-provinciasContainer esconder divSelecTipoenvio" >
-                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
-                                                <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="rosario">Retiro en persona</label>
-                                                            <input type="radio" name="opciones" value="retiro" id="retiro">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraCiudad">A domicilio</label>
-                                                        <input type="radio" name="opciones" value="domicilio" id="domicilio">
-                                                    </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                            </svg>
-                                            <div class="text">
-                                              
-                                            </div>   
-                                          </button>
-                                        
-                                    </div>
-                                    <div class="totalApagar esconder">
-                                        <p class="p-total"> Total a pagar: $<span class="precio-subtotal" id="totalCarrito"> </span></p>
-                                    </div>
-                                </div>
-
-
-                                <div class="botones-carrito"> 
-
-                                    <div class="btn-vaciarCarrito"> 
-                                        <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
-                                    </div>
-                                    <div class="nadaCarrito">
-                                        <!-- ACA VA EL P CUANDO NO HAY NADA -->
-                                    </div>
-                                    <div class="btn-pagarCarrito"> 
-                                        <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
-                                    </div>
-                                </div>
-                                <div class="p-container">
-                                    <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="#blog" class="a-pMostrarEnvio">blog. </a></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="header-content container paraMargin">
-                <div class="header-img">
-                    <img src="landingpage/images/img 5.jpeg" width="600px">
-                </div>
-                <div class="header-txt">
-                    <h3> Ofertas especiales </h3>
-                    <p> No te pierdas estas impresiones </p>
-                    <a href="#" class="btn-1" id="btn-ofertas"> VER OFERTAS </a>
-                </div>
-            </div>
-
-        </header>
-
-        <section class="ofert container paraMargin esconder" id="listadoOfertas">
-            
-
-            <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
-                <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" onclick="window.location.href='1producto.html'">
-                <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
-                    <h3> Impresion 1</h3>
-                    <p> Altura de capa: 0,4 </p>
-                    <p> <b>$</b><spam class="precio">600</spam></p>
-                    <br>
-                    <a class="agregar-carrito btn-2" data-id="1">
-                        Agregar al carrito
-                    </a>
-                    <a class= "btn-3" onclick="window.location.href='1producto.html'">
-                        Ver Info
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="landingpage/images/img 2.jpeg" alt="" loading="lazy"loading="lazy"  onclick="window.location.href='2producto.html'">
-                <div class="product-txt">
-                    <h3> Impresion 2</h3>
-                    <p> Altura de capa: 0,4 </p>
-                    <p> <b>$</b><spam class="precio">600</spam></p>
-                    <br>
-                    <a class="agregar-carrito btn-2" data-id="2">
-                        Agregar al carrito
-                    </a>
-                    <a class= "btn-3" onclick="window.location.href='2producto.html'">
-                        Ver Info
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="landingpage/images/img 3.jpeg" alt="" loading="lazy" onclick="window.location.href='3producto.html'">
-                <div class="product-txt">
-                    <h3> Impresion 3</h3>
-                    <p> Altura de capa: 0,4 </p>
-                    <p> <b>$</b><spam class="precio">600</spam></p>
-                    <br>
-                    <a class="agregar-carrito btn-2" data-id="3">
-                        Agregar al carrito
-                    </a>
-                    <a class= "btn-3" onclick="window.location.href='3producto.html'">
-                        Ver Info
-                    </a>
-                </div>
-            </div>
-
-        </section>
-        <div class="esconderOfertas">
-            <a href="#" class="btn-1 esconder" id="btn-ofertas2"> CERRAR </a>    
-        </div>
-
-        <!-- HASTA ACA ES EL HEADER -->
-
-        <div class="titulo-sectionPE">
-            <h3> Productos especiales </h3>
-        </div>
-        <div class="div-titullosectionPE">
-            <p class="p-titulosectionPE">Contactanos si estas buscando alguna de estas opciones</p>
-        </div>
-        <section class="ofert container prodEspeciales">
-            
-            <div class="prodEsp-content">
-                <div class="prodEspeciales-1">
-                    <div class="pe-img">
-                        <img src="landingpage/images/img 2.jpeg" loading="lazy" alt="" width="260px">
-                    </div>
-                    <div class="pe-text">
-                        <h3> Compras por mayor </h3>
-                        <div class="textoPE">
-                            <p>Si quieres realizar un encargue de muchas impresiones (ejemplo llaveros), puedes contactarnos por Whatsapp o el medio que prefieras.</p>
-                        </div>
-                        <!-- meter btn para wsp -->
-                    </div>
-                </div>
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f5f5 ;
     
-                <div class="prodEspeciales-1">
-                    <div class="pe-img">
-                        <img src="landingpage/images/img 6.jpeg" loading="lazy" alt="" width="260px">
-                    </div>
-                    <div class="pe-text">
-                        <h3> Impresiones personalizadas </h3>
-                        <div class="textoPE">
-                            <p> Puedes enviarnos un archivo STL o un link con lo que quieras que imprimamos. Puedes visitar las paginas que dejamos para que busques modelos haciendo <a href="#footer"> click aqui.</a></p>
-                        </div>
-                    </div>
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/*_____________________HEADER___________________*/
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 70px 0;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu  {
+    z-index: 1;
+    background-color:rgb(206, 234, 247);
+    width: 100vw;
+    padding: 20px;
+    position: fixed;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+}
+
+.menu .navbar ul li {
+    float: left;
+    position: relative;
+    align-items: center;
+}
+
+.menu .navbar ul li a {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+
+.li-navbar:hover {
+    box-shadow: 0px 8px 5px antiquewhite;
+    border-radius: 2.5rem;
+    transition: 0.5s;
+}
+.li-navbar:not(:hover) {
+    box-shadow: none;
+    transition: .8s;
+}
+.li-navbar:active {
+    box-shadow: 0px 8px 5px rgb(255, 251, 0);
+    transition: .2s;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 45px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* _________________________CARRITO_____________________ */
+
+.submenu { /*Logo de carrito*/
+    position: relative;
+    right: 70%;
+
+}
+
+.submenu #carrito {
+    display: none;
+    overflow-y: auto;
     
-                </div>
+}
+#img-carrito, #img-close {
+    cursor: pointer;
     
-                <div class="prodEspeciales-1">
-                    <div class="pe-img">
-                        <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" width="250px">
-                    </div>
-                    <div class="pe-text">
-                        <h3> Figuras de coleccion pintadas </h3>
-                        <div class="textoPE">
-                            <p> Contamos con figuras pintadas a mano, solo tienes que pedirlo y tendras una pieza unica para tu coleccion! Puedes visitar nuestra galeria de impresiones pintadas a mano haciendo <a href="#"> click aqui</a></p>
-                        </div>
-                    </div>
+}
+
+.agregado {
+    animation: bounce 1s infinite; 
+    scale: 130%; 
+    transition: 0.5s;
     
-                </div>
-            </div>
+}
 
-        </section>
-        <div class="irAproductos">
-            <a class="cta" href="contacto.html">
-                <span class="hover-underline-animation"> Ir a contacto </span>
-                <svg viewBox="0 0 46 16" height="20" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
-                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-                </svg>
-            </a>
-        </div>
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
 
-        <!-- HASTA SECCION DE OFERTAS-->
 
-        <main id="lista-productos" class="products container paraMargin" >
-            <h2> Productos </h2>
-            <div class="product-content">
 
-                <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
-                    <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" onclick="window.location.href='1producto.html'">
-                    <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
-                        <h3> Impresion 1</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="1">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='1producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
+.submenu.active #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 80vh;
+    overflow-y: auto;
+    background-color:rgb(230, 242, 247);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px;
+    margin-top: 28.5px;    
+    z-index: 0.5;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+}
 
-                <div class="product">
-                    <img src="landingpage/images/img 2.jpeg" loading="lazy" alt="" onclick="window.location.href='2producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 2</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="2">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='2producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
+.botones-carrito {
+    display: flex;
+    bottom: 0;
+    justify-content: space-evenly;
+    margin: 30px 0 20px 0;
+    align-items: center;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 20px;
+}
 
-                <div class="product">
-                    <img src="landingpage/images/img 3.jpeg" loading="lazy" alt="" onclick="window.location.href='3producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 3</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="3">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='3producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
+table {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(248, 238, 226);
+}
 
-                <div class="product">
-                    <img src="landingpage/images/img 4.jpeg" loading="lazy" alt="" onclick="window.location.href='4producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 4</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="4">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='4producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
+th, tr, td {
+    padding: 15px;
+    justify-content: space-around;
+}
 
-                <div class="product">
-                    <img src="landingpage/images/img 5.jpeg" loading="lazy" alt="" onclick="window.location.href='5producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 5</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="5">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='5producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
+th {
+    padding: 15px;
+    justify-content: center;
+    font-weight: 1200;
+    font-size: 20px;
+}
 
-                <div class="product">
-                    <img src="landingpage/images/img 6.jpeg" loading="lazy" alt="" onclick="window.location.href='6producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 6</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="6">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='6producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
 
-            </div>
-            
-        </main>
-        <div class="irAproductos">
-            <a class="cta" href="productos.html">
-                <span class="hover-underline-animation"> Ver mas productos </span>
-                <svg viewBox="0 0 46 16" height="20" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
-                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-                </svg>
-            </a>
-        </div>
+td {
+    font-size: 22px;
+    
+}
+
+.restar { 
+    cursor: pointer;
+    padding: 5px;
+}
+    
+
+.sumar {
+    cursor: pointer;
+    padding: 5px;    
+}
+
+#vaciar-carrito {
+    padding: 5px 10px;
+    color: rgb(121, 6, 6);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+}
+#vaciar-carrito:hover {
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
+}
+
+#vaciar-carrito:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.pagar-carrito {
+    color: rgb(13, 102, 31);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+}
+.pagar-carrito:hover {
+    color: rgb(9, 172, 9);
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.pagar-carrito:not(:hover) {
+    transition: 0.5s;
+}
+
+
+.esconder {
+    display: none !important;
+}
+
+.nadaCarrito {
+    text-align: center;
+}
+
+.borrar-curso {
+    color: rgb(176, 29, 29);
+    font-weight: bold;
+    border: 3px solid transparent;
+    padding: 0px 5.5px 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(241, 103, 103);
+}
+
+.borrar-curso:hover {
+    box-shadow: 0 0 25px rgb(241, 103, 103);
+    transition: 0.5s;
+}
+
+.borrar-curso:not(:hover){
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.iracomprar {
+    color: black;
+    font-weight: 600;
+}
+
+.iracomprar:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    padding: 6px;
+    border-radius: 6%;
+}
+
+.iracomprar:active {
+    background-color: antiquewhite;
+}
+
+.p-subtotal {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+span {
+    font-weight: 600;
+}
+
+.p-totalenvio {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #000000;
+    width: 7em;
+    height: 1.6em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-left: 15px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    font-size: 18px;
+  }
+  
+  .button:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    width: 1.4em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: none;
+    text-align: center;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+    display: none;
+  }
+  
+  .text {
+    margin: 0 1.5em;
+  }
+
+.btn-2{
+    margin-top: 15px;
+    margin-left: -1px;
+}
+.text {
+    margin-left: 9px;
+}
+#calcularEnvio2 {
+    background-color: #ffffff00;
+    color: #000000;
+    width:7em;
+    height: 1.8em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+   
+}  
+#calcularEnvio2:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+  
+#calcularEnvio2 svg {
+    width: 1.8em;
+    margin: auto;
+    position: relative;
+    display: flex;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+#calcularEnvio2:hover svg {
+    transform: translateX(35px);
+}
+
+.calculoEnvio {
+    font-size: 20px;
+}
+
+
+.mostrarEnvio {
+    display: flex;
+    justify-content: right;
+    border: none;
+    flex-direction: row-reverse;
+}
+
+.p-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin: 45px 0 20px 0;
+}
+
+.p-mostrarEnvio {
+    width: 80%;
+    font-size: 18px;
+    justify-content: left;
+}
+
+#calcularEnvio1 {
+    font-size: 20px;
+    border: none;
+    padding: 8px 12px 4px 2px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.235);
+}
+
+#calcularEnvio1:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: transparent !important;
+}
+
+.probarOtro{
+    position: relative;
+    border: none;
+    padding: 8px 6px 4px 6px;
+    border-radius: 1rem;
+    margin-right: 35px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.245);
+}
+.probarOtro:hover {
+    transition: 0.5s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.572);
+}
+.probarOtro:not(:hover) {
+    transition: 0.5s;
+}
+.label-checked {
+    display: block !important;
+    margin-bottom: 10px;   
+}
+
+.a-pMostrarEnvio {
+   font-weight: 800;
+   text-decoration: underline;
+}
+
+.check-provinciasContent {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.p-checkProvincia {
+    text-decoration: underline;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+.calcularEnvio2 {
+    margin-top: 15px;
+}
+
+.totalApagar {
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
+
+.p-total {
+    border-top: 7px double rgb(0, 0, 0);
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+/* _____________________________OFERTAS_______________________________ */
+
+.header {
+    margin-top: -83px;
+    margin-bottom: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-content {
+    
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 10px;
+    
+}
+
+.header-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+
+.header-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt h3 {
+    font-size: 70px;
+    text-transform: uppercase;
+    margin: 0px 20px;
+    line-height: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.header-txt p {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.header-txt a {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.ofert {
+    padding: 20px 0 0 0;
+    display: flex;
+}
+
+.ofert-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ofert-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 15px);
+    padding: 15px;
+    background-color: rgb(248, 238, 226);
+    
+}
+
+.ofert-img {
+    flex-basis: 50%;
+    margin-right: 15px;
+    
+}
+
+.ofert-img img {
+    width: 250px;
+}
+
+.ofert-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.ofert-txt h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ofert-txt a {
+    border: 2px solid black;
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#listadoOfertas {
+    margin-top: -150px;
+    margin-bottom: 200px;
+}
+
+.esconderOfertas {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+    margin-top: -150px;
+    margin-bottom: 450px;
+}
+
+#btn-ofertas2 {
+    border: 2px solid black;
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 15px;
+}
+.titulo-sectionPE {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: -300px auto 20px auto;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.p-titulosectionPE {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.prodEsp-content {
+    margin: 0 100px -50px 100px;
+    display: flex;
+    padding: 50px 0 100px 0;
+    justify-content: space-between;
+}
+
+.prodEspeciales-1 {
+    flex-basis: calc(33.3% - 30px);
+    text-align: center;
+    align-items: center;
+    background-color: rgb(248, 238, 226);
+    padding: 30px;
+}
+
+.pe-img {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pe-text h3 {
+    margin-bottom: 20px;
+}
+
+
+
+/*__________________PRODUCTOS____________________*/
+
+.products {
+    padding: 75px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.products h2 {
+    margin: auto;
+    font-size: 35px;
+}
+
+.product:hover {
+    scale: 105%;
+    transition: 0.3s;
+}
+.product:not(:hover) {
+    scale: 100%;
+    transition: 0.2s;
+}
+
+.products h2 {
+    margin-bottom: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.product-content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 0 20px rgb(109, 109, 109);
+    min-width: 300px;
+}
+
+.product h3  {
+    margin: 10px;
+}
+
+.product img {
+    cursor: pointer;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.product p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.product .precio span {
+    font-weight: 800;
+    padding: 30px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.agregar-carrito {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+    padding: 6px 11px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+
+.agregar-carrito:hover {
+  background: rgb(247, 221, 160);
+  color: black;
+  transition: .5s;
+}
+.agregar-carrito:not(:hover) {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition:0.5s;
+}
+
+.agregar-carrito:active {
+  transform: scale(0.95);
+  
+}
+
+.btn-3 {
+    cursor: pointer;
+    padding: 8px 6px 4px 6px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+}
+
+.btn-3:hover {
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.601);
+}
+
+.btn-3:not(:hover) {
+    transition: 0.5s;
+}
+
+.nadaCarrito p {
+    margin: 20px 0 40px;
+}
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding-right: 15px;
+  text-transform: uppercase;
+
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.irAproductos {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.icons {
+    display: flex;
+    padding: 50px 0 100px 0;
+    justify-content: space-between;
+}
+
+.icon-1  {
+    flex-basis: calc(33.3% - 30px);
+    text-align: center;
+    align-items: center;
+    background-color: rgb(248, 238, 226);
+    padding: 30px;
+}
+
+.icon-img img {
+    width: 50px;
+    margin: 30px;
+}
+
+.icon-txt h3 {
+    margin-bottom: 30px;
+}
+
+.icon-txt p {
+    font-size: 18px;
+}
+
+.icon-txt a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.btn-3 {
+    margin: 0 15px;
+}
+
+/* _______________________BLOG/NOSOTROS______________________________________ */
+
+.blog {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 75px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 43px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.blog p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.blog-1 {
+    text-align: center;
+}
+
+.cards-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-basis: calc(33.3% - 30px);
+
+} 
+
+
+.card-content h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    color: black;
+
+}
+
+.card-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    opacity: 100%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    backface-visibility: hidden;
+}
+
+
+.back { 
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(248, 238, 226);
+    padding: 30px;
+}
+
+
+.back p {
+    display: flex;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.card:hover .front img {
+    filter: blur(1px);
+}
+
+.card:hover .back {
+    transition: 1s;
+    opacity: 90%;
+    color:black
+}
+
+.card:not(:hover) .front img {
+    filter: blur(0);
+}
+
+.card:not(:hover) .back {
+    transition: 1s;
+    opacity: 0%;
+}
+
+/* _______________________FOOTER______________________________________ */
+
+
+.footer {
+    padding: 50px;
+    background-color: rgb(206, 234, 247);
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.footer-content {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.link {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 60px;
+}
+
+.footer-content a {
+    font-size: 15px;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 20px; 
+}
+
+
+.menu  {
+    z-index: 1;
+    background-color:rgb(206, 234, 247);
+    padding: 20px;
+    position: fixed;
+}
+
+/*_____________________BOTON WSP_______________________*/
+
+.wsp-content {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    margin-right: 90px;
+    margin-bottom: 75px;
+    z-index: 0.6;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.wsp-content:hover {
+    scale: 130%;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 60px rgba(207, 247, 147, 0.987);
+}
+
+.wsp-content:not(:hover) {
+
+    transition: 0.5s ease-in-out;
+}
+
+
+/*_______________________RESPONSIVE______________________*/
+
+
+@media (max-width: 902px) {
+    .menu {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 100%;
+        background-color: rgb(206, 234, 247);
+        display: none;
         
-        <!-- HASTA ACA LA LISTA DE LOS PRODUCTOS -->
+    }
+
+    .menu .navbar ul li a {
+        width: 100%;
+        font-weight: 600;
+    }
+
+
+    #menu:checked ~ .navbar  {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        background-color: rgb(206, 234, 247);
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+
+    .submenu:hover #lista-carrito {
+        max-width: 100%;
+    }
+
+    .header {
+        min-height: 0vh;
+        margin-bottom: -60px;
+        margin-top: 100px;
+    }
+
+    .header-content {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-txt {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .header-txt h3 {
+        font-size: 50px;
+    }
+
+    .ofert {
+        padding: 30px 30px 0 30px;
+        flex-direction: column;
+    }
+
+    .ofert-1 {
+        margin-bottom: 30px;
+    }
+
+    .ofert-content {
+        flex-direction: column;
+
+    }
+
+    .products {
+        margin-top: 450px;
+        padding: 0 30px 30px 30px;
+    }
+
+    .products h3 {
+        margin: 20px;
+    }
+
+    .products p {
+        font-size: 20px;
+        margin: 30px;
+    }
+
+    .products a {
+        font-size: 20px;
         
+    }
 
-        <section class="icons container paraMargin" id="blog">
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 
-            <div class="icon-1">
-                <div class="icon-img">
-                    <img src="landingpage/images/IconEnvio.svg" alt="">
-                </div>
-                <div class="icon-txt">
-                    <h3> Envios a todo el país </h3>
-                    <p> Utilisamos Correo Argentino. </p>
-                    <p> Si sos de la provincia Santa Fe, el envio es el regional y cuesta $2800, para el resto de provincias cuesta $3800.</p>
-                    <p> Si sos de Rosario, el envio lo coordinamos por Whatsapp</p>
-                </div>
-            </div>
+    .product img {
+        width: 200px;
+        height: 280px;
+    }
 
-            <div class="icon-1">
-                <div class="icon-img">
-                    <img src="landingpage/images/IconStar.svg" alt="">
-                </div>
-                <div class="icon-txt">
-                    <h3> Atencion en todo momento </h3>
-                    <p> Contactese mediante cualquiera de nuestras<a href="contacto.html" class="btn-2"> opciones de contacto.</a> Respoderemos lo antes posible!</p>
-                </div>
-            </div>
+    .icons {
+        padding: 30px;
+        flex-direction: column;
+    }
 
-            <div class="icon-1">
-                <div class="icon-img">
-                    <img src="landingpage/images/IconHappy.svg" alt="">
-                </div>
-                <div class="icon-txt">
-                    <h3> Clientes satisfechos </h3>
-                    <p> Podes encontrar pruebas de nuestra calidad viendo la  <a href="#" class="btn-2"> galeria de clientes.</a></p>
-                </div>
-            </div>
+    .icon-1 {
+        margin-bottom: 30px;
+    }
 
-        </section>
-        <!-- HASTA ACA LA SECCION DE ICONOS ASI COMO MEJOR ENVIO, MEJORES CLIENTES Y ESO -->
+    .cards-containers {
+        padding: 0 30px 30px 30px;
+        flex-direction: column;
+    }
 
-        <!-- HACER QUE CUANDO TOQUEMOS NOS MUESTRE LA INFO, COMO TIENE EL MODULO 2 DE TECLAB DE GESTION CONFIGURACION -->
-        <section class="blog container paraMargin" id="sobre-nosotros">
-            <h2> Conoce un poco mas sobre PD Impresiones </h2>
-            <p> Posicionate sobre las imagenes para ver mas info!</p>
+    .blog-1 {
+        margin-bottom: 30px;
+    }
 
-            <div class="cards-containers">
+    .footer {
+        padding: 30px;
+    }
 
-                <div class="card-content blog-1">
-                    <h3> Quien soy? </h3> 
-                                   
-                    <div class="card">
-                        <div class="front">
-                            <img src="landingpage/images/matias.jpeg" alt="">
-                        </div>
-                        <div class="back">
-                            <p> Me llamo Matías, tengo 18 años y estudio Ingenieria Mecanica. </p>
-                            <p> Soy fanatico de la pesca, y mi hobby principal es realizar impresiones 3d que soluciones necesidades. Y romper las bolas </p>
-                        </div>
-                    </div>
-                    
-                </div>
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}
     
+.paraMargin {
+    max-width: 1200px;
+}
 
-                <div class="card-content blog-1">
-                    <h3> Con que imprimo? </h3>                
-                    <div class="card">
-                        <div class="front">
-                            <img src="landingpage/images/impresora2.jpeg" alt="">
-                        </div>
-                        <div class="back">
-                            <p> Mi impresora es la Ender 3 de 2MG. Llevo usandola hace 1 año y me facilita brindar la mayor calidad en mis impresiones. </p>
-                            <p> El material que utilizo es PLA, PET-G, y TPU. Son materiales Ecofriendly, y vienen de muchos colores y tonos distintos.</p>
-                        </div>
-                    </div>
-                    
-                </div>
+/*Stilo boton calcular envio*/
 
-
-                <div class="card-content blog-1">
-                    <h3> + sobre impresion 3D </h3>                
-                    <div class="card">
-                        <div class="front">
-                            <img src="landingpage/images/img 5.jpeg" alt="">
-                        </div>
-                        <div class="back">
-                            <p> La impresion 3D, tiene infinidad de utilidades, pero una para destacar es su uso medicinal, ya que es muy recomendada para realizar prótesis. </p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-            
-
-        </section>
-        <!-- HASTA ACA LA SESION DE BLOG Y MAS SOBRE NOSOTROS -->
-
-        <footer class="footer">
-            <div class="footer-content container">
-
-                <div class="link">
-                    <h3> Redes sociales </h3>
-                    <ul>
-                        <li> <a href="#"> Insta </a> </li>
-                        <li> <a href="#"> Facebook </a> </li>
-                        <li> <a href="#"> Whatsapp </a> </li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h3> Lorem </h3>
-                    <ul>
-                        <li> <a href="#"> lorem  </a> </li>
-                        <li> <a href="#"> lorem </a> </li>
-                        <li> <a href="#"> lorem </a> </li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h3> Lorem </h3>
-                    <ul>
-                        <li> <a href="#"> lorem  </a> </li>
-                        <li> <a href="#"> lorem </a> </li>
-                        <li> <a href="#"> lorem </a> </li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h3> Lorem </h3>
-                    <ul>
-                        <li> <a href="#"> lorem  </a> </li>
-                        <li> <a href="#"> lorem </a> </li>
-                        <li> <a href="#"> lorem </a> </li>
-                    </ul>
-                </div>
-
-            </div>
-        </footer>
-
-        <div class="wsp-container"> 
-            <div class="wsp-fondo">
-                <div class="wsp-content"> <!-- este seria class="card" -->
-                    <a href="https://wa.me/543413076880" target="_blank" class="texto-wsp"><img src="landingpage/images/wsp.svg" width="110px"></a>
-                </div>  <!-- este seria class="card" -->
-            </div>    
-        </div>
-    
-
-    </body>
-
-    <script src="landingpage/js/carrito.js"> </script>
-</html>
