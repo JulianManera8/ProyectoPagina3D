@@ -594,7 +594,7 @@ span {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: -150px auto 20px auto;
+    margin: -50px auto 20px auto;
     font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
@@ -847,6 +847,26 @@ span {
     text-decoration: underline;
     font-weight: 600;
 }
+
+
+.animacionIcon {
+    animation: bounce 1s infinite; 
+    scale: 150%; 
+    transition: 0.5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
 
 .btn-3 {
     margin: 0 15px;
@@ -1210,6 +1230,12 @@ h2 {
   box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
 }
 
+.carrousel .product img {
+    scale: 120%;
+    margin-bottom: 25px;
+    border-radius: 0.5rem;
+}
+
 .carrousel .puntos {
   width: 100%;
   margin: 1em 0 0;
@@ -1221,8 +1247,8 @@ h2 {
 }
 
 .carrousel .punto {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   margin: 1em 1em 0;
   color: var(--negro);
   transition: all 0.4s ease;
@@ -1230,6 +1256,10 @@ h2 {
   background-color: white;
   border: 1px solid black;
   box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+.carrousel .punto:hover {
+    background-color: rgb(247, 215, 147);
 }
 
 .carrousel .punto.activo {
