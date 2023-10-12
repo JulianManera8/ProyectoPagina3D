@@ -28,7 +28,7 @@
                         <li> <a href="inicio.html" class="li-navbar"> INICIO </a> </li>
                         <li> <a href="productos.html" class="li-navbar"> PRODUCTOS </a> </li>
                         <li> <a href="contacto.html" class="li-navbar"> CONTACTO </a> </li>
-                        <li> <a href="#sobre-nosotros" class="li-navbar"> NOSOTROS </a> </li>
+                        <li> <a href="inicio.html#sobre-nosotros" class="li-navbar"> NOSOTROS </a> </li>
                     </ul>
                 </nav>
                 <div>
@@ -154,74 +154,70 @@
             </div>
 
             <div class="header-content container paraMargin">
-                <div class="header-img">
-                    <img src="landingpage/images/img 5.jpeg" loading="lazy" width="600px">
+                <div class="carrousel" id="lista-productos">
+                    <div class="grande">
+                        <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
+                            <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" onclick="window.location.href='1producto.html'">
+                            <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
+                                <h3> Impresion 1</h3>
+                                <p> Altura de capa: 0,4 </p>
+                                <p> <b>$</b><spam class="precio">600</spam></p>
+                                <br>
+                                <a class="agregar-carrito btn-2" data-id="1">
+                                    Agregar al carrito
+                                </a>
+                                <a class= "btn-3" onclick="window.location.href='1producto.html'">
+                                    Ver Info
+                                </a>
+                            </div>
+                        </div>   
+
+                        <div class="product">
+                            <img src="landingpage/images/img 2.jpeg" loading="lazy" alt="" onclick="window.location.href='2producto.html'">
+                            <div class="product-txt">
+                                <h3> Impresion 2</h3>
+                                <p> Altura de capa: 0,4 </p>
+                                <p> <b>$</b><spam class="precio">600</spam></p>
+                                <br>
+                                <a class="agregar-carrito btn-2" data-id="2">
+                                    Agregar al carrito
+                                </a>
+                                <a class= "btn-3" onclick="window.location.href='2producto.html'">
+                                    Ver Info
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="product">
+                            <img src="landingpage/images/img 3.jpeg" loading="lazy" alt="" onclick="window.location.href='3producto.html'">
+                            <div class="product-txt">
+                                <h3> Impresion 3</h3>
+                                <p> Altura de capa: 0,4 </p>
+                                <p> <b>$</b><spam class="precio">600</spam></p>
+                                <br>
+                                <a class="agregar-carrito btn-2" data-id="3">
+                                    Agregar al carrito
+                                </a>
+                                <a class= "btn-3" onclick="window.location.href='3producto.html'">
+                                    Ver Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                    </ul>
                 </div>
                 <div class="header-txt">
                     <h3> Ofertas especiales </h3>
                     <p> No te pierdas estas impresiones </p>
-                    <a href="#" class="btn-1" id="btn-ofertas"> VER OFERTAS </a>
                 </div>
             </div>
 
         </header>
-
-        <section class="ofert container paraMargin esconder" id="listadoOfertas">
-            
-
-            <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
-                    <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" onclick="window.location.href='1producto.html'">
-                    <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
-                        <h3> Impresion 1</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="1">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='1producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <img src="landingpage/images/img 2.jpeg" alt="" loading="lazy" onclick="window.location.href='2producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 2</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="2">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='2producto.html'">
-                            Ver Info
-                        </a>
-                        
-                    </div>
-                </div>
-
-                <div class="product">
-                    <img src="landingpage/images/img 3.jpeg" alt="" loading="lazy" onclick="window.location.href='3producto.html'">
-                    <div class="product-txt">
-                        <h3> Impresion 3</h3>
-                        <p> Altura de capa: 0,4 </p>
-                        <p> <b>$</b><spam class="precio">600</spam></p>
-                        <br>
-                        <a class="agregar-carrito btn-2" data-id="3">
-                            Agregar al carrito
-                        </a>
-                        <a class= "btn-3" onclick="window.location.href='3producto.html'">
-                            Ver Info
-                        </a>
-                    </div>
-                </div>
-
-        </section>
-        <div class="esconderOfertas">
-            <a href="#" class="btn-1 esconder" id="btn-ofertas2"> CERRAR </a>    
-        </div>
 
         <!-- HASTA ACA ES EL HEADER -->
 
@@ -747,4 +743,5 @@
     </body>
 
     <script src="landingpage/js/carrito.js"> </script>
+    <script src="landingpage/js/carrusel.js"> </script>
 </html>
