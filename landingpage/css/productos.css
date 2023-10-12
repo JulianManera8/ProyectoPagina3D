@@ -603,7 +603,7 @@ span {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: -300px auto 20px auto;
+    margin: -150px auto 20px auto;
     font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
@@ -1179,4 +1179,71 @@ h2 {
 }
 
 /*Stilo boton calcular envio*/
+
+/*PARTE DEL CARRUSEL*/
+
+.carrousel {
+    margin-top: 50px;
+  width: 90%;
+  max-width: 120em;
+  padding: 1em;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  overflow: hidden;
+}
+
+.carrousel .grande {
+  width: 304%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: rgba(250, 235, 215, 0.514);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  padding: 3em;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+
+.carrousel .product {
+  width: calc(90% / 3 );
+  min-height: 10vh;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+.carrousel .puntos {
+  width: 100%;
+  margin: 1em 0 0;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+.carrousel .punto.activo {
+  background-color: rgb(235, 165, 16);
+}
 
