@@ -1,7 +1,8 @@
 //VARIABLES
 
 const carrito = document.querySelector('#carrito');
-const listaCursos = document.querySelector('#lista-productos');
+const listaProductos = document.querySelector('#lista-productos');
+const listaProductos2 = document.querySelector('.lista-productos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const botonesCarrito = document.querySelector('.botones-carrito');
 const botonVaciarCarrito = document.querySelector('.vaciar-carrito');
@@ -17,7 +18,8 @@ const spanTotal = document.querySelector('#totalCarrito');
 const ofertasEspeciales = document.getElementById('listadoOfertas') 
 const btnOfertas = document.getElementById('btn-ofertas')
 const btnOfertas2 = document.getElementById('btn-ofertas2')
-
+const irAlBlog = document.querySelector('.a-pMostrarEnvio');
+const blogEnvio = document.querySelector('.infoEnvio');
 
 let totalCarrito = 0;
 
@@ -37,7 +39,8 @@ crearEventos();
 function crearEventos() {
     
     //agregar producto seleccionado al carrito
-    listaCursos.addEventListener('click', agregarCurso);
+    listaProductos.addEventListener('click', agregarCurso);
+    listaProductos2.addEventListener('click', agregarCurso);
 
     //borrar producto desde la X desde el carrito
     contenedorCarrito.addEventListener('click', borrarProducto);
@@ -63,9 +66,22 @@ function crearEventos() {
     //que no me muestre los botones de vaciar o pagar si no tengo nada en el carrito
     iconoCarrito.addEventListener('mouseenter', sacarBotones);
 
-    
-
+    //que se ilumine el blog donde dice la info del carrito
+    irAlBlog.addEventListener('click', iluminarIcon);
 }
+
+//iluminar el blog del envio
+function iluminarIcon() {
+    
+    blogEnvio.classList.add('animacionIcon')    
+    
+    setTimeout(() => {
+        blogEnvio.classList.remove('animacionIcon')    
+    }, 5000);
+    
+    
+}
+
 
 //mostrar y cerrar carrito
 imgCarrito.onclick = () => {
