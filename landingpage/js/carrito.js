@@ -63,21 +63,6 @@ function crearEventos() {
     //que no me muestre los botones de vaciar o pagar si no tengo nada en el carrito
     iconoCarrito.addEventListener('mouseenter', sacarBotones);
 
-
-    //mostrar listado de ofertas
-    btnOfertas.addEventListener('click', (e) => {
-        e.preventDefault()
-        ofertasEspeciales.classList.remove('esconder')
-        btnOfertas2.classList.remove('esconder')
-    })
-
-
-    //cerrar ofertas
-    btnOfertas2.addEventListener('click', (e) => {
-        e.preventDefault()
-        ofertasEspeciales.classList.add('esconder')
-        btnOfertas2.classList.add('esconder')
-    })
     
 
 }
