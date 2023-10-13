@@ -1015,6 +1015,17 @@ h2 {
     position: fixed;
 }
 
+.iluminarFooter {
+    transition: 1s;
+    color: red !important; 
+    scale: 120%;   
+}
+.desiluminarFooter {
+    color: black !important; 
+    scale: 100%;  
+}
+
+
 /*_____________________BOTON WSP_______________________*/
 
 .wsp-content {
@@ -1266,3 +1277,30 @@ h2 {
   background-color: rgb(235, 165, 16);
 }
 
+.observacionCarrusel {
+    margin-top: -35px;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.img {
+    border: none !important;
+    background-color: transparent !important;
+    scale: 140% !important;
+    margin: 29px -10px 0px !important;
+    pointer-events: none !important;
+    animation: mostrar 2s infinite; 
+}
+
+
+
+@keyframes mostrar {
+    
+    30% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 1;
+    }
+}
