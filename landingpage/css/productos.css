@@ -861,6 +861,24 @@ span {
     margin: 0 15px;
 }
 
+.animacionIcon {
+    animation: bounce 1s infinite; 
+    scale: 150%; 
+    transition: 0.5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
 /* _______________________BLOG/NOSOTROS______________________________________ */
 
 .blog {
@@ -1002,6 +1020,16 @@ h2 {
     background-color:rgb(206, 234, 247);
     padding: 20px;
     position: fixed;
+}
+
+.iluminarFooter {
+    transition: 1s;
+    color: red !important; 
+    scale: 120%;   
+}
+.desiluminarFooter {
+    color: black !important; 
+    scale: 100%;  
 }
 
 /*_____________________BOTON WSP_______________________*/
@@ -1258,3 +1286,30 @@ h2 {
   background-color: rgb(235, 165, 16);
 }
 
+.observacionCarrusel {
+    margin-top: -35px;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.img {
+    border: none !important;
+    background-color: transparent !important;
+    scale: 140% !important;
+    margin: 29px -10px 0px !important;
+    pointer-events: none !important;
+    animation: mostrar 2s infinite; 
+}
+
+
+
+@keyframes mostrar {
+    
+    30% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 1;
+    }
+}
