@@ -20,6 +20,8 @@ const btnOfertas = document.getElementById('btn-ofertas')
 const btnOfertas2 = document.getElementById('btn-ofertas2')
 const irAlBlog = document.querySelector('.a-pMostrarEnvio');
 const blogEnvio = document.querySelector('.infoEnvio');
+const irModelosFooter = document.querySelector('.irModelosFooter')
+const modelosFooter = document.querySelector('.modelosFooter');
 
 let totalCarrito = 0;
 
@@ -68,6 +70,9 @@ function crearEventos() {
 
     //que se ilumine el blog donde dice la info del carrito
     irAlBlog.addEventListener('click', iluminarIcon);
+
+    //que se ilumine el footer donde dice los links de la pag d mdoelos
+    irModelosFooter.addEventListener('click', iluminarFooter); //
 }
 
 //iluminar el blog del envio
@@ -78,8 +83,15 @@ function iluminarIcon() {
     setTimeout(() => {
         blogEnvio.classList.remove('animacionIcon')    
     }, 5000);
+       
+}
+
+function iluminarFooter() {
     
-    
+    modelosFooter.classList.add('iluminarFooter')   
+    setTimeout(() => {
+        modelosFooter.classList.add('desiluminarFooter')    
+    }, 3000);
 }
 
 
