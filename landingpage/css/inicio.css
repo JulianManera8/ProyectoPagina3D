@@ -1271,6 +1271,7 @@ h2 {
 
 .carrousel .punto:hover {
     background-color: rgb(247, 215, 147);
+    cursor: pointer;
 }
 
 .carrousel .punto.activo {
