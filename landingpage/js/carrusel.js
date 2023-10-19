@@ -1,52 +1,71 @@
+const sliderContainer = document.getElementById('slider-container');
+const slider = document.getElementById('slider');
+const buttonLeft = document.getElementById('button-left');
+const buttonRight = document.getElementById('button-right');
 
+const sliderElements = document.querySelectorAll('.slider__element');
 
-// 'use strict'
+const rootStyles = document.documentElement.style;
 
-const grande    = document.querySelector('.grande')
-const punto     = document.querySelectorAll('.punto')
+let slideCounter = 0;
+let isInTransition = false;
 
+const DIRECTION = {
+  RIGHT: 'RIGHT',
+  LEFT: 'LEFT'
+};
 
-punto.forEach( ( cadaPunto , i )=> {
+const getTransformValue = () =>
+  Number(rootStyles.getPropertyValue('--slide-transform').replace('px', ''));
 
-    // Asignamos un CLICK a cadaPunto
-    punto[i].addEventListener('click',()=>{
-    // Guardar la posición de ese PUNTO
-    let posicion  = i
-    // Calculando el espacio que debe DESPLAZARSE el GRANDE
-    let operacion = posicion * -33.3
-    // MOVEMOS el grand
-    grande.style.transform = `translateX(${ operacion }%)`
-    // Recorremos TODOS los punto
-    punto.forEach( ( cadaPunto , i )=>{
-        // Quitamos la clase ACTIVO a TODOS los punto
-        punto[i].classList.remove('activo')
-    })
-    // Añadir la clase activo en el punto que hemos hecho CLICK
-    punto[i].classList.add('activo')
-    })
-    
-})
+const reorderSlide = () => {
+  const transformValue = getTransformValue();
+  rootStyles.setProperty('--transition', 'none');
+  if (slideCounter === sliderElements.length - 1) {
+    slider.appendChild(slider.firstElementChild);
+    rootStyles.setProperty(
+      '--slide-transform',
+      `${transformValue + sliderElements[slideCounter].scrollWidth}px`
+    );
+    slideCounter--;
+  } else if (slideCounter === 0) {
+    slider.prepend(slider.lastElementChild);
+    rootStyles.setProperty(
+      '--slide-transform',
+      `${transformValue - sliderElements[slideCounter].scrollWidth}px`
+    );
+    slideCounter++;
+  }
 
-if ( punto[0].classList.contains('activo')) {
-    setInterval(() => {
-        grande.style.transform = 'translateX(-33.3%)'
-        punto[0].classList.remove('activo')
-        punto[1].classList.add('activo')
-    }, 2000);
-} 
+  isInTransition = false;
+};
 
+const moveSlide = direction => {
+  if (isInTransition) return;
+  const transformValue = getTransformValue();
+  rootStyles.setProperty('--transition', 'transform 0.7s');
+  isInTransition = true;
+  if (direction === DIRECTION.LEFT) {
+    rootStyles.setProperty(
+      '--slide-transform',
+      `${transformValue + sliderElements[slideCounter].scrollWidth}px`
+    );
+    slideCounter--;
+  } else if (direction === DIRECTION.RIGHT) {
+    rootStyles.setProperty(
+      '--slide-transform',
+      `${transformValue - sliderElements[slideCounter].scrollWidth}px`
+    );
+    slideCounter++;
+  }
+};
 
+buttonRight.addEventListener('click', () => moveSlide(DIRECTION.RIGHT));
+buttonLeft.addEventListener('click', () => moveSlide(DIRECTION.LEFT));
 
-// function mover(posicion) {
-//     let operacion = posicion * -33.3
-//     if (posicion === 0) {
-//         grande.style.transform = `translateX(-33.3%)`
-//     } else if (posicion === 1) {
-//         console.log('la posicion es 1')
-//     } else if (posicion === 2) {
-//         console.log('la posicion es 2')
-//     }
-// }
+slider.addEventListener('transitionend', reorderSlide);
+
+reorderSlide();
 
 
 
