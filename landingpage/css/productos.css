@@ -471,8 +471,8 @@ span {
 /* _____________________________OFERTAS_______________________________ */
 
 .header {
-    margin-top: -83px;
-    margin-bottom: 80px;
+    margin-top: 5%;
+    margin-bottom: 150px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -1208,108 +1208,91 @@ h2 {
 
 /*Stilo boton calcular envio*/
 
+
 /*PARTE DEL CARRUSEL*/
 
-.carrousel {
-    margin-top: 50px;
-  width: 90%;
-  max-width: 120em;
-  padding: 1em;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+:root {
+  --slide-transform: 0;
+  --transition: transform 0.5s;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.slider-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  background-color: rgb(248, 238, 226); 
+  scale: 110%;
+  border-radius: 0.5rem;
 }
 
-.carrousel .grande {
-  width: 304%;
+.slider {
   display: flex;
-  flex-flow: row nowrap;
+  transform: translateX(var(--slide-transform));
+  transition: var(--transition);
+  
+}
+
+
+
+.slider__element {
+  min-width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  scale: 90% !important;
+  border-radius: 0.5rem;
+
+}
+
+
+.slider-buttons {
+  position: relative;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: rgba(250, 235, 215, 0.514);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  padding: 3em;
-  transition: all 0.5s ease;
-  transform: translateX(0%);
+  text-align: c;
+  height: 100px;
+  width: 250px;
+  margin: auto;
 }
 
-.carrousel .product {
-  width: calc(90% / 3 );
-  min-height: 10vh;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: white;
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-}
-
-.carrousel .product img {
-    scale: 120%;
-    margin-bottom: 25px;
-    border-radius: 0.5rem;
-}
-
-
-.carrousel .puntos {
-  width: 100%;
-  margin: 1em 0 0;
-  padding: 0.4em;
+.boton {
   display: flex;
-  flex-flow: row nowrap;
+  text-align: center;
   justify-content: center;
-  align-items: center;
+  background: none;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  color: #000000;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.223);
 }
 
-.carrousel .punto {
-  width: 1.5em;
-  height: 1.5em;
-  margin: 1em 1em 0;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+.boton:hover { 
+    background-color: rgb(206, 234, 247);
+    scale: 110%;
+    transition: 0.5s;
+}
+.boton:not(:hover) { 
+    background-color: #f5f5f5;
+    transition: 0.7s;
 }
 
-.carrousel .punto:hover {
-    background-color: rgb(247, 215, 147);
+.flechita {
+    margin: auto;
+    font-size: 40px;
 }
 
-.carrousel .punto.activo {
-  background-color: rgb(235, 165, 16);
+.boton:active {
+    scale: 90%;
+    transition: 0.2s;
 }
 
-.observacionCarrusel {
-    margin-top: -35px;
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    font-size: 25px;
-}
-
-.img {
-    border: none !important;
-    background-color: transparent !important;
-    scale: 140% !important;
-    margin: 29px -10px 0px !important;
-    pointer-events: none !important;
-    animation: mostrar 2s infinite; 
-}
-
-
-
-@keyframes mostrar {
-    
-    30% {
-        opacity: 0.2;
-    }
-    60% {
-        opacity: 1;
-    }
-}
