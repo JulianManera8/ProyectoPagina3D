@@ -152,10 +152,10 @@
                 </div>
             </div>
 
-            <div class="header-content container paraMargin">
-                <div class="carrousel lista-productos">
-                    <div class="grande">
-                        <div class="product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
+            <div class="header-content container paraMargin ">
+                <div id="slider-container" class="slider-container lista-productos">
+                    <div class="slider" id="slider">
+                        <div class="product slider__element">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
                             <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" onclick="window.location.href='1producto.html'">
                             <div class="product-txt"> <!-- ESTE SERIA EL class="info-card" (para hacer el carrito) -->
                                 <h3> Impresion 1</h3>
@@ -171,7 +171,7 @@
                             </div>
                         </div>   
 
-                        <div class="product">
+                        <div class="product slider__element">
                             <img src="landingpage/images/img 2.jpeg" loading="lazy" alt="" onclick="window.location.href='2producto.html'">
                             <div class="product-txt">
                                 <h3> Impresion 2</h3>
@@ -187,7 +187,7 @@
                             </div>
                         </div>
                         
-                        <div class="product">
+                        <div class="product slider__element">
                             <img src="landingpage/images/img 3.jpeg" loading="lazy" alt="" onclick="window.location.href='3producto.html'">
                             <div class="product-txt">
                                 <h3> Impresion 3</h3>
@@ -203,18 +203,12 @@
                             </div>
                         </div>
                     </div>
-            
-                    <div class="observacionCarrusel">
-                        <p>Desplazate para ver mas ofertas!</p>
+                    
+                    <div class="slider-buttons">
+                        <button id="button-left" class="boton"> <p class="flechita fizq">&lt;</p></button>
+                        <button id="button-right" class="boton button-right"><p class="flechita fder">&gt;</p></button>
                     </div>
                     
-                    <ul class="puntos">
-                        <li class="img"><img src="landingpage/images/leftarrow.svg" class="flechitas"></img></li>
-                        <li class="punto activo"></li>
-                        <li class="punto"></li>
-                        <li class="punto"></li>
-                        <li class="img"><img src="landingpage/images/arrow.svg" class="flechitas"></img></li>
-                    </ul>
                 </div>
                 <div class="header-txt">
                     <h3> Ofertas especiales </h3>
