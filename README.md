@@ -15,21 +15,13 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
                                 OFERTAS ESPECIALES
 
-
-+ Que no sea la foto grande, sino que esa foto sea un carrusel (video que tengo en wsp y codigo en carpeta de pruebas) con las ofertas.
-
-
-+Obiamente sacar el boton de ver ofertas y que aparezcan y desaparezcan
-
-
++
 
 
 
                                 PRODUCTOS:
 - Ponerle filtros de busqueda
 
-- Poner un boton que diga "mostrar mas" y agregarle el onclick ahi que me muestre en otra pestaña todo con 1producto
-- Armar las estructuras de los otros productos
 
 - https://www.youtube.com/watch?v=gW-q6G9KYTg&t=0s estilo cada producto individual
 
@@ -60,16 +52,10 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
 
                             BLOG/NOSOTROS:
-+ CUANDO TOQUE EN VER LINK EN PRODESPEC. QUE SE ILUMINE O DESTAQUE ESOS LINKS O EL FOOTER
 
 
 
                                GENERAL:
-
-- Ver lo de las ofertas, si lo dejo o q hago 
-- Productos con colores mas llamativos
-- Poner carteles emergentes tipo alarmas para llamar mas la atencion de ciertas cosas
-
 
 
 
