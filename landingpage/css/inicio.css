@@ -682,6 +682,7 @@ span {
     padding: 40px;
     box-shadow: 0 0 20px rgb(109, 109, 109);
     min-width: 300px;
+    border-radius: 0.5rem;
 }
 
 .product h3  {
@@ -702,9 +703,17 @@ span {
     padding: 10px;
 }
 
-.product .precio span {
+.product .precio {
     font-weight: 800;
-    padding: 30px;
+    font-size: 25px;
+}
+.precio-signo {
+    font-weight: 800;
+    font-size: 25px;
+}
+.precioNo {
+    text-decoration: line-through;
+    margin-right: 20px;
 }
 
 .boton {
@@ -1200,7 +1209,7 @@ h2 {
     max-width: 1200px;
 }
 
-/*PARTE DEL CARRUSEL*/
+/*_________________________________PARTE DEL CARRUSEL_________________*/
 
 :root {
   --slide-transform: 0;
@@ -1287,3 +1296,19 @@ img {
     transition: 0.2s;
 }
 
+.destacarBtnDer {
+    
+    animation: destacar 2s infinite;
+    transition: 0.1s;
+    
+}
+
+@keyframes destacar {
+    0%, 100% {
+        background-color: #f5f5f5;
+    }
+    50% {
+        background-color: rgb(180, 227, 248);
+    }
+
+}
