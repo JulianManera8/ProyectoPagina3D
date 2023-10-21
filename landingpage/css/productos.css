@@ -32,7 +32,7 @@ img {
 .header {
     display: flex;
     align-items: center;
-    min-height: 80vh;
+    min-height: 10vh;
     padding: 70px 0;
     align-items: center;
 }
@@ -470,140 +470,14 @@ span {
 
 /* _____________________________OFERTAS_______________________________ */
 
-.header {
-    margin-top: 5%;
-    margin-bottom: 150px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.header-content {
-    
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    padding: 0 10px;
-    
-}
-
-.header-img {
-    flex-basis: 50%;
-    text-align: center;
-}
 
 
-.header-txt {
-    flex-basis: 50%;
-    text-align: center;
-}
-
-.header-txt h3 {
-    font-size: 70px;
-    text-transform: uppercase;
-    margin: 0px 20px;
-    line-height: 1;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-.header-txt p {
-    font-size: 20px;
-    margin: 30px;
-}
-
-.header-txt a {
-    border: 2px solid rgb(0, 0, 0);
-    padding: 3px 11px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 7px;
-}
-
-.ofert {
-    padding: 20px 0 0 0;
-    display: flex;
-}
-
-.ofert-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.ofert-1 {
-    display: flex;
-    align-items: center;
-    flex-basis: calc(33.3% - 15px);
-    padding: 15px;
-    background-color: rgb(248, 238, 226);
-    
-}
-
-.ofert-img {
-    flex-basis: 50%;
-    margin-right: 15px;
-    
-}
-
-.ofert-img img {
-    width: 250px;
-}
-
-.ofert-txt {
-    flex-basis: 50%;
-    text-align: center;
-}
-
-.ofert-txt h3 {
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.ofert-txt a {
-    border: 2px solid black;
-    padding: 3px 11px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 7px;
-    font-size: 15px;
-}
-
-#listadoOfertas {
-    margin-top: -280px;
-    margin-bottom: 200px;
-}
-
-.esconderOfertas {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin: 30px;
-    margin-top: -150px;
-    margin-bottom: 450px;
-}
-
-#btn-ofertas2 {
-    border: 2px solid black;
-    padding: 3px 11px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 7px;
-    font-size: 15px;
-}
+ 
 .titulo-sectionPE {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: -90px auto 20px auto;
+    margin: 20px;
     font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
@@ -685,12 +559,14 @@ span {
 }
 
 .product {
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 40px;
     box-shadow: 0 0 20px rgb(109, 109, 109);
     min-width: 300px;
+    border-radius: 0.5rem;
 }
 
 .product h3  {
@@ -711,10 +587,20 @@ span {
     padding: 10px;
 }
 
-.product .precio span {
+.product .precio {
     font-weight: 800;
-    padding: 30px;
+    font-size: 25px;
 }
+.precio-signo {
+    font-weight: 800;
+    font-size: 25px;
+}
+.precioNo {
+    text-decoration: line-through;
+    margin-right: 20px;
+}
+
+
 
 .boton {
     display: flex;
@@ -746,6 +632,9 @@ span {
 .agregar-carrito:active {
   transform: scale(0.95);
   
+}
+.verInfoOferta {
+    background-color: #f5f5f5!important;
 }
 
 .btn-3 {
@@ -824,6 +713,13 @@ span {
     text-align: center;
     margin-bottom: 80px;
 }
+
+.ofertas {
+    background-color: rgb(247, 238, 226);
+    border-radius: 1rem;
+}
+
+/*_______________________BLOG/ICONOS__________________*/
 
 .icons {
     display: flex;
