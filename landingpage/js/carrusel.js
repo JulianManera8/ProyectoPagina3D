@@ -68,7 +68,16 @@ slider.addEventListener('transitionend', reorderSlide);
 reorderSlide();
 
 
+eventoBtnDer();
+function eventoBtnDer() {
+  document.addEventListener('DOMContentLoaded', destacarBtnDer)
+}
 
-
-
-
+function destacarBtnDer() {
+  buttonRight.classList.add('destacarBtnDer');
+    
+  setTimeout(() => {
+    buttonRight.classList.remove('destacarBtnDer');     
+  }, 6000);
+  
+}
