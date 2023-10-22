@@ -65,66 +65,83 @@
                                         </p>
                                     </div>
 
-                                    <div class="calculoEnvio esconder" id="divCalculoEnvio">
+                                    <!-- <form class="envio esconder" id="divCalculoEnvio">
+                                    
+                                        <label class="label-checked" for="provincia">Provincia: </label>
+                                        <select name="provincia" id="provincia">
+                                            <option value="seleccionar">Seleccionar</option>
+                                            <option value="santafe">Santa Fe</option>
+                                            <option value="otraprovincia">otra provincia</option>
+                                        </select>
 
-                                        <div class="checkers-container">
+                                        <label class="label-checked " for="ciudad">Ciudad: </label>
+                                        <select name="ciudad" id="ciudad" class="esconder">
+                                            <option value="seleccionar">Seleccionar</option>
+                                            <option value="rosario">Rosario</option>
+                                            <option value="otraciudad">otra ciudad</option>
+                                        </select>
+
+                                        <label class="label-checked" for="entrega">Entrega: </label>
+                                        <select name="entrega" id="entrega">
+                                            <option value="seleccionar">Seleccionar</option>
+                                            <option value="retiro">Retiro en persona</option>
+                                            <option value="domicilio">Entrega a domicilio</option>
+                                        </select>
+
+                                        <input type="submit" value="CALCULAR" id="calcularEnvio2">
+                                        <input type="reset" value="Probar otro" id="probarOtro">
+
+                                    </form> -->
+
+                                    <div class="calculoEnvio formularioEnvio esconder" id="divCalculoEnvio">
+
+                                        <form class="checkers-container">
                                             <div class="check-provinciasContainer divSelecProvincia" >
                                                 <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
                                                 <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="santaFe">Santa Fe</label>
-                                                            <input type="radio" name="opciones" value="Santa Fe" id="santaFe">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraProvincia">Otra provincia</label>
-                                                        <input type="radio" name="opciones" value="Otra provincia" id="otraProvincia">
-                                                    </label>
-                                                    </div>
+                                                    <select name="provincia" id="provincia">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="santafe">Santa Fe</option>
+                                                        <option value="otraprovincia">otra provincia</option>
+                                                    </select>
+                                                    <!-- Poner un spinner -->
                                                 </div>
                                             </div>
                                             <div class="check-provinciasContainer esconder divSelecCiudad" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
                                                 <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="rosario">Rosario</label>
-                                                            <input type="radio" name="opciones" value="Rosario" id="rosario">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraCiudad">Otra ciudad/localidad</label>
-                                                        <input type="radio" name="opciones" value="otraCiudad" id="otraCiudad">
-                                                    </label>
-                                                    </div>
+                                                    <select name="ciudad" id="ciudad" class="esconder">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="rosario">Rosario</option>
+                                                        <option value="otraciudad">otra ciudad</option>
+                                                    </select>
+                                                    <!-- Poner un spinner -->
                                                 </div>
                                             </div>
                                             <div class="check-provinciasContainer esconder divSelecTipoenvio" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
                                                 <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="retiro">Retiro en persona</label>
-                                                            <input type="radio" name="opciones" value="retiro" id="retiro">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="domicilio">A domicilio</label>
-                                                        <input type="radio" name="opciones" value="domicilio" id="domicilio">
-                                                    </label>
-                                                    </div>
+                                                    <select name="entrega" id="entrega">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="retiro">Retiro en persona</option>
+                                                        <option value="domicilio">Entrega a domicilio</option>
+                                                    </select>
+                                                    <!-- Poner un spinner -->
                                                 </div>
                                             </div>
-                                        </div>
+                                            <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                                </svg>
+                                                <div class="text">
+                                                  
+                                                </div>   
+                                            </button>
+                                        </form>
 
-                                        <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                            </svg>
-                                            <div class="text">
-                                              
-                                            </div>   
-                                          </button>
                                         
-                                    </div>
+                                        
+                                    </div> 
                                     <div class="totalApagar esconder">
                                         <p class="p-total"> Total a pagar: $<span class="precio-subtotal" id="totalCarrito"> </span></p>
                                     </div>
@@ -333,48 +350,48 @@
                 </div>
 
                 <div class="product">
-                    <img src="landingpage/images/img 7.jpeg" loading="lazy" alt="" onclick="window.location.href='7producto.html'">
+                    <img src="landingpage/images/img 6.jpeg" loading="lazy" alt="" onclick="window.location.href='6producto.html'">
                     <div class="product-txt">
-                        <h3> Impresion 7</h3>
+                        <h3> Impresion 6</h3>
                         <p> Altura de capa: 0,4 </p>
                         <p> <b>$</b><spam class="precio">600</spam></p>
                         <br>
-                        <a class="agregar-carrito btn-2" data-id="7">
+                        <a class="agregar-carrito btn-2" data-id="6">
                             Agregar al carrito
                         </a>
-                        <a class= "btn-3" onclick="window.location.href='7producto.html'">
+                        <a class= "btn-3" onclick="window.location.href='6producto.html'">
                             Ver Info
                         </a>
                     </div>
                 </div>
 
                 <div class="product">
-                    <img src="landingpage/images/img 8.jpeg" loading="lazy" alt="" onclick="window.location.href='8producto.html'">
+                    <img src="landingpage/images/img 6.jpeg" loading="lazy" alt="" onclick="window.location.href='6producto.html'">
                     <div class="product-txt">
-                        <h3> Impresion 8</h3>
+                        <h3> Impresion 6</h3>
                         <p> Altura de capa: 0,4 </p>
                         <p> <b>$</b><spam class="precio">600</spam></p>
                         <br>
-                        <a class="agregar-carrito btn-2" data-id="8">
+                        <a class="agregar-carrito btn-2" data-id="6">
                             Agregar al carrito
                         </a>
-                        <a class= "btn-3" onclick="window.location.href='8producto.html'">
+                        <a class= "btn-3" onclick="window.location.href='6producto.html'">
                             Ver Info
                         </a>
                     </div>
                 </div>
 
                 <div class="product">
-                    <img src="landingpage/images/img 9.jpeg" loading="lazy" alt="" onclick="window.location.href='9producto.html'">
+                    <img src="landingpage/images/img 6.jpeg" loading="lazy" alt="" onclick="window.location.href='6producto.html'">
                     <div class="product-txt">
-                        <h3> Impresion 9</h3>
+                        <h3> Impresion 6</h3>
                         <p> Altura de capa: 0,4 </p>
                         <p> <b>$</b><spam class="precio">600</spam></p>
                         <br>
-                        <a class="agregar-carrito btn-2" data-id="9">
+                        <a class="agregar-carrito btn-2" data-id="6">
                             Agregar al carrito
                         </a>
-                        <a class= "btn-3" onclick="window.location.href='9producto.html'">
+                        <a class= "btn-3" onclick="window.location.href='6producto.html'">
                             Ver Info
                         </a>
                     </div>
