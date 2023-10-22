@@ -313,6 +313,7 @@ const btnCalcularEnvio1 = document.getElementById('calcularEnvio1');
 const btnCalcularEnvio2 = document.getElementById('calcularEnvio2')
 const spanEnvio = document.querySelector('.numero-envioTotal')
 const opciones = document.querySelectorAll('input[name="opciones"]');
+const formularioEnvio = document.querySelector('.formularioEnvio');
 let opcionSeleccionada;
 let totalEnvio = 0;
 
@@ -327,6 +328,7 @@ function eventosEnvio() {
     //volver a setear el calculo de envio
     btnProbarOtro.addEventListener('click', resetCalculo)
 
+    
 
 }
 
@@ -336,9 +338,11 @@ function mostrarCalcularEnvio() {
     spanEnvio.textContent = '...';
 }
 
-function leerCheck() {
+function leerCheck(e) {
+    e.preventDefault();
 
-    for (const opcion of opciones) {
+    for (let opcion of opciones) {
+
         if (opcion.checked) {
             opcionSeleccionada = opcion.value;
 
@@ -389,24 +393,20 @@ function leerCheck() {
                 spanTotal.classList.remove('esconder')
             }
 
-            break; // Termina la iteración cuando encuentres la opción seleccionada
+            
         }
+
     }
-    //spanTotal.textContent = spanSubtotal+spanEnvio
+
     
 }
 
 function resetCalculo() {
+
     mostrarCalcularEnvio();
-    opciones.forEach(opcion => {
-        opcion.checked = false
-    });
+
     btnProbarOtro.classList.add('esconder')
     spanTotal.classList.add('esconder')
-    
-    alert('Si quieres completar el calculo del envio de nuevo, refresca la pagina. Y no te preocupes, se te guardarán los productos del carrito. Sinó, solo dale a ACEPTAR y modifica lo ultimo que seleccionaste.')
-    
-
 
 }
 
