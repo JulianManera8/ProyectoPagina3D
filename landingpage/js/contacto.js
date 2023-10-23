@@ -246,12 +246,17 @@ function crearEventos() {
 //mostrar y cerrar carrito
 imgCarrito.onclick = () => {
     submenuCarrito.classList.add('active');
-    imgCarrito.classList.add('esconder');
+    submenuCarrito.style.transition = ('all 0.5s');
+    submenuCarrito.style.transform = ('translateX(-500px)');
+    imgCarrito.classList.add('esconder');   
     imgCerrarCarrito.classList.remove('esconder');
     iconoCarrito.classList.remove('agregado');
 }
+
 imgCerrarCarrito.onclick = () => {
-    submenuCarrito.classList.remove('active');
+    submenuCarrito.style.transition = ('all 0.75s');
+    submenuCarrito.style.transform = ('translateX(500px)');
+    submenuCarrito.classList.add('cerrar');
     imgCerrarCarrito.classList.add('esconder')
     imgCarrito.classList.remove('esconder') 
 }
