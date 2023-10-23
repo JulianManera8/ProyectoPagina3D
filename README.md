@@ -13,9 +13,9 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
         
 
-                                OFERTAS ESPECIALES
+                                Productos ESPECIALES
 
-+
++ Poner que sea una carta giratoria y que la info se encuentre detras, agregar un icono que muestre que hay q tocar para ver mas info
 
 
 
@@ -35,23 +35,19 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 + HACER QUE ENVIE EL MAIL, PERO SIN BACKEND: https://www.youtube.com/watch?v=qtH8PLuy1Ck USANDO UNA API 
 (es una solucion momentanea para salir del pas hasta q use todo el backend)
 
++ modificar ajustar css el footer aca
 
                                 FOOTER:
+
 + Lo de producto registrado y todo eso
 
 +preguntar a juampi q mas va
 
++poner el logo
 
-
-
-                            
-                            GALERIA DE CLIENTES:
-- Crear la galeria de clientes, o piezas ya impresas
-- USAR EL VIDEO DE GALERIA LIGHTROOM QUE TENGO EN WSP
-
-
-
+                           
                             BLOG/NOSOTROS:
++  hacer que funcione tmb para celulares
 
 
 
