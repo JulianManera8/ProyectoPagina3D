@@ -509,6 +509,61 @@ p {
     
 }
 
+.contadorCarrito {
+    position: absolute;
+    top: 37px;
+    right: 35px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    pointer-events: none;
+    z-index: 1;
+
+}
+
+.agregado {
+    animation: bounce 1s infinite; 
+    scale: 130%; 
+    transition: 0.5s;
+    
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.agregado-numero {
+    animation: bounce2 1s infinite; 
+
+    scale: 130%;
+    transition: 0.5s;
+    
+}
+
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        color: white;
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
 .agregado {
     animation: bounce 1s infinite; 
     scale: 130%; 
