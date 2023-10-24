@@ -1,4 +1,4 @@
-//VARIABLES
+
 
 const carrito = document.querySelector('#carrito');
 const listaProductos = document.querySelector('#lista-productos');
@@ -12,6 +12,7 @@ const divSubtotal = document.querySelector('.subtotal');
 const spanSubtotal = document.querySelector('.precio-subtotal');
 const iconoCarrito = document.querySelector('#img-carrito');
 const imgCarrito = document.getElementById('img-carrito');
+const contadorCarrito = document.getElementById('contadorCarrito');
 const imgCerrarCarrito = document.getElementById('img-close');
 const submenuCarrito = document.querySelector('.submenu');
 const spanTotal = document.querySelector('#totalCarrito');
@@ -22,6 +23,7 @@ const irAlBlog = document.querySelector('.a-pMostrarEnvio');
 const blogEnvio = document.querySelector('.infoEnvio');
 const irModelosFooter = document.querySelector('.irModelosFooter')
 const modelosFooter = document.querySelector('.modelosFooter');
+
 
 let totalCarrito = 0;
 
@@ -51,9 +53,15 @@ function crearEventos() {
     botonVaciarCarrito.addEventListener('click', (e) => {
 
         e.preventDefault();
+
         arregloProductos = [];
+        if (arregloProductos.length === 0) {
+            contadorCarrito.innerHTML = '0';
+        }
+        
         crearHTML();
         sacarBotones();
+        
 
     });
 
@@ -62,6 +70,7 @@ function crearEventos() {
         arregloProductos = JSON.parse(localStorage.getItem('producto')) || [];
 
         crearHTML();
+        contador(arregloProductos);
     });
 
 
@@ -74,6 +83,10 @@ function crearEventos() {
     //que se ilumine el footer donde dice los links de la pag d mdoelos
     irModelosFooter.addEventListener('click', iluminarFooter); //
 }
+
+
+
+
 
 //iluminar el blog del envio
 function iluminarIcon() {
@@ -100,17 +113,25 @@ imgCarrito.onclick = () => {
     submenuCarrito.classList.add('active');
     submenuCarrito.style.transition = ('all 0.5s');
     submenuCarrito.style.transform = ('translateX(-500px)');
+
+    contadorCarrito.classList.add('esconder');
+
     imgCarrito.classList.add('esconder');   
+
     imgCerrarCarrito.classList.remove('esconder');
-    iconoCarrito.classList.remove('agregado');
+
 }
 
 imgCerrarCarrito.onclick = () => {
     submenuCarrito.style.transition = ('all 0.75s');
     submenuCarrito.style.transform = ('translateX(500px)');
     submenuCarrito.classList.add('cerrar');
+
     imgCerrarCarrito.classList.add('esconder')
+
     imgCarrito.classList.remove('esconder') 
+
+    contadorCarrito.classList.remove('esconder');
 }
 
 //que no hata botones de pagar y vaciar si no hay elementos
@@ -150,11 +171,24 @@ function agregarCurso(e) {
         const productoSeleccionado = e.target.parentElement.parentElement;
         leerDatoProducto(productoSeleccionado);
         iconoCarrito.classList.add('agregado');
+        contadorCarrito.classList.add('agregado');
+        contadorCarrito.classList.add('agregado-numero');
         e.target.textContent = 'AGREGADO';
+
+        setTimeout(() => {
+            e.target.textContent = 'Agregar al carrito';
+        }, 2500);
         
         setTimeout(() => {
             e.target.textContent = 'Agregar al carrito';
-        }, 2250);
+            iconoCarrito.style.transition = '0.5s all';
+            contadorCarrito.style.transition = '0.5s all';
+
+            iconoCarrito.classList.remove('agregado');
+            contadorCarrito.classList.remove('agregado');
+            contadorCarrito.classList.remove('agregado-numero');
+        }, 4000);
+        
     }
     
 };
@@ -192,6 +226,8 @@ function leerDatoProducto(producto) {
     } else {
         arregloProductos = [...arregloProductos, infoProducto];   
     }
+
+    
     
     //le pasamos el arreglo a la funcion crearHTML para justamente crear el html del carrito
     crearHTML(producto.precio, infoProducto);
@@ -199,6 +235,10 @@ function leerDatoProducto(producto) {
 
 
 function crearHTML(precio) {
+    //contador
+    contador(arregloProductos)
+    console.log(arregloProductos)
+
     //primero hay que hacer que no se dupliquen
     
     limpiarHTML();
@@ -247,6 +287,7 @@ function crearHTML(precio) {
 
         //que me agregue los precios cada vez q sumo algo al subtotal
         subtotalCarrito = subtotalCarrito + parseInt(producto.precio)
+        
 
     });
 
@@ -269,6 +310,21 @@ function sincronizarStorage() {
     localStorage.setItem('producto', JSON.stringify(arregloProductos))
 }
 
+function contador(arregloProductos) {
+    let numeroContador = arregloProductos.length
+    
+    arregloProductos.forEach( producto => {
+        //numeroContador.innerHTML = numeroContador++;
+        contadorCarrito.innerHTML = numeroContador;
+
+    
+    });
+    
+
+    
+    
+}
+
 
 //borrar producto del carrito desde la X
 function borrarProducto(e) {
@@ -283,7 +339,14 @@ function borrarProducto(e) {
     //luego le pasamos d nuevo la funcion que crea el html para que borre el q tocamos    
     crearHTML();
     sacarBotones();
+    if (arregloProductos.length === 0) {
+        contadorCarrito.innerHTML = '0';
+    }
 };
+
+
+
+
 
 function agregarBotones() {
     botonPagarCarrito.classList.remove('esconder')
