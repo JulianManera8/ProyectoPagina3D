@@ -26,8 +26,7 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 30px;
-    margin-top: 10px;
+    margin: 0px;
     min-height: 100vh;
 }
 
@@ -63,11 +62,11 @@ header {
 
 h3 {
     margin-bottom: 35px;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 h5 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
@@ -77,10 +76,12 @@ p {
     justify-content: center;
     max-width: 70%;
     margin: 15px auto 40px;
+    font-size: 18px;
 }
 
 select {
     padding: 10px;
+    scale: 60%;
 
 }
 
@@ -96,6 +97,7 @@ select {
     flex-direction: column;
     font-size: 20px;
     width: 600px;
+    margin: auto;
 }
 
 .btn-3:hover {
@@ -123,4 +125,393 @@ select {
 
 .btn-volver:not(:hover) {
     transition: 0.5s;
+}
+
+/* _________________________CARRITO_____________________ */
+
+.submenu { /*Logo de carrito*/
+    position: relative;
+    right: 50%;
+
+}
+
+.submenu #carrito {
+    display: none;
+    overflow-y: auto;
+    transition: 0.5s;
+    transform: translateX(-500px);
+    
+}
+
+#carrito {
+    transition: 1s;
+}
+
+#img-carrito, #img-close {
+    cursor: pointer;
+    
+}
+
+.agregado {
+    animation: bounce 1s infinite; 
+    scale: 130%; 
+    transition: 0.5s;
+    
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.submenu.active #carrito {
+    display: block;
+    position: absolute;
+    right: -49.5px;
+    height: 80vh;
+    overflow-y: auto;
+    background-color:rgb(230, 244, 247);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.413);
+    margin-top: 20px;    
+    z-index: 0.5;
+    padding: 20px;
+    min-width: 200px !important;
+    text-align: center !important;
+    transform:translateX(500px);
+    transition: 0.5s;
+    justify-content: right;
+    width: 450px;
+}
+
+.submenu.cerrar #carrito{
+    transition: all 0.5s;
+    transform: translateX(500px);
+   
+}
+
+.botones-carrito {
+    display: flex;
+    bottom: 0;
+    justify-content: space-evenly;
+    margin: 30px 0 20px 0;
+    align-items: center;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 20px;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(248, 238, 226);
+}
+
+th, tr, td {
+    padding: 15px;
+    justify-content: space-around;
+}
+
+th {
+    padding: 15px;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+td {
+    font-size: 13px;
+    
+}
+
+.restar { 
+    cursor: pointer;
+    padding: 5px;
+}
+    
+
+.sumar {
+    cursor: pointer;
+    padding: 5px;    
+}
+
+#vaciar-carrito {
+    padding: 5px 10px;
+    color: rgb(121, 6, 6);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+}
+#vaciar-carrito:hover {
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
+}
+
+#vaciar-carrito:not(:hover) {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.pagar-carrito {
+    color: rgb(13, 102, 31);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+}
+.pagar-carrito:hover {
+    color: rgb(9, 172, 9);
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.pagar-carrito:not(:hover) {
+    transition: 0.5s;
+}
+
+
+.esconder {
+    display: none !important;
+}
+
+.nadaCarrito {
+    text-align: center;
+}
+
+.borrar-curso {
+    color: rgb(176, 29, 29);
+    font-weight: bold;
+    border: 3px solid transparent;
+    padding: 0px 5.5px 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(241, 103, 103);
+}
+
+.borrar-curso:hover {
+    box-shadow: 0 0 25px rgb(241, 103, 103);
+    transition: 0.5s;
+}
+
+.borrar-curso:not(:hover){
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.iracomprar {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.iracomprar:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    padding: 6px;
+    border-radius: 6%;
+}
+
+.iracomprar:active {
+    background-color: antiquewhite;
+}
+
+.p-subtotal {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+span {
+    font-weight: 600;
+}
+
+.p-totalenvio {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #000000;
+    width: 7em;
+    height: 1.6em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-left: 15px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    font-size: 18px;
+  }
+  
+  .button:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    width: 1.4em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: none;
+    text-align: center;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+    display: none;
+  }
+  
+  .text {
+    margin: 0 1.5em;
+  }
+
+.btn-2{
+    margin-top: 15px;
+    margin-left: -1px;
+}
+.text {
+    margin-left: 9px;
+    margin-top: -13px;
+}
+#calcularEnvio2 {
+    background-color: #ffffff00;
+    color: #000000;
+    width:7em;
+    height: 1.8em;
+    box-shadow: 1 1 3px;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    
+   
+}  
+#calcularEnvio2:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+  
+#calcularEnvio2 svg {
+    width: 1.8em;
+    margin: auto;
+    position: relative;
+    display: flex;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+#calcularEnvio2:hover svg {
+    transform: translateX(35px);
+}
+
+.calculoEnvio {
+    font-size: 16px;
+}
+
+
+.mostrarEnvio {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-top: -10px;
+}
+
+.p-container {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin: 45px 0 0px 0;
+}
+
+.p-mostrarEnvio {
+    width: 80%;
+    font-size: 14px;
+    justify-content: center;
+}
+.a-pMostrarEnvio {
+    margin-top: 15.5px;
+    margin-right: 38px;
+}
+
+#calcularEnvio1 {
+    font-size: 16px;
+    border: none;
+    padding: 8px 12px 4px 2px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.235);
+}
+
+#calcularEnvio1:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: transparent !important;
+}
+
+.probarOtro{
+    position: relative;
+    border: none;
+    padding: 8px 6px 4px 6px;
+    border-radius: 1rem;
+    margin-right: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.245);
+}
+.probarOtro:hover {
+    transition: 0.5s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.572);
+}
+.probarOtro:not(:hover) {
+    transition: 0.5s;
+}
+.label-checked {
+    display: block !important;
+    margin-bottom: 10px;   
+}
+
+.a-pMostrarEnvio {
+   font-weight: 600;
+   text-decoration: underline;
+}
+
+.check-provinciasContent {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.p-checkProvincia {
+    text-decoration: underline;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+.calcularEnvio2 {
+    margin-top: 15px;
+}
+
+.totalApagar {
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
+
+.p-total {
+    border-top: 7px double rgb(0, 0, 0);
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 20px;
 }
