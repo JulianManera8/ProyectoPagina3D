@@ -34,10 +34,11 @@
                 </nav>
                 <div>
                     <ul>
-                        <li class="submenu"> 
 
-                            <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="40px">
-                            <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="60px" class="esconder">
+                        <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="50px">
+                        <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="50px" class="esconder">
+
+                        <li class="submenu"> 
                             
                             <div id="carrito">
                                 <table id="lista-carrito">
@@ -56,7 +57,7 @@
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
                                     <div class="mostrarEnvio"> 
-                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro envio</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                                             </svg>
@@ -67,66 +68,55 @@
                                         </p>
                                     </div>
 
-                                    <div class="calculoEnvio esconder" id="divCalculoEnvio">
+                                    <div class="calculoEnvio formularioEnvio esconder" id="divCalculoEnvio">
 
-                                        <div class="checkers-container">
+                                        <form class="checkers-container">
                                             <div class="check-provinciasContainer divSelecProvincia" >
                                                 <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
                                                 <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="santaFe">Santa Fe</label>
-                                                            <input type="radio" name="opciones" value="Santa Fe" id="santaFe">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraProvincia">Otra provincia</label>
-                                                        <input type="radio" name="opciones" value="Otra provincia" id="otraProvincia">
-                                                    </label>
-                                                    </div>
+                                                    <select name="provincia" id="provincia">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="santafe">Santa Fe</option>
+                                                        <option value="otraprovincia">otra provincia</option>
+                                                    </select>
+                                                    <!-- Poner un spinner -->
                                                 </div>
                                             </div>
                                             <div class="check-provinciasContainer esconder divSelecCiudad" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
                                                 <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="rosario">Rosario</label>
-                                                            <input type="radio" name="opciones" value="Rosario" id="rosario">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraCiudad">Otra ciudad/localidad</label>
-                                                        <input type="radio" name="opciones" value="otraCiudad" id="otraCiudad">
-                                                    </label>
-                                                    </div>
+                                                    <select name="ciudad" id="ciudad" class="esconder">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="rosario">Rosario</option>
+                                                        <option value="otraciudad">otra ciudad</option>
+                                                    </select>
+                                                    <!-- Poner un spinner -->
                                                 </div>
                                             </div>
                                             <div class="check-provinciasContainer esconder divSelecTipoenvio" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
                                                 <div class="check-provinciasContent">
-                                                    <div>
-                                                        <label class="label-checked" for="rosario">Retiro en persona</label>
-                                                            <input type="radio" name="opciones" value="retiro" id="retiro">
-                                                        </label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="label-checked" for="otraCiudad">A domicilio</label>
-                                                        <input type="radio" name="opciones" value="domicilio" id="domicilio">
-                                                    </label>
-                                                    </div>
+                                                    <select name="entrega" id="entrega">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="retiro">Retiro en persona</option>
+                                                        <option value="domicilio">Entrega a domicilio</option>
+                                                    </select>
+                                                    <!-- Poner un spinner -->
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                            </svg>
-                                            <div class="text">
-                                              
-                                            </div>   
-                                          </button>
+                                            <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                                </svg>
+                                                <div class="text">
+                                                  
+                                                </div>   
+                                            </button>
+                                        </form>
                                         
-                                    </div>
+                                    </div> 
+
+                                    
                                     <div class="totalApagar esconder">
                                         <p class="p-total"> Total a pagar: $<span class="precio-subtotal" id="totalCarrito"> </span></p>
                                     </div>
@@ -146,13 +136,15 @@
                                     </div>
                                 </div>
                                 <div class="p-container">
-                                    <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="#inicio.html" class="a-pMostrarEnvio">blog.</a></p>
+                                    <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="inicio.html#blog" class="a-pMostrarEnvio">blog. </a></p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+
+
         </header>
 
         <div>
