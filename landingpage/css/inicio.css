@@ -169,7 +169,6 @@ img {
     text-align: center;
     transform:translateX(500px);
     transition: 0.5s;
-    
 }
 
 .submenu.cerrar #carrito{
@@ -203,12 +202,12 @@ th {
     padding: 15px;
     justify-content: center;
     font-weight: 1200;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 
 td {
-    font-size: 16px;
+    font-size: 13px;
     
 }
 
@@ -229,7 +228,7 @@ td {
     text-decoration: none;
     cursor: pointer;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
 }
 #vaciar-carrito:hover {
     color: rgb(255, 0, 0);
@@ -244,7 +243,7 @@ td {
 .pagar-carrito {
     color: rgb(13, 102, 31);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
 }
 .pagar-carrito:hover {
@@ -288,6 +287,7 @@ td {
 .iracomprar {
     color: black;
     font-weight: 600;
+    font-size: 16px;
 }
 
 .iracomprar:hover {
@@ -306,7 +306,7 @@ td {
     padding-right: 40px;
     margin-top: 17px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 16px;
 }
 span {
     font-weight: 600;
@@ -370,6 +370,7 @@ span {
     border-radius: 11px;
     text-align: right;
     transition: all 0.6s ease;
+    
    
 }  
 #calcularEnvio2:hover {
@@ -390,7 +391,7 @@ span {
 }
 
 .calculoEnvio {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
@@ -412,12 +413,12 @@ span {
 
 .p-mostrarEnvio {
     width: 80%;
-    font-size: 16px;
+    font-size: 14px;
     justify-content: left;
 }
 
 #calcularEnvio1 {
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     padding: 8px 12px 4px 2px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.235);
@@ -435,7 +436,7 @@ span {
     border-radius: 1rem;
     margin-right: 35px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     background-color: transparent;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.245);
 }
@@ -452,7 +453,7 @@ span {
 }
 
 .a-pMostrarEnvio {
-   font-weight: 800;
+   font-weight: 600;
    text-decoration: underline;
 }
 
@@ -467,6 +468,7 @@ span {
     text-decoration: underline;
     margin-bottom: 12px;
     font-weight: 600;
+    font-weight: 16px;
 }
 
 
@@ -484,13 +486,16 @@ span {
     border-top: 7px double rgb(0, 0, 0);
     padding-top: 15px;
     margin-top: 10px;
-    font-size: 22px;
+    font-size: 20px;
 }
+
+
+/*/////////////////////////////////////////////////////////////////////*/
 
 /* _____________________________OFERTAS_______________________________ */
 
 .header {
-    margin-top: 5%;
+    margin-top: 20px;
     margin-bottom: 110px;
     display: flex;
     text-align: center;
@@ -559,14 +564,14 @@ span {
     text-align: center;
     justify-content: center;
     font-size: 20px;
+    margin-bottom: -60px;
 }
 
 .prodEsp-content {
     margin: 0 100px -50px 100px;
     display: flex;
     padding: 50px 0 100px 0;
-    justify-content: space-between;
-
+    justify-content: space-around;
 }
 
 .prodEspeciales-1 {
@@ -575,6 +580,8 @@ span {
     align-items: center;
     background-color: rgb(248, 238, 226);
     padding: 30px;
+    border-radius: 0.7rem;
+    scale: 80%;
 }
 
 .pe-img {
@@ -583,6 +590,12 @@ span {
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
+    
+
+}
+
+.pe-img img {
+    border-radius: 0.5rem;
 }
 
 .pe-text h3 {
@@ -591,11 +604,12 @@ span {
 }
 
 .textoPE {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .irAcontacto {
-    margin-top: 0px !important;
+    margin-top: -100px !important;
+    margin-bottom: 40px;
 }
 
 
@@ -620,8 +634,8 @@ span {
 }
 
 .products-h2 {
-    margin-top: -10px;
-    margin-bottom: -20px;
+    margin-top: 20px;
+    margin-bottom: -70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
     font-size: 35px;
@@ -629,22 +643,23 @@ span {
 
 .product-content {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 20px;
-    scale: 80%;
+    scale: 70%;
     margin: 0 auto;
 }
 
 .product {
-    width: calc(100% / 6);
+    width: 350px;
+    min-width: 277.33px;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 20px;
     box-shadow: 0 0 20px rgb(109, 109, 109);
-    min-width: 277.33px;
     border-radius: 0.5rem;
 }
 
@@ -671,7 +686,7 @@ span {
 .product .precio {
     font-weight: 800;
     font-size: 19px;
-    
+    margin-bottom: -20px;
 }
 .precio-signo {
     font-weight: 800;
@@ -735,28 +750,16 @@ span {
 
 
 .irAproductos {
+    margin-top: -150px;
     text-align: center;
-    margin-top: -100px;
     margin-bottom: 100px;
     font-size: 20px;
 }
 
 
-/* asi esta bien con los divs extras pero hay q cambiar el js 
-.botones-productos { 
-    display: flex;
-    justify-content: space-between !important;
-    text-align: center !important;
-    margin-top: -10px;
-}
-
-.divAgregarCarrito {
-    width: 110%;
-    margin-top: 10px;
-} */
-
 .nadaCarrito p {
     margin: 20px 0 40px;
+    font-size: 15px;
 }
 
 .cta {
@@ -822,7 +825,7 @@ span {
     padding: 50px 0 100px 0;
     justify-content: space-evenly;
     margin: 0px auto;
-    scale: 90%;
+    scale: 70%;
 }
 
 .icon-1  {
@@ -842,16 +845,16 @@ span {
 
 .icon-txt h3 {
     margin-bottom: 30px;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .icon-txt p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .icon-txt a {
     text-decoration: underline;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 600;
 }
 
@@ -884,6 +887,7 @@ span {
 .blog {
     text-align: center;
     padding-bottom: 15px;
+    margin-top: -150px;
     margin-bottom: 250px;
     scale: 80%;
 }
@@ -1322,4 +1326,8 @@ img {
         background-color: rgb(180, 227, 248);
     }
 
+}
+
+.precioNo {
+    text-decoration: line-through red;
 }
