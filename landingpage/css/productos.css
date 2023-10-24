@@ -16,7 +16,6 @@ font-family: 'Poppins', sans-serif;
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f5f5f5 ;
-    
 }
 
 img {
@@ -32,7 +31,7 @@ img {
 .header {
     display: flex;
     align-items: center;
-    min-height: 10vh;
+    min-height: 80vh;
     padding: 70px 0;
     align-items: center;
 }
@@ -53,11 +52,11 @@ img {
     background-color:rgb(206, 234, 247);
     width: 100vw;
     padding: 20px;
-    position: fixed;
+    position: sticky;
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     color: black;
@@ -72,8 +71,12 @@ img {
 .menu .navbar ul li a {
     display: block;
     padding: 20px;
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(0, 0, 0);
+}
+
+.menu .navbar {
+    margin-left: -70px;
 }
 
 
@@ -108,15 +111,22 @@ img {
 
 .submenu { /*Logo de carrito*/
     position: relative;
-    right: 70%;
+    right: 50%;
 
 }
 
 .submenu #carrito {
     display: none;
     overflow-y: auto;
+    transition: 0.5s;
+    transform: translateX(-500px);
     
 }
+
+#carrito {
+    transition: 1s;
+}
+
 #img-carrito, #img-close {
     cursor: pointer;
     
@@ -146,17 +156,25 @@ img {
 .submenu.active #carrito {
     display: block;
     position: absolute;
-    right: 0;
+    right: -49.5px;
     height: 80vh;
     overflow-y: auto;
-    background-color:rgb(230, 242, 247);
+    background-color:rgb(230, 244, 247);
     border: 1px solid rgb(0, 0, 0);
-    box-shadow: 0 0 20px;
-    margin-top: 28.5px;    
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.413);
+    margin-top: 20px;    
     z-index: 0.5;
     padding: 20px;
     min-width: 200px;
     text-align: center;
+    transform:translateX(500px);
+    transition: 0.5s;
+}
+
+.submenu.cerrar #carrito{
+    transition: all 0.5s;
+    transform: translateX(500px);
+   
 }
 
 .botones-carrito {
@@ -183,13 +201,13 @@ th, tr, td {
 th {
     padding: 15px;
     justify-content: center;
-    font-weight: 1200;
-    font-size: 20px;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 
 td {
-    font-size: 22px;
+    font-size: 13px;
     
 }
 
@@ -210,7 +228,7 @@ td {
     text-decoration: none;
     cursor: pointer;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
 }
 #vaciar-carrito:hover {
     color: rgb(255, 0, 0);
@@ -225,7 +243,7 @@ td {
 .pagar-carrito {
     color: rgb(13, 102, 31);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
 }
 .pagar-carrito:hover {
@@ -269,6 +287,7 @@ td {
 .iracomprar {
     color: black;
     font-weight: 600;
+    font-size: 16px;
 }
 
 .iracomprar:hover {
@@ -287,7 +306,7 @@ td {
     padding-right: 40px;
     margin-top: 17px;
     margin-bottom: 20px;
-    font-size: 23px;
+    font-size: 16px;
 }
 span {
     font-weight: 600;
@@ -351,6 +370,7 @@ span {
     border-radius: 11px;
     text-align: right;
     transition: all 0.6s ease;
+    
    
 }  
 #calcularEnvio2:hover {
@@ -371,7 +391,7 @@ span {
 }
 
 .calculoEnvio {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -393,12 +413,12 @@ span {
 
 .p-mostrarEnvio {
     width: 80%;
-    font-size: 18px;
+    font-size: 14px;
     justify-content: left;
 }
 
 #calcularEnvio1 {
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     padding: 8px 12px 4px 2px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.235);
@@ -416,7 +436,7 @@ span {
     border-radius: 1rem;
     margin-right: 35px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     background-color: transparent;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.245);
 }
@@ -433,7 +453,7 @@ span {
 }
 
 .a-pMostrarEnvio {
-   font-weight: 800;
+   font-weight: 600;
    text-decoration: underline;
 }
 
@@ -448,6 +468,7 @@ span {
     text-decoration: underline;
     margin-bottom: 12px;
     font-weight: 600;
+    font-weight: 16px;
 }
 
 
@@ -465,36 +486,92 @@ span {
     border-top: 7px double rgb(0, 0, 0);
     padding-top: 15px;
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 20px;
 }
+
+
+/*/////////////////////////////////////////////////////////////////////*/
 
 /* _____________________________OFERTAS_______________________________ */
 
+.header {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-content {
+    
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 10px;
+    
+}
+
+.header-img {
+    flex-basis: 50%;
+    text-align: center;
+}
 
 
- 
+.header-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt h3 {
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 0px 20px;
+    line-height: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.header-txt p {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.header-txt a {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 3px 11px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+
 .titulo-sectionPE {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 20px;
-    font-size: 30px;
+    margin-bottom: 30px;
+    font-size: 25px;
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: -380px;
 }
+
 .p-titulosectionPE {
     display: flex;
     text-align: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: -60px;
 }
 
 .prodEsp-content {
     margin: 0 100px -50px 100px;
     display: flex;
     padding: 50px 0 100px 0;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .prodEspeciales-1 {
@@ -503,6 +580,8 @@ span {
     align-items: center;
     background-color: rgb(248, 238, 226);
     padding: 30px;
+    border-radius: 0.7rem;
+    scale: 80%;
 }
 
 .pe-img {
@@ -511,12 +590,27 @@ span {
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
+    
+
+}
+
+.pe-img img {
+    border-radius: 0.5rem;
 }
 
 .pe-text h3 {
     margin-bottom: 20px;
+    font-size: 22px;
 }
 
+.textoPE {
+    font-size: 17px;
+}
+
+.irAcontacto {
+    margin-top: -100px !important;
+    margin-bottom: 40px;
+}
 
 
 /*__________________PRODUCTOS____________________*/
@@ -529,11 +623,6 @@ span {
     flex-direction: column;
 }
 
-.products h2 {
-    margin: auto;
-    font-size: 35px;
-}
-
 .product:hover {
     scale: 105%;
     transition: 0.3s;
@@ -543,64 +632,72 @@ span {
     transition: 0.2s;
 }
 
-.products h2 {
-    margin-bottom: 50px;
+.products-h2 {
+    margin-top: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 40px;
 }
 
 .product-content {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 30px;
+    scale: 70%;
+    margin: -560px auto -200px auto;
 }
 
 .product {
-    background-color: #f5f5f5;
+    width: 350px;
+    min-width: 277.33px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     box-shadow: 0 0 20px rgb(109, 109, 109);
-    min-width: 300px;
     border-radius: 0.5rem;
 }
 
 .product h3  {
     margin: 10px;
+    font-size: 20px;
 }
 
 .product img {
     cursor: pointer;
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
     text-align: center;
     margin: auto;
     justify-content: center;
+    border-radius: 0.3rem;
 }
 
 .product p {
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px;
 }
 
 .product .precio {
     font-weight: 800;
-    font-size: 25px;
+    font-size: 19px;
+    margin-bottom: -20px;
 }
 .precio-signo {
     font-weight: 800;
-    font-size: 25px;
+    font-size: 19px;
 }
+
+.ofertas {
+    background-color: rgba(249, 238, 225, 0.669); 
+}
+
 .precioNo {
-    text-decoration: line-through;
+    text-decoration: line-through red;
     margin-right: 20px;
 }
-
-
 
 .boton {
     display: flex;
@@ -608,13 +705,13 @@ span {
 }
 
 .agregar-carrito {
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 600;
     text-align: center;
-    margin-top: 50px;
     padding: 6px 11px;
     cursor: pointer;
     border-radius: 7px;
+    margin-bottom: 5px;
 }
 
 
@@ -633,11 +730,14 @@ span {
   transform: scale(0.95);
   
 }
-.verInfoOferta {
-    background-color: #f5f5f5!important;
+
+.ofertas .btn-3 {
+    background-color: #f5f5f5;
 }
 
 .btn-3 {
+    font-size: 14px;
+    height: 50%;
     cursor: pointer;
     padding: 8px 6px 4px 6px;
     border-radius: 1rem;
@@ -653,8 +753,18 @@ span {
     transition: 0.5s;
 }
 
+
+.irAproductos {
+    margin-top: -150px;
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 20px;
+}
+
+
 .nadaCarrito p {
     margin: 20px 0 40px;
+    font-size: 15px;
 }
 
 .cta {
@@ -709,22 +819,18 @@ span {
 }
 
 
-.irAproductos {
-    text-align: center;
-    margin-bottom: 80px;
-}
 
-.ofertas {
-    background-color: rgb(247, 238, 226);
-    border-radius: 1rem;
-}
 
-/*_______________________BLOG/ICONOS__________________*/
+/* ////////////////////////////////////////// */
+
+/*_______________ICONOS___________*/
 
 .icons {
     display: flex;
     padding: 50px 0 100px 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    scale: 70%;
 }
 
 .icon-1  {
@@ -733,6 +839,8 @@ span {
     align-items: center;
     background-color: rgb(248, 238, 226);
     padding: 30px;
+    border-radius: 3rem !important;
+    height: 450px;
 }
 
 .icon-img img {
@@ -742,6 +850,7 @@ span {
 
 .icon-txt h3 {
     margin-bottom: 30px;
+    font-size: 24px;
 }
 
 .icon-txt p {
@@ -750,12 +859,10 @@ span {
 
 .icon-txt a {
     text-decoration: underline;
+    font-size: 19px;
     font-weight: 600;
 }
 
-.btn-3 {
-    margin: 0 15px;
-}
 
 .animacionIcon {
     animation: bounce 1s infinite; 
@@ -775,12 +882,19 @@ span {
     }
 }
 
+
+.btn-3 {
+    margin: 0 15px;
+}
+
 /* _______________________BLOG/NOSOTROS______________________________________ */
 
 .blog {
     text-align: center;
     padding-bottom: 15px;
-    margin-bottom: 75px;
+    margin-top: -150px;
+    margin-bottom: 250px;
+    scale: 80%;
 }
 
 h2 {
@@ -798,6 +912,7 @@ h2 {
 
 .blog-1 {
     text-align: center;
+
 }
 
 .cards-containers {
@@ -806,6 +921,8 @@ h2 {
     justify-content: space-evenly;
     margin-top: 30px;
     flex-basis: calc(33.3% - 30px);
+    gap: 30px;
+
 
 } 
 
@@ -823,12 +940,15 @@ h2 {
     height: 300px;
     object-fit: fill;
     opacity: 100%;
+    border-radius: 2rem !important;
+
 }
 
 .card {
     width: 300px;
     height: 300px;
     position: relative;
+
 }
 
 .card div {
@@ -838,6 +958,7 @@ h2 {
     align-items: center;
     justify-content: space-between;
     backface-visibility: hidden;
+
 }
 
 
@@ -847,6 +968,8 @@ h2 {
     flex-direction: column;
     background-color: rgb(248, 238, 226);
     padding: 30px;
+    border-radius: 2rem !important;
+
 }
 
 
@@ -861,7 +984,7 @@ h2 {
 }
 
 .card:hover .back {
-    transition: 1s;
+    transition: 0.7s;
     opacity: 90%;
     color:black
 }
@@ -871,7 +994,7 @@ h2 {
 }
 
 .card:not(:hover) .back {
-    transition: 1s;
+    transition: 0.7s;
     opacity: 0%;
 }
 
@@ -883,21 +1006,23 @@ h2 {
     background-color: rgb(206, 234, 247);
     display: flex;
     justify-content: space-evenly;
-    
 }
 
 .footer-content {
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
+    justify-content: center !important;
+    width: 100%;
+    min-width: 1000px;
+
 }
 
 .link {
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin: 0 60px;
+    margin: 0 40px;
+
 }
 
 .footer-content a {
@@ -906,8 +1031,7 @@ h2 {
 
 .footer-content h3 {
     font-size: 20px;
-    margin: 0;
-    padding-top: 20px; 
+     
 }
 
 
@@ -928,21 +1052,23 @@ h2 {
     scale: 100%;  
 }
 
+
 /*_____________________BOTON WSP_______________________*/
 
 .wsp-content {
     position: fixed;
     bottom: 0%;
     right: 0%;
-    margin-right: 90px;
-    margin-bottom: 75px;
+    margin-right: 20px;
+    margin-bottom: 45px;
     z-index: 0.6;
     background-color: #f5f5f5;
     border-radius: 50%;
+    scale: 60%;
 }
 
 .wsp-content:hover {
-    scale: 130%;
+    scale: 80%;
     transition: 0.5s ease-in-out;
     box-shadow: 0 0 60px rgba(207, 247, 147, 0.987);
 }
@@ -1100,95 +1226,5 @@ h2 {
     
 .paraMargin {
     max-width: 1200px;
-}
-
-/*Stilo boton calcular envio*/
-
-
-/*PARTE DEL CARRUSEL*/
-
-:root {
-  --slide-transform: 0;
-  --transition: transform 0.5s;
-}
-
-
-img {
-  max-width: 100%;
-}
-
-.slider-container {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  background-color: rgb(248, 238, 226); 
-  scale: 110%;
-  border-radius: 0.5rem;
-}
-
-.slider {
-  display: flex;
-  transform: translateX(var(--slide-transform));
-  transition: var(--transition);
-  
-}
-
-
-
-.slider__element {
-  min-width: 100%;
-  height: 100%;
-  background-color: #f5f5f5;
-  scale: 90% !important;
-  border-radius: 0.5rem;
-
-}
-
-
-.slider-buttons {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  text-align: c;
-  height: 100px;
-  width: 250px;
-  margin: auto;
-}
-
-.boton {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  background-color: #f5f5f5;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
-  color: #000000;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.223);
-}
-
-.boton:hover { 
-    background-color: rgb(206, 234, 247);
-    scale: 110%;
-    transition: 0.5s;
-}
-.boton:not(:hover) { 
-    background-color: #f5f5f5;
-    transition: 0.7s;
-}
-
-.flechita {
-    margin: auto;
-    font-size: 40px;
-}
-
-.boton:active {
-    scale: 90%;
-    transition: 0.2s;
 }
 
