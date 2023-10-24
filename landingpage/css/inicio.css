@@ -127,9 +127,22 @@ img {
     transition: 1s;
 }
 
+
 #img-carrito, #img-close {
     cursor: pointer;
+    z-index: 2;
+}
+
+.contadorCarrito {
+    position: absolute;
+    top: 37px;
+    right: 35px;
+    color: rgb(255, 255, 255);
     
+    font-size: 17px;
+    pointer-events: none;
+    z-index: 1;
+
 }
 
 .agregado {
@@ -138,6 +151,7 @@ img {
     transition: 0.5s;
     
 }
+
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -151,7 +165,27 @@ img {
     }
 }
 
+.agregado-numero {
+    animation: bounce2 1s infinite; 
 
+    scale: 130%;
+    transition: 0.5s;
+    
+}
+
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        color: white;
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
 
 .submenu.active #carrito {
     display: block;
@@ -647,13 +681,13 @@ span {
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
-    gap: 20px;
+    gap: 40px;
     scale: 70%;
     margin: 0 auto;
 }
 
 .product {
-    width: 350px;
+    width: 300px;
     min-width: 277.33px;
     display: flex;
     flex-direction: column;
@@ -752,7 +786,7 @@ span {
 .irAproductos {
     margin-top: -150px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     font-size: 20px;
 }
 
@@ -824,7 +858,7 @@ span {
     display: flex;
     padding: 50px 0 100px 0;
     justify-content: space-evenly;
-    margin: 0px auto;
+    margin: 0px auto 100px auto;
     scale: 70%;
 }
 
@@ -935,7 +969,7 @@ h2 {
     height: 300px;
     object-fit: fill;
     opacity: 100%;
-    border-radius: 2rem !important;
+    border-radius: 1rem !important;
 
 }
 
@@ -963,7 +997,7 @@ h2 {
     flex-direction: column;
     background-color: rgb(248, 238, 226);
     padding: 30px;
-    border-radius: 2rem !important;
+    border-radius: 1rem !important;
 
 }
 
