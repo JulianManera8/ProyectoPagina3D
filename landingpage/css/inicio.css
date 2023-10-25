@@ -643,7 +643,7 @@ span {
 
 .irAcontacto {
     margin-top: -100px !important;
-    margin-bottom: 40px;
+    margin-bottom: 110px !important;
 }
 
 
@@ -1040,7 +1040,7 @@ h2 {
 .footer-content {
     display: flex;
     text-align: center;
-    justify-content: center !important;
+    justify-content: space-evenly !important;
     width: 100%;
     min-width: 1000px;
 
@@ -1079,6 +1079,14 @@ h2 {
 .desiluminarFooter {
     color: black !important; 
     scale: 100%;  
+}
+
+.logofooter {
+    margin-top: 20px;
+    border-radius: 50%;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.723) );
+    cursor: pointer;
+    
 }
 
 
