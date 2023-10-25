@@ -173,11 +173,12 @@ footer {
 
 
 .footer-content {
-
     display: flex;
-	text-align: center;
-    justify-content: space-around;
-    
+    text-align: center;
+    justify-content: space-evenly !important;
+    width: 100%;
+    min-width: 1000px;
+
 }
 
 .footer-content a {
@@ -187,7 +188,15 @@ footer {
 
 .footer-content h3 {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
+}
+
+.logofooter {
+    margin-top: 20px;
+    border-radius: 50%;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.723) );
+    cursor: pointer;
+    
 }
 
 
