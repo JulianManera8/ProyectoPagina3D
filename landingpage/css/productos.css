@@ -841,7 +841,7 @@ span {
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: 0;
+  bottom: 0;    
   left: 0;
   background-color: #000000;
   transform-origin: bottom right;
@@ -1046,7 +1046,7 @@ h2 {
 .footer-content {
     display: flex;
     text-align: center;
-    justify-content: center !important;
+    justify-content: space-evenly !important;
     width: 100%;
     min-width: 1000px;
 
@@ -1069,6 +1069,13 @@ h2 {
      
 }
 
+.logofooter {
+    margin-top: 20px;
+    border-radius: 50%;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.723) );
+    cursor: pointer;
+    
+}
 
 .menu  {
     z-index: 1;
