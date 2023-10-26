@@ -20,7 +20,7 @@ otraFoto[3].onclick = function () {
 //VARIABLES
 const carrito = document.querySelector('#carrito');
 const listaProductos = document.querySelector('#lista-productos');
-const listaProductos2 = document.querySelector('.lista-productos');
+const listaProductos2 = document.getElementById('lista-productos2');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const botonesCarrito = document.querySelector('.botones-carrito');
 const botonVaciarCarrito = document.querySelector('.vaciar-carrito');
@@ -62,6 +62,8 @@ function crearEventos() {
     
     //agregar producto seleccionado al carrito
     listaProductos.addEventListener('click', agregarCurso);
+    listaProductos2.addEventListener('click', agregarCurso);
+
 
     //borrar producto desde la X desde el carrito
     contenedorCarrito.addEventListener('click', borrarProducto);
