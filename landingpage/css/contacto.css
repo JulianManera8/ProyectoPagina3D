@@ -637,12 +637,13 @@ table {
 th, tr, td {
     padding: 15px;
     justify-content: space-around;
+    font-weight: 600;
 }
 
 th {
     padding: 15px;
     justify-content: center;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 15px;
 }
 
@@ -662,6 +663,21 @@ td {
     cursor: pointer;
     padding: 5px;    
 }
+
+.wsp {
+    margin: 20px auto 0px;
+}
+
+.paraMayorista {
+    font-size: 16px;
+    margin-top: 15px;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.461);
+    padding: 10px;
+    border-radius: 3rem;
+    font-weight: 400 !important;
+}
+
 
 #vaciar-carrito {
     padding: 5px 10px;
