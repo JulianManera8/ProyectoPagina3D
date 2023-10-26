@@ -9,13 +9,10 @@
 + Agregar la funcionalidad de mercado pago, y que te pida el domicilio para el envio
 https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
-+ ver de agregar el contador de productos en el carrito
 
         
 
                                 Productos ESPECIALES
-
-+ Poner que sea una carta giratoria y que la info se encuentre detras, agregar un icono que muestre que hay q tocar para ver mas info
 
 
 
@@ -35,7 +32,9 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 + HACER QUE ENVIE EL MAIL, PERO SIN BACKEND: https://www.youtube.com/watch?v=qtH8PLuy1Ck USANDO UNA API 
 (es una solucion momentanea para salir del pas hasta q use todo el backend)
 
-+ modificar ajustar css el footer aca
+
+
+
 
                                 FOOTER:
 
@@ -43,11 +42,12 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
 +preguntar a juampi q mas va
 
-+poner el logo
 
                            
                             BLOG/NOSOTROS:
-+  hacer que funcione tmb para celulares
+
+
+
 
 
 
@@ -57,4 +57,20 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
 
 
+
+                            COSAS QUE MODIFICA MATIAS 
+
++ La cantidad que pasa a ser por mayor (modificar la alerta desde carrito.js)
+
++ Colores / tamaños disponibles
+
++ DE PRODUCTOS Y 1PRODUCTOS Y OFERTAS 
+
+    + Fotos videos nombre descripcion precio
+
+    + Cuales estan en oferta y a q precio
+
+    + Algun orden para mostrarlos 
+
++ 
 
