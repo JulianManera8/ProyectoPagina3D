@@ -120,7 +120,7 @@ img {
     overflow-y: auto;
     transition: 0.5s;
     transform: translateX(-500px);
-    
+    height: 85vh !important;
 }
 
 #carrito {
@@ -228,7 +228,7 @@ table {
 }
 
 th, tr, td {
-    padding: 15px;
+    padding: 16px;
     justify-content: space-around;
 }
 
@@ -254,6 +254,19 @@ td {
 .sumar {
     cursor: pointer;
     padding: 5px;    
+}
+
+.wsp {
+    margin: 20px auto 0px;
+}
+
+.paraMayorista {
+    font-size: 16px;
+    margin-top: 15px;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.461);
+    padding: 10px;
+    border-radius: 3rem;
 }
 
 #vaciar-carrito {
@@ -1097,11 +1110,11 @@ h2 {
     bottom: 0%;
     right: 0%;
     margin-right: 20px;
-    margin-bottom: 45px;
+    margin-bottom: 5px;
     z-index: 0.6;
     background-color: #f5f5f5;
     border-radius: 50%;
-    scale: 60%;
+    scale: 70%;
 }
 
 .wsp-content:hover {
