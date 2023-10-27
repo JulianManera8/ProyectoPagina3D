@@ -3,7 +3,7 @@
     <head>
 
         <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" href="landingpage/css/inicio.css">        
         <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
@@ -54,8 +54,11 @@
                                         </tr>
                                     </thead>
                                     <tbody></tbody>
+                                    
                                 </table>
                                 <div class="subtotal">
+                                    <div class="paraMayorista esconder"></div>
+
                                     <br>
                                     <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
                                     <div class="mostrarEnvio"> 
@@ -107,23 +110,25 @@
                                                     <select name="provincia" id="provincia">
                                                         <option value="seleccionar">Seleccionar</option>
                                                         <option value="santafe">Santa Fe</option>
-                                                        <option value="otraprovincia">otra provincia</option>
+                                                        <option value="otraprovincia">Otra provincia</option>
                                                     </select>
+                                                    <span class="loader-envio esconder"></span>
                                                     <!-- Poner un spinner -->
                                                 </div>
                                             </div>
-                                            <div class="check-provinciasContainer esconder divSelecCiudad" >
+                                            <div class="check-provinciasContainer  divSelecCiudad esconder" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
                                                 <div class="check-provinciasContent">
-                                                    <select name="ciudad" id="ciudad" class="esconder">
+                                                    <select name="ciudad" id="ciudad">
                                                         <option value="seleccionar">Seleccionar</option>
                                                         <option value="rosario">Rosario</option>
-                                                        <option value="otraciudad">otra ciudad</option>
+                                                        <option value="otraciudad">Otra ciudad</option>
                                                     </select>
+                                                    <span class="loader-envio esconder"></span>
                                                     <!-- Poner un spinner -->
                                                 </div>
                                             </div>
-                                            <div class="check-provinciasContainer esconder divSelecTipoenvio" >
+                                            <div class="check-provinciasContainer  divSelecTipoenvio esconder" >
                                                 <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
                                                 <div class="check-provinciasContent">
                                                     <select name="entrega" id="entrega">
@@ -131,15 +136,14 @@
                                                         <option value="retiro">Retiro en persona</option>
                                                         <option value="domicilio">Entrega a domicilio</option>
                                                     </select>
+                                                    <span class="loader-envio esconder"></span>
                                                     <!-- Poner un spinner -->
                                                 </div>
                                             </div>
                                             <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                                </svg>
+                                                
                                                 <div class="text">
-                                                  
+                                                  Continuar
                                                 </div>   
                                             </button>
                                         </form>    
@@ -257,7 +261,7 @@
                     <div class="pe-text">
                         <h3> Compras por mayor </h3>
                         <div class="textoPE">
-                            <p>Si quieres realizar un encargue de muchas impresiones (ejemplo llaveros), contactanos por Whatsapp.</p>
+                            <p>Si queres 20 o mas unidades de un mismo producto, hacemos descuentos por mayor, contactanos por Whatsapp.</p>
                         </div>
                     </div>
                 </div>
@@ -518,7 +522,7 @@
                         <li> <img src="landingpage/images/logo.jpeg" onclick="window.location.href='inicio.html'" width="150px" class="logofooter"></li>
                     </ul>
                 </div>
-                <div class="link modelosFooter">
+                <div class="link">
                     <h3> Redes sociales </h3>
                     <ul>
                         <li> <a href="https://www.instagram.com/pdimpresiones_/" target="_blank"> INSTAGRAM </a></li>
@@ -541,7 +545,7 @@
                         <li> <a href="productos.html"> PRODUCTOS </a> </li>
                     </ul>
                     <br>
-                    <h3> Modelos 3D </h3>
+                    <h3 class="modelosFooter"> Modelos 3D </h3>
                     <ul>
                         <li> <a href="https://www.thingiverse.com/" target="_blank"> THINGSDIVERSE  </a> </li>
                         <li> <a href="https://cults3d.com/es" target="_blank">  CULTS 3D </a> </li>
