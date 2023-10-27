@@ -140,7 +140,7 @@ select {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: -23%;
+    margin-top: -2%;
     background-color:  rgba(250, 235, 215, 0.639);
     padding-bottom: 30px;
 }
