@@ -31,29 +31,24 @@ img {
 .header {
     display: flex;
     align-items: center;
-    min-height: 80vh;
-    padding: 70px 0;
     align-items: center;
+    position: absolute;
 }
 
 .menu {
-    position: absolute;
+
     top: 0;
     right: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-
-.menu  {
     z-index: 1;
     background-color:rgb(206, 234, 247);
     width: 100vw;
     padding: 20px;
-    position: sticky;
 }
+
 
 .logo {
     font-size: 20px;
@@ -540,60 +535,9 @@ span {
 
 /* _____________________________OFERTAS_______________________________ */
 
-.header {
-    margin-top: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.header-content {
-    
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    padding: 0 10px;
-    
-}
-
-.header-img {
-    flex-basis: 50%;
-    text-align: center;
-}
-
-
-.header-txt {
-    flex-basis: 50%;
-    text-align: center;
-}
-
-.header-txt h3 {
-    font-size: 45px;
-    text-transform: uppercase;
-    margin: 0px 20px;
-    line-height: 1;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-.header-txt p {
-    font-size: 20px;
-    margin: 30px;
-}
-
-.header-txt a {
-    border: 2px solid rgb(0, 0, 0);
-    padding: 3px 11px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 7px;
-}
-
 
 .titulo-sectionPE {
+    margin-top:  25vh;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -602,7 +546,7 @@ span {
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: -460px;
+    position: inherit;
 }
 
 .p-titulosectionPE {
