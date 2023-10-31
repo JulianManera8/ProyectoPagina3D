@@ -1,13 +1,27 @@
 # ProyectoPagina3D
 
+                                GENERAL
++ Guardar en el github la foto del icono y actualizar todos los archivos
+
+
+
+
+
+
+
+
                                 CARRITO:
 
-+ Poner que le pida la direccion de envio si selecciona para que sea con envio
++ Poner que le pida la direccion de envio si selecciona para que sea con envio.
 
-+ Meter un enlace directo a wsp cuando sea de rosario
++ Meter un enlace directo a wsp cuando sea de rosario.
 
-+ Agregar la funcionalidad de mercado pago, y que te pida el domicilio para el envio
++ Agregar la funcionalidad de mercado pago, y que te pida el domicilio para el envio.
 https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
+
++ meterle color o resaltar la palabra DESCUENTO en la alerta cuando supera la cantidad.
+
++ pasar a los otros archivos lo de la funcionalidad del descuento.
 
 
         
@@ -16,8 +30,11 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
 
 
+
+
                                 PRODUCTOS:
 - Ponerle filtros de busqueda
+
 
 
 - https://www.youtube.com/watch?v=gW-q6G9KYTg&t=0s estilo cada producto individual
@@ -41,6 +58,7 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 + Lo de producto registrado y todo eso
 
 +preguntar a juampi q mas va
+
 
 
                            
