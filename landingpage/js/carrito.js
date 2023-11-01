@@ -23,6 +23,7 @@ const irAlBlog = document.querySelector('.a-pMostrarEnvio');
 const blogEnvio = document.querySelector('.infoEnvio');
 const irModelosFooter = document.querySelector('.irModelosFooter')
 const modelosFooter = document.querySelector('.modelosFooter');
+const divMayorista = document.querySelector('.paraMayorista');
 
 
 let totalCarrito = 0;
@@ -237,7 +238,6 @@ function leerDatoProducto(producto) {
 function crearHTML(precio) {
     //contador
     contador(arregloProductos)
-    console.log(arregloProductos)
 
     //primero hay que hacer que no se dupliquen
     
@@ -256,19 +256,55 @@ function crearHTML(precio) {
         row.innerHTML =  `
         <td> <img src="${producto.imagen}" width=100px> </td>
         <td> ${producto.nombre} </td>
-        <td> ${producto.$}${producto.precio} </td>
-        <td> <span class="restar"> - </span> <span>${producto.cantidad}</span> <span class="sumar" > + </span></td>
-        <td> <a href="#" class="borrar-curso" data-id="${producto.id}"> X </a></td>
+        <td> ${producto.$}${producto.precio} </td> 
+        <td> <span class="restar"> - </span> <span>${producto.cantidad}</span> <span class="sumar" > + </span> </td> 
+        <a href="https://wa.me/543413076880" target="_blank"><img src="landingpage/images/wsp.svg" class=" wsp esconder" id="logoWsp" width="40px"></a>
+        <td> <a href="#" class="borrar-curso" data-id="${producto.id}"> X </a> </td>
         `;
+
 
         contenedorCarrito.appendChild(row)
      
         //funcionalidad botones de - y + cantidades
-        
+        const logoWsp = row.querySelector('#logoWsp');
         const restar = row.querySelector('.restar')
         const sumar = row.querySelector('.sumar')
 
+        //q no funcione el restar si hay solo 1
+        if (producto.cantidad === 1) {
+            restar.style.opacity = '0.3';
+            restar.style.cursor = 'default';
+
+        } else if (producto.cantidad >= 20 ) {
+
+            //q no se repitan alertas
+            limpiarMensajeMayorista();
+
+            //q no se vea el mas para seguir tocando
+            sumar.style.opacity = '0.3';
+            sumar.style.cursor = 'default';
+            sumar.style.pointerEvents = 'none';
+
+            logoWsp.classList.remove('esconder'); //mostrar logo d wsp
+
+            //mostrar la alerta
+            const mensaje = document.createElement('tr');
+            mensaje.innerHTML = 'Cuando superes las 20 unidades de un producto, contactanos por Whatsapp para ofrecerte descuento por mayor!'
+            mensaje.classList.add('mensajeMayorista')
+            divMayorista.classList.remove('esconder');
+            divMayorista.appendChild(mensaje);
+
+            //borrar la alerta post 10 segundos
+            setTimeout(() => {
+                divMayorista.removeChild(mensaje);
+                divMayorista.classList.add('esconder');
+            }, 8000);
+        }
+
+
         restar.addEventListener('click', () => {
+            
+            // cuando toque en restar, tiene q haber mas de 1
             if(producto.cantidad !== 1) {
                 producto.cantidad--;
                 producto.precio = precioBase * producto.cantidad
@@ -278,10 +314,13 @@ function crearHTML(precio) {
         });
         
         sumar.addEventListener('click', () => {
-            producto.cantidad++;
-            producto.precio = precioBase * producto.cantidad
-            crearHTML();
 
+            //cuando toque en + q funcione hasta 20, pq dps es por mayor
+            if (producto.cantidad < 21 ) {
+                producto.cantidad++;
+                producto.precio = precioBase * producto.cantidad
+                crearHTML();
+            }
         });
 
 
@@ -370,6 +409,12 @@ function limpiarPcarrito() {
     }
 }
 
+function limpiarMensajeMayorista() {
+    while (divMayorista.firstChild) {
+        divMayorista.removeChild(divMayorista.firstChild)
+    }
+}
+
 //TODO LO DEL ENVIO
 const divCalculoEnvio = document.getElementById('divCalculoEnvio');
 const btnProbarOtro = document.getElementById('probarOtroEnvio');
@@ -408,7 +453,7 @@ function mostrarCalcularEnvio() {
 
 function leerCheck(e) {
     e.preventDefault();
-
+    
     for (let opcion of opciones) {
 
         if (opcion.checked) {
