@@ -10,7 +10,6 @@ font-family: 'Poppins', sans-serif;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
 }
 
 body {
@@ -33,6 +32,11 @@ header {
     min-height: 100vh;
 }
 
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
 .fotoContainer {
     margin-left: 50px;
 }
@@ -43,6 +47,7 @@ header {
 
 .fotoPrincipal img {
     border-radius: 1rem;
+    max-width: 600px;
 }
 
 
@@ -64,6 +69,7 @@ header {
 }
 
 h3 {
+    margin-top: 60px;
     margin-bottom: 35px;
     font-size: 27px;
 }
@@ -82,17 +88,33 @@ h5 {
     font-size: 18px;
 }
 
+
+.especTec h5 {
+    text-decoration: underline;
+    margin: -10px auto 20px;
+    font-size: 18px;
+    text-align: left;
+    width: 60%;
+}
+
+.especTec li {
+    font-size: 15px;
+    list-style: outside;
+    text-align: left;
+    width: 50%;
+    margin: -10px auto 20px;
+}
+
 select {
     padding: 10px;
     scale: 60%;
 
 }
 
-.tamañoPrecio {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+
+.precio, .signoPrecio {
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 .nadaCarrito p {
@@ -140,7 +162,7 @@ select {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: -2%;
+    margin-top: 2%;
     background-color:  rgba(250, 235, 215, 0.639);
     padding-bottom: 30px;
 }
