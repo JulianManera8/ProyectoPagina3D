@@ -1,9 +1,6 @@
 # ProyectoPagina3D
 
                                 GENERAL
-+ Guardar en el github la foto del icono y actualizar todos los archivos
-
-
 
 
 
@@ -21,7 +18,7 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
 + meterle color o resaltar la palabra DESCUENTO en la alerta cuando supera la cantidad.
 
-+ pasar a los otros archivos lo de la funcionalidad del descuento.
++ ensanchar la parte del carrito para q entren bien los precios y todo
 
 
         
