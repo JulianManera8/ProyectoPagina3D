@@ -721,9 +721,9 @@ span {
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
     gap: 40px;
-    scale: 70%;
+    scale: 80%;
     margin: 0 auto;
 }
 
@@ -779,7 +779,7 @@ span {
 }
 
 .agregar-carrito {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
     text-align: center;
     padding: 6px 11px;
@@ -825,7 +825,7 @@ span {
 
 
 .irAproductos {
-    margin-top: -150px;
+    margin-top: -120px;
     text-align: center;
     margin-bottom: 30px;
     font-size: 20px;
@@ -910,7 +910,7 @@ span {
     background-color: rgb(248, 238, 226);
     padding: 30px;
     border-radius: 3rem !important;
-    height: 450px;
+    height: 550px;
 }
 
 .icon-img img {
@@ -920,16 +920,16 @@ span {
 
 .icon-txt h3 {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 26px;
 }
 
-.icon-txt p {
-    font-size: 18px;
+.icon-txt {
+    font-size: 22px;
 }
 
 .icon-txt a {
     text-decoration: underline;
-    font-size: 19px;
+    font-size: 23px;
     font-weight: 600;
 }
 
@@ -964,7 +964,7 @@ span {
     padding-bottom: 15px;
     margin-top: -150px;
     margin-bottom: 250px;
-    scale: 80%;
+    scale: 90%;
 }
 
 h2 {
@@ -1414,3 +1414,4 @@ img {
 .precioNo {
     text-decoration: line-through red;
 }
+
