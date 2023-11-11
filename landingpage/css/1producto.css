@@ -57,15 +57,15 @@ img {
     margin-top: 10px;
     gap: 10px;
     cursor: pointer;
-    text-align: right;
+    text-align: center !important;
     justify-content: center !important;
-
-
+    margin: auto !important;
 }
 
 .otrasFotos img {
     min-width: 120px;
     border-radius: 0.5rem;
+    margin: auto !important;
 }
 
 h3 {
@@ -645,4 +645,46 @@ footer {
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.723) );
     cursor: pointer;
     
+}
+
+
+@media (width < 850px) { 
+    .sectionContainer {
+        display: flex;
+        flex-direction: column !important;
+        margin: auto !important;
+        text-align: center;
+        justify-content: center;
+        margin-top: -100px !important;
+        margin-bottom: 200px !important;
+    }
+
+    @media (width < 650px) {
+        .sectionContainer img {
+            width: 70% !important;
+            margin: auto !important;
+        }
+
+    }
+
+    .otrasFotos {
+        margin-top: 20px !important;
+        scale: 85% ;
+        margin: auto;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    
+
+    .productos-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 150px;
+    }
+
+    footer {
+        margin-top:  200px !important;
+    }
+
 }
