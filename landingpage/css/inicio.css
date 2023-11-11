@@ -1347,7 +1347,15 @@ h2 {
         text-align: center;
         gap: 30px;
     }
+    .wsp-content {
+        scale: 50%;
+    }
+    
+    .wsp-content:hover {
+        scale: 60%;
 
+    }
+    
 
 }
     
