@@ -1,5 +1,3 @@
-
-
 const carrito = document.querySelector('#carrito');
 const listaProductos = document.querySelector('#lista-productos');
 const listaProductos2 = document.querySelector('.lista-productos');
@@ -24,6 +22,7 @@ const blogEnvio = document.querySelector('.infoEnvio');
 const irModelosFooter = document.querySelector('.irModelosFooter')
 const modelosFooter = document.querySelector('.modelosFooter');
 const divMayorista = document.querySelector('.paraMayorista');
+
 
 
 let totalCarrito = 0;
@@ -83,6 +82,12 @@ function crearEventos() {
 
     //que se ilumine el footer donde dice los links de la pag d mdoelos
     irModelosFooter.addEventListener('click', iluminarFooter); //
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('carrito')) {
+            console.log('nada')
+        } else { console.log('cerraria')}
+    })
 }
 
 
@@ -124,6 +129,11 @@ imgCarrito.onclick = () => {
 }
 
 imgCerrarCarrito.onclick = () => {
+    cerrarCarrito();
+}
+
+
+function cerrarCarrito() {
     submenuCarrito.style.transition = ('all 0.75s');
     submenuCarrito.style.transform = ('translateX(500px)');
     submenuCarrito.classList.add('cerrar');
