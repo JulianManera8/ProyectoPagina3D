@@ -18,6 +18,7 @@ body {
     background-color: #f5f5f5 ;
 }
 
+
 img {
     max-width: 100%;
 }
@@ -620,6 +621,10 @@ span {
     color: white;
     cursor: pointer;
     border-radius: 7px;
+}
+
+.ofert-product:not(:hover) {
+    scale: 90% !important;
 }
 
 
