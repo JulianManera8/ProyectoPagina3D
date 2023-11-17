@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="landingpage/css/inicio.css">        
+        <link rel="stylesheet" type="text/css" href="landingpage/css/normalize.css">
+        <link rel="icon" href="landingpage/images/logo.jpeg">
+
+        <title> PDImpresiones </title>
+
+    </head>
+
+    <body>
+        <header id="header" class="header">
+            
+            <div class="menu container">
+                <a href="#" class="logo"> PD Impresiones </a>
+                <input type="checkbox" id="menu" />
+                <label for="menu" class="labelhide">
+                    <img src="landingpage/images/menu.svg" loading="lazy" class="menu-icono" alt="menu">
+                </label>
+
+                <nav class="navbar">
+                    <ul>
+                        <li> <a href="index.html" class="li-navbar"> INICIO </a> </li>
+                        <li> <a href="productos.html" class="li-navbar"> PRODUCTOS </a> </li>
+                        <li> <a href="contacto.html" class="li-navbar"> CONTACTO </a> </li>
+                    </ul>
+                </nav>
+                <div>
+                    <ul>
+                            <div class="imgcarrito-container">
+                                <div class="contadorCarrito" id="contadorCarrito"> 0 </div>
+                                <img src="landingpage/images/carrito.svg" id="img-carrito" alt="carrito" width="50px">
+                            </div>
+
+                            <img src="landingpage/images/close.svg" id="img-close" alt="carritoClose" width="50px" class="esconder">
+                            
+                        <li class="submenu"> 
+
+                            
+                            <div id="carrito" class="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th> Imagen </th>
+                                            <th> Nombre </th>
+                                            <th> Precio </th>
+                                            <th class="cantidad-th"> Cantidad </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    
+                                </table>
+                                <div class="subtotal">
+                                    <div class="paraMayorista esconder"></div>
+
+                                    <br>
+                                    <p class="p-subtotal"> Subtotal: $<span class="precio-subtotal" type="number"> </span></p>
+                                    <div class="mostrarEnvio"> 
+                                        <p class="p-subtotal p-totalenvio"><button class="probarOtro esconder" id="probarOtroEnvio"> Probar otro envio</button> * Envio: <span class="numero-envioTotal"><button class="button calcular" id="calcularEnvio1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                            </svg>
+                                            <div class="text">
+                                              Seleccionar
+                                            </div>   
+                                          </button> </span>
+                                        </p>
+                                    </div>
+
+                                    <!-- <form class="envio esconder" id="divCalculoEnvio">
+                                    
+                                        <label class="label-checked" for="provincia">Provincia: </label>
+                                        <select name="provincia" id="provincia">
+                                            <option value="seleccionar">Seleccionar</option>
+                                            <option value="santafe">Santa Fe</option>
+                                            <option value="otraprovincia">otra provincia</option>
+                                        </select>
+
+                                        <label class="label-checked " for="ciudad">Ciudad: </label>
+                                        <select name="ciudad" id="ciudad" class="esconder">
+                                            <option value="seleccionar">Seleccionar</option>
+                                            <option value="rosario">Rosario</option>
+                                            <option value="otraciudad">otra ciudad</option>
+                                        </select>
+
+                                        <label class="label-checked" for="entrega">Entrega: </label>
+                                        <select name="entrega" id="entrega">
+                                            <option value="seleccionar">Seleccionar</option>
+                                            <option value="retiro">Retiro en persona</option>
+                                            <option value="domicilio">Entrega a domicilio</option>
+                                        </select>
+
+                                        <input type="submit" value="CALCULAR" id="calcularEnvio2">
+                                        <input type="reset" value="Probar otro" id="probarOtro">
+
+                                    </form> -->
+
+                                    <div class="calculoEnvio formularioEnvio esconder" id="divCalculoEnvio">
+
+                                        <form class="checkers-container">
+                                            <div class="check-provinciasContainer divSelecProvincia" >
+                                                <p class="p-checkProvincia" id="p-provincias">Seleccione su provincia</p>
+                                                <div class="check-provinciasContent">
+                                                    <select name="provincia" id="provincia">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="santafe">Santa Fe</option>
+                                                        <option value="otraprovincia">Otra provincia</option>
+                                                    </select>
+                                                    <span class="loader-envio esconder"></span>
+                                                    <!-- Poner un spinner -->
+                                                </div>
+                                            </div>
+                                            <div class="check-provinciasContainer  divSelecCiudad esconder" >
+                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione su ciudad/localidad </p>
+                                                <div class="check-provinciasContent">
+                                                    <select name="ciudad" id="ciudad">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="rosario">Rosario</option>
+                                                        <option value="otraciudad">Otra ciudad</option>
+                                                    </select>
+                                                    <span class="loader-envio esconder"></span>
+                                                    <!-- Poner un spinner -->
+                                                </div>
+                                            </div>
+                                            <div class="check-provinciasContainer  divSelecTipoenvio esconder" >
+                                                <p class="p-checkProvincia" id="p-ciudades">Seleccione el tipo de envio </p>
+                                                <div class="check-provinciasContent">
+                                                    <select name="entrega" id="entrega">
+                                                        <option value="seleccionar">Seleccionar</option>
+                                                        <option value="retiro">Retiro en persona</option>
+                                                        <option value="domicilio">Entrega a domicilio</option>
+                                                    </select>
+                                                    <span class="loader-envio esconder"></span>
+                                                    <!-- Poner un spinner -->
+                                                </div>
+                                            </div>
+                                            <button class="button calcular btn-2 btnLeerSeleccion" id="calcularEnvio2" >
+                                                
+                                                <div class="text">
+                                                  Continuar
+                                                </div>   
+                                            </button>
+                                        </form>    
+                                        
+                                    </div> 
+
+                                    
+                                    <div class="totalApagar esconder">
+                                        <p class="p-total"> Total a pagar: $<span class="precio-subtotal" id="totalCarrito"> </span></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="botones-carrito"> 
+
+                                    <div class="btn-vaciarCarrito"> 
+                                        <a href="#" id="vaciar-carrito" class="btn-2 vaciar-carrito esconder">Vaciar</a>
+                                    </div>
+                                    <div class="nadaCarrito">
+                                        <!-- ACA VA EL P CUANDO NO HAY NADA -->
+                                    </div>
+                                    <div class="btn-pagarCarrito"> 
+                                        <a href="#" id="pagar-carrito" class="btn-2 pagar-carrito esconder">Ir a Pagar</a>
+                                    </div>
+                                </div>
+                                <div class="p-container">
+                                    <p class="p-mostrarEnvio"> * Para mas info sobre el envio, consultar la seccion de <a href="#blog" class="a-pMostrarEnvio">blog. </a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-content container paraMargin ">
+                <div id="slider-container" class="slider-container lista-productos">
+                    <div class="slider" id="slider">
+                        <div class="product slider__element ofert-product">  <!-- ESTE SERIA EL class="card" (para hacer el carrito)-->
+                            <img src="landingpage/img-productos/1..jpeg" loading="lazy" alt="" onclick="window.location.href='1producto.html'">
+                            <div class="product-txt"> 
+                                <h3> Picador Copa del Mundo </h3>
+                                <p> Sumate al festejo de la Scaloneta con tu picador de la Copa del Mundo </p>
+                                <p> <b>$</b><spam class="precioNo">3600 </spam><b class="precio-signo"> $</b><spam class="precio">3300</spam></p>
+                                <br>
+                                <a class="agregar-carrito btn-2" data-id="1">
+                                    Agregar al carrito
+                                </a>
+                                <a class= "btn-3" onclick="window.location.href='1producto.html'">
+                                    + Info
+                                </a>
+                            </div>
+                        </div>   
+
+                        <div class="product slider__element ofert-product">
+                            <img src="landingpage/images/img 2.jpeg" loading="lazy" alt="" onclick="window.location.href='2producto.html'">
+                            <div class="product-txt">
+                                <h3> Impresion 2</h3>
+                                <p> Altura de capa: 0,4 </p>
+                                <p> <b>$</b><spam class="precioNo">600 </spam><b class="precio-signo"> $</b><spam class="precio">300</spam></p>
+                                <br>
+                                <a class="agregar-carrito btn-2" data-id="2">
+                                    Agregar al carrito
+                                </a>
+                                <a class= "btn-3" onclick="window.location.href='2producto.html'">
+                                    + Info
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="product slider__element ofert-product">
+                            <img src="landingpage/images/img 3.jpeg" loading="lazy" alt="" onclick="window.location.href='3producto.html'">
+                            <div class="product-txt">
+                                <h3> Impresion 3</h3>
+                                <p> Altura de capa: 0,4 </p>
+                                <p> <b>$</b><spam class="precioNo">300 </spam><b class="precio-signo"> $</b><spam class="precio">300</spam></p>
+                                <br>
+                                <a class="agregar-carrito btn-2" data-id="3">
+                                    Agregar al carrito
+                                </a>
+                                <a class= "btn-3" onclick="window.location.href='3producto.html'">
+                                    + Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-buttons">
+                        <button id="button-left" class="boton"> <p class="flechita fizq">&lt;</p></button>
+                        <button id="button-right" class="boton button-right"><p class="flechita fder">&gt;</p></button>
+                    </div>
+                    
+                </div>
+                <div class="header-txt">
+                    <h3> Ofertas especiales </h3>
+                    <p> No te pierdas estas impresiones! </p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- HASTA ACA ES EL HEADER -->
+
+        <div class="titulo-sectionPE">
+            <h3> Productos especiales </h3>
+        </div>
+        <div class="div-titullosectionPE">
+            <p class="p-titulosectionPE">Contactanos si estas buscando alguna de estas opciones</p>
+        </div>
+        <section class=" container prodEspeciales">
+            
+            <div class="prodEsp-content">
+                <div class="prodEspeciales-1">
+                    <div class="pe-img">
+                        <img src="landingpage/images/img 2.jpeg" loading="lazy" alt="" width="260px">
+                    </div>
+                    <div class="pe-text">
+                        <h3> Compras por mayor </h3>
+                        <div class="textoPE">
+                            <p>Ofrecemos descuentos a partir de una determinada cantidad que varia en cada producto.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="prodEspeciales-1">
+                    <div class="pe-img">
+                        <img src="landingpage/images/img 6.jpeg" loading="lazy" alt="" width="260px">
+                    </div>
+                    <div class="pe-text">
+                        <h3> Impresiones personalizadas </h3>
+                        <div class="textoPE">
+                            <p> Envianos archivos STL o links de lo que quieras imprimir, puedes buscar modelos haciendo <a href="#footer" class="irModelosFooter"> click aqui.</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="prodEspeciales-1">
+                    <div class="pe-img">
+                        <img src="landingpage/images/img 1.jpeg" loading="lazy" alt="" width="250px">
+                    </div>
+                    <div class="pe-text">
+                        <h3> Figuras pintadas a mano</h3>
+                        <div class="textoPE">
+                            <p>Pintamos a mano cualquier figura que desees agregar a tu coleccion. Sera una pieza unica!</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+        </section>
+        <div class="irAproductos irAcontacto">
+            <a class="cta" href="contacto.html">
+                <span class="hover-underline-animation"> Ir a contacto </span>
+                <svg viewBox="0 0 46 16" height="20" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- HASTA SECCION DE OFERTAS-->
+
+        <main id="lista-productos" class="products container paraMargin" >
+            <h2 class="products-h2"> Productos </h2>
+            <div class="product-content">
+
+                <div class="product">
+                    <img src="landingpage/images/img 4.jpeg" alt="" loading="lazy" onclick="window.location.href='4producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 4</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b class="precio-signo">$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="4">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='4producto.html'">
+                            Mas Info
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 5.jpeg" alt="" loading="lazy" onclick="window.location.href='5producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 5</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b class="precio-signo">$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="5">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='5producto.html'">
+                            Mas Info
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="" loading="lazy" onclick="window.location.href='6producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 6</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b class="precio-signo">$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="6">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='6producto.html'">
+                            Mas Info
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="landingpage/images/img 4.jpeg" alt="" loading="lazy" onclick="window.location.href='4producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 4</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b class="precio-signo">$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="4">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='4producto.html'">
+                            Mas Info
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 5.jpeg" alt="" loading="lazy" onclick="window.location.href='5producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 5</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b class="precio-signo">$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="5">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='5producto.html'">
+                            Mas Info
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="landingpage/images/img 6.jpeg" alt="" loading="lazy" onclick="window.location.href='6producto.html'">
+                    <div class="product-txt">
+                        <h3> Impresion 6</h3>
+                        <p> Altura de capa: 0,4 </p>
+                        <p> <b class="precio-signo">$</b><spam class="precio">600</spam></p>
+                        <br>
+                        <a class="agregar-carrito btn-2" data-id="6">
+                            Agregar al carrito
+                        </a>
+                        <a class= "btn-3" onclick="window.location.href='6producto.html'">
+                            Mas Info
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+        </main>
+        <div class="irAproductos">
+            <a class="cta" href="productos.html">
+                <span class="hover-underline-animation" id="blog"> Ver mas productos </span>
+                <svg viewBox="0 0 46 16" height="20" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </a>
+        </div>
+        
+        <!-- HASTA ACA LA LISTA DE LOS PRODUCTOS -->
+        
+
+        <section class="icons container paraMargin" >
+
+            <div class="icon-1 ">
+                <div class="icon-img">
+                    <img src="landingpage/images/IconEnvio.svg" class="infoEnvio" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3> Envios a todo el país </h3>
+                    <p> Utilizamos Correo Argentino. Puedes probar nuestro <a href=""> cotizador de envios</a> para calcular tu envio! </p>
+                </div>
+            </div>
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="landingpage/images/IconStar.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3> Atencion en todo momento </h3>
+                    <p> Contactate mediante cualquiera de nuestras<a href="contacto.html" class="btn-2"> opciones de contacto.</a> Respoderemos lo antes posible!</p>
+                </div>
+            </div>
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="landingpage/images/IconHappy.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3> Clientes satisfechos </h3>
+                    <p> Podes encontrar pruebas de nuestra calidad y compromiso viendo nuestros clientes en   <a href="https://www.instagram.com/pdimpresiones_/" target="_blank" class="btn-2"> instagram.</a></p>
+                </div>
+            </div>
+
+        </section>
+        <!-- HASTA ACA LA SECCION DE ICONOS ASI COMO MEJOR ENVIO, MEJORES CLIENTES Y ESO -->
+
+        <!-- HACER QUE CUANDO TOQUEMOS NOS MUESTRE LA INFO, COMO TIENE EL MODULO 2 DE TECLAB DE GESTION CONFIGURACION -->
+        <section class="blog container paraMargin" id="sobre-nosotros">
+            <h2> Conoce un poco mas sobre PD Impresiones </h2>
+            <p> Posicionate sobre las imagenes para ver mas info!</p>
+
+            <div class="cards-containers">
+
+                <div class="card-content blog-1">
+                    <h3> Quien soy? </h3> 
+                                   
+                    <div class="card">
+                        <div class="front">
+                            <img src="landingpage/images/matias.jpeg" alt="">
+                        </div>
+                        <div class="back">
+                            <p> Me llamo Matías, tengo 18 años y estudio Ingenieria Mecanica. </p>
+                            <p> Soy fanatico de la pesca, y mi hobby principal es realizar impresiones 3d que soluciones necesidades. Y romper las bolas </p>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+
+                <div class="card-content blog-1">
+                    <h3> Con que imprimo? </h3>                
+                    <div class="card">
+                        <div class="front">
+                            <img src="landingpage/images/impresora2.jpeg" alt="">
+                        </div>
+                        <div class="back">
+                            <p> Mi impresora es la Ender 3 de 2MG. Llevo usandola hace 1 año y me facilita brindar la mayor calidad en mis impresiones. </p>
+                            <p> El material que utilizo es PLA, PET-G, y TPU. Son materiales Ecofriendly, y vienen de muchos colores y tonos distintos.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="card-content blog-1">
+                    <h3> + sobre impresion 3D </h3>                
+                    <div class="card">
+                        <div class="front">
+                            <img src="landingpage/images/img 5.jpeg" alt="">
+                        </div>
+                        <div class="back">
+                            <p> La impresion 3D, tiene infinidad de utilidades, pero una para destacar es su uso medicinal, ya que es muy recomendada para realizar prótesis. </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+        </section>
+        <!-- HASTA ACA LA SESION DE BLOG Y MAS SOBRE NOSOTROS -->
+
+        <footer class="footer" id="footer">
+            <div class="footer-content container">
+
+                <div class="link">
+                    <h3> PD Impresiones </h3>
+                    <ul>
+                        <li> <img src="landingpage/images/logo.jpeg" onclick="window.location.href='index.html'" width="150px" class="logofooter"></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3> Redes sociales </h3>
+                    <ul>
+                        <li> <a href="https://www.instagram.com/pdimpresiones_/" target="_blank"> INSTAGRAM </a></li>
+                    </ul>
+                    <br>
+                    <br>
+                    <h3> Pagos y Envio </h3>
+                    <ul>
+                        <li> <a> MERCADO PAGO </a>  </li>
+                        <li> <a> EFECTIVO </a>  </li>
+                        <li> <a href="#blog"> CORREO ARGENTINO </a> </li>
+                    </ul>
+                    
+                </div>
+                <div class="link">
+                    <h3> Navegacion </h3>
+                    <ul>
+                        <li> <a href="index.html"> INICIO  </a>  </li>
+                        <li> <a href="contacto.html"> CONTACTO </a> </li>
+                        <li> <a href="productos.html"> PRODUCTOS </a> </li>
+                    </ul>
+                    <br>
+                    <h3 class="modelosFooter"> Modelos 3D </h3>
+                    <ul>
+                        <li> <a href="https://www.thingiverse.com/" target="_blank"> THINGSDIVERSE  </a> </li>
+                        <li> <a href="https://cults3d.com/es" target="_blank">  CULTS 3D </a> </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </footer>
+
+        <div class="wsp-container"> 
+            <div class="wsp-fondo">
+                <div class="wsp-content"> <!-- este seria class="card" -->
+                    <a href="https://wa.me/543413076880" target="_blank" class="texto-wsp"><img src="landingpage/images/wsp.svg" width="110px"></a>
+                </div>  <!-- este seria class="card" -->
+            </div>    
+        </div>
+    
+
+    </body>
+
+    <script src="landingpage/js/carrito.js"> </script>
+    <script src="landingpage/js/carrusel.js"> </script>
+</html>

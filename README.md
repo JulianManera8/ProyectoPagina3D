@@ -67,7 +67,7 @@ https://www.youtube.com/watch?v=vXqo-hgvvZU&t=270s
 
 
                                GENERAL:
-
+* Cuando cree los otros productos, acordarse de modificar el inicio.html a index.html en esos archivos
 
 
 
