@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;500;600;800&display=swap');
 
 /*
 font-family: 'Nunito', sans-serif;
@@ -57,7 +57,7 @@ img {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
     color: black;
@@ -67,13 +67,16 @@ img {
     float: left;
     position: relative;
     align-items: center;
+    font-weight: 600;
+    
 }
 
 .menu .navbar ul li a {
     display: block;
     padding: 20px;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    
+    
 }
 
 .menu .navbar {
@@ -82,17 +85,23 @@ img {
 
 
 .li-navbar:hover {
-    box-shadow: 0px 8px 5px antiquewhite;
     border-radius: 2.5rem;
-    transition: 0.5s;
+    color: black;
+    transition: 0.3s;
 }
 .li-navbar:not(:hover) {
-    box-shadow: none;
-    transition: .8s;
+    color: rgba(0, 0, 0, 0.563);
+    transition: 0.3s;
+
 }
+
+
 .li-navbar:active {
-    box-shadow: 0px 8px 5px rgb(255, 251, 0);
-    transition: .2s;
+    scale: 85%;
+    transition: .1s;
+}
+.li-navbar:not(:active) {
+    transition: .1s;
 }
 
 #menu {
@@ -623,9 +632,115 @@ span {
     border-radius: 7px;
 }
 
-.ofert-product:not(:hover) {
-    scale: 90% !important;
+/*_________________________________PARTE DEL CARRUSEL_________________*/
+
+:root {
+    --slide-transform: 0;
+    --transition: transform 0.5s;
 }
+
+
+img {
+  max-width: 100%;
+}
+
+.slider-container {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: rgb(248, 238, 226); 
+  scale: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: -100px;
+}
+
+.slider {
+  display: flex;
+  transform: translateX(var(--slide-transform));
+  transition: var(--transition);
+  
+}
+
+
+
+.slider__element {
+  min-width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  width: 100px !important;
+  border-radius: 0.5rem;
+
+}
+
+
+.slider-buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  margin: auto;
+}
+
+.boton {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  color: #000000;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.223);
+}
+
+.boton:hover { 
+    background-color: rgb(206, 234, 247);
+    scale: 110%;
+    transition: 0.5s;
+}
+.boton:not(:hover) { 
+    background-color: #f5f5f5;
+    transition: 0.7s;
+}
+
+.flechita {
+    margin: auto;
+    font-size: 40px;
+}
+
+.boton:active {
+    scale: 90%;
+    transition: 0.2s;
+}
+
+.destacarBtnDer {
+    
+    animation: destacar 2s infinite;
+    transition: 0.1s;
+    
+}
+
+@keyframes destacar {
+    0%, 100% {
+        background-color: #f5f5f5;
+    }
+    50% {
+        background-color: rgb(180, 227, 248);
+    }
+
+}
+
+.precioNo {
+    text-decoration: line-through red;
+}
+  
 
 
 .titulo-sectionPE {
@@ -751,7 +866,7 @@ span {
 }
 
 .product:hover {
-    scale: 95% !important;
+    scale: 93% !important;
     transition: 0.3s;
 }
 .product:not(:hover) {
@@ -760,7 +875,7 @@ span {
 
 .product h3  {
     margin: 10px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .product img {
@@ -835,11 +950,12 @@ span {
 
 .btn-3 {
     font-size: 14px;
-    height: 50%;
+    height: 30%;
     cursor: pointer;
     padding: 8px 6px 4px 6px;
     border-radius: 1rem;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+    scale: 50% !important;
 }
 
 .btn-3:hover {
@@ -1011,13 +1127,12 @@ h2 {
 }
 
 .blog p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .blog-1 {
     text-align: center;
-
 }
 
 .cards-containers {
@@ -1071,6 +1186,7 @@ h2 {
     display: flex;
     text-align: center;
     flex-direction: column;
+    justify-content: center;
     background-color: rgb(248, 238, 226);
     padding: 30px;
     border-radius: 1rem !important;
@@ -1082,6 +1198,7 @@ h2 {
     display: flex;
     font-size: 19px;
     font-weight: 500;
+    text-align: center;
 }
 
 .card:hover .front img {
@@ -1118,7 +1235,7 @@ h2 {
     text-align: center;
     justify-content: space-evenly !important;
     width: 100%;
-    min-width: 1000px;
+    min-width: 100%;
 
 }
 
@@ -1366,114 +1483,5 @@ h2 {
     
 .paraMargin {
     max-width: 1200px;
-}
-
-/*_________________________________PARTE DEL CARRUSEL_________________*/
-
-:root {
-  --slide-transform: 0;
-  --transition: transform 0.5s;
-}
-
-
-img {
-  max-width: 100%;
-}
-
-.slider-container {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  background-color: rgb(248, 238, 226); 
-  scale: 90%;
-  border-radius: 0.5rem;
-  margin-bottom: -100px;
-}
-
-.slider {
-  display: flex;
-  transform: translateX(var(--slide-transform));
-  transition: var(--transition);
-  
-}
-
-
-
-.slider__element {
-  min-width: 100%;
-  height: 100%;
-  background-color: #f5f5f5;
-  scale: 80% !important;
-  border-radius: 0.5rem;
-
-}
-
-
-.slider-buttons {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  text-align: c;
-  height: 100px;
-  width: 250px;
-  margin: auto;
-}
-
-.boton {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  background-color: #f5f5f5;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
-  color: #000000;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.223);
-}
-
-.boton:hover { 
-    background-color: rgb(206, 234, 247);
-    scale: 110%;
-    transition: 0.5s;
-}
-.boton:not(:hover) { 
-    background-color: #f5f5f5;
-    transition: 0.7s;
-}
-
-.flechita {
-    margin: auto;
-    font-size: 40px;
-}
-
-.boton:active {
-    scale: 90%;
-    transition: 0.2s;
-}
-
-.destacarBtnDer {
-    
-    animation: destacar 2s infinite;
-    transition: 0.1s;
-    
-}
-
-@keyframes destacar {
-    0%, 100% {
-        background-color: #f5f5f5;
-    }
-    50% {
-        background-color: rgb(180, 227, 248);
-    }
-
-}
-
-.precioNo {
-    text-decoration: line-through red;
 }
 
