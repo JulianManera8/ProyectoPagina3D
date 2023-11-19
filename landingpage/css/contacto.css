@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;500;600;800&display=swap');
 
 
 * {
@@ -40,7 +40,7 @@ body {
     text-align: center;
     justify-content: center;
     margin: 25px 20px 80px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
 
 }
@@ -111,7 +111,7 @@ body {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
     color: black;
@@ -127,8 +127,8 @@ body {
     display: block;
     padding: 20px;
     font-size: 16px;
-    color: rgb(0, 0, 0);
-    font-weight: 500;
+    font-weight: 600;
+
 }
 
 .menu .navbar {
@@ -137,17 +137,23 @@ body {
 
 
 .li-navbar:hover {
-    box-shadow: 0px 8px 5px antiquewhite;
     border-radius: 2.5rem;
-    transition: 0.5s;
+    color: black;
+    transition: 0.3s;
 }
 .li-navbar:not(:hover) {
-    box-shadow: none;
-    transition: .8s;
+    color: rgba(0, 0, 0, 0.563);
+    transition: 0.3s;
+
 }
+
+
 .li-navbar:active {
-    box-shadow: 0px 8px 5px rgb(255, 251, 0);
-    transition: .2s;
+    scale: 85%;
+    transition: .1s;
+}
+.li-navbar:not(:active) {
+    transition: .1s;
 }
 
 #menu {
@@ -477,19 +483,7 @@ p {
     margin-right: -150px;
 }
 
-.li-navbar:hover {
-    box-shadow: 0px 8px 5px antiquewhite;
-    border-radius: 2.5rem;
-    transition: 0.5s;
-}
-.li-navbar:not(:hover) {
-    box-shadow: none;
-    transition: .8s;
-}
-.li-navbar:active {
-    box-shadow: 0px 8px 5px rgb(255, 251, 0);
-    transition: .2s;
-}
+
 
 /*/////////////////////////////////////////////////*/
 /*                 CARRITO                  */

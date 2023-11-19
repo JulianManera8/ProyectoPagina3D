@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@200;400;500;600;800&display=swap');
 
 /*
 font-family: 'Nunito', sans-serif;
@@ -51,7 +51,7 @@ img {
 
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
     color: black;
@@ -61,13 +61,16 @@ img {
     float: left;
     position: relative;
     align-items: center;
+    font-weight: 600;
+    
 }
 
 .menu .navbar ul li a {
     display: block;
     padding: 20px;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    
+    
 }
 
 .menu .navbar {
@@ -76,18 +79,25 @@ img {
 
 
 .li-navbar:hover {
-    box-shadow: 0px 8px 5px antiquewhite;
     border-radius: 2.5rem;
-    transition: 0.5s;
+    color: black;
+    transition: 0.3s;
 }
 .li-navbar:not(:hover) {
-    box-shadow: none;
-    transition: .8s;
+    color: rgba(0, 0, 0, 0.563);
+    transition: 0.3s;
+
 }
+
+
 .li-navbar:active {
-    box-shadow: 0px 8px 5px rgb(255, 251, 0);
-    transition: .2s;
+    scale: 85%;
+    transition: .1s;
 }
+.li-navbar:not(:active) {
+    transition: .1s;
+}
+
 
 #menu {
     display: none;
@@ -630,6 +640,7 @@ span {
 .product-content {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1180px;
     text-align: center;
     justify-content: center;
     margin: 10px auto;
@@ -731,11 +742,12 @@ span {
 
 .ofertas .btn-3 {
     background-color: #f5f5f5;
+    scale: 50%;
 }
 
 .btn-3 {
-    font-size: 14px;
-    height: 50%;
+    font-size: 5px;
+    height: 20%;
     cursor: pointer;
     padding: 8px 6px 4px 6px;
     border-radius: 1rem;
@@ -1060,10 +1072,8 @@ h2 {
 
 .wsp-content {
     position: fixed;
-    bottom: 0%;
-    right: 0%;
-    margin-right: 20px;
-    margin-bottom: 45px;
+    bottom: 10px;
+    right: 10px;
     z-index: 0.6;
     background-color: #f5f5f5;
     border-radius: 50%;

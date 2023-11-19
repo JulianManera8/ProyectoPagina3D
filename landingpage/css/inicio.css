@@ -1287,14 +1287,12 @@ h2 {
 
 .wsp-content {
     position: fixed;
-    bottom: 0%;
-    right: 0%;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    bottom: 10px;
+    right: 10px;
     z-index: 0.6;
     background-color: #f5f5f5;
     border-radius: 50%;
-    scale: 70%;
+    scale: 60%;
 }
 
 .wsp-content:hover {
