@@ -1019,10 +1019,8 @@ h2 {
 .footer-content {
     display: flex;
     text-align: center;
-    justify-content: space-evenly !important;
-    width: 100%;
-    min-width: 1000px;
-
+    justify-content: center !important;
+    min-width: 100%;
 }
 
 .link {
@@ -1039,7 +1037,8 @@ h2 {
 
 .footer-content h3 {
     font-size: 20px;
-     
+    font-weight: 600;
+ 
 }
 
 .logofooter {

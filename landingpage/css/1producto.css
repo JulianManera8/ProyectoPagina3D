@@ -33,13 +33,11 @@ header {
 }
 
 img {
-    object-fit: cover;
+    object-fit:cover;
     object-position: center;
 }
 
-.fotoContainer {
-    margin-left: 50px;
-}
+
 
 .fotoPrincipal {
     text-align: center !important;
@@ -54,6 +52,7 @@ img {
 .otrasFotos{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 10px;
     gap: 10px;
     cursor: pointer;
@@ -115,6 +114,7 @@ select {
 .precio, .signoPrecio {
     font-size: 25px;
     margin-top: 20px;
+    font-weight: 500;
 }
 
 .nadaCarrito p {
@@ -142,6 +142,7 @@ select {
     border-radius: 1rem;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
     margin-left: 60px;
+    scale: 70%;
 }
 
 .btn-volver:hover {
@@ -624,8 +625,7 @@ footer {
     text-align: center;
     justify-content: space-evenly !important;
     width: 100%;
-    min-width: 1000px;
-
+    min-width: 100%;
 }
 
 .footer-content a {
