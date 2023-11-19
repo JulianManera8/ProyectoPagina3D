@@ -519,7 +519,7 @@ p {
     font-size: 17px;
     pointer-events: none;
     z-index: 1;
-
+    font-weight: 400;
 }
 
 .agregado {
