@@ -1,10 +1,12 @@
 # ProyectoPagina3D
 
                                 GENERAL
-
-
-
-
++ tipografias y tamaños iguales para titulos y parrafos en toda la  pag
++ ajustar el footer en ancho en productos y en altura en 1producto
++ subir un poquito el de productos especiales en movile en productos
++ ajustar el ancho del carrito en movile en todos
++ ajustar tamaño botones de + info que sean iguales toda la pag
++ poner que todos los botones de + info DIGAN + info en toda la pag
 
 
                                 CARRITO:
